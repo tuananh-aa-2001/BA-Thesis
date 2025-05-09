@@ -2,7 +2,9 @@
 \usepackage[ngerman]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage{amsmath}
+\usepackage{acronym}
 \usepackage{graphicx}
+\usepackage[onehalfspacing]{setspace}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \newcommand{\dcplace}{Aachen}
 \newcommand{\dcdate}{04. Mai 2025}
@@ -63,6 +65,7 @@
 			%Korreferent: Prof. Dr.-Ing. ...\
 	\end{minipage}
 
+
 	\vspace{1.5cm}
 	
 	%Erstellungsdatum
@@ -75,7 +78,7 @@
             ahu GmbH Wasser Boden Geomatik \\
             \vspace{1cm}
             Externer Betreuer: Dr. David Loibl
-			\vspace{1cm}
+            
 			%\today\\ %Datum\\
 			%\vspace{1cm}
 			%vertraulich bis xx.xx.xx
@@ -90,33 +93,51 @@
 \chapter*{Selbstständigkeitserklärung}
 \thispagestyle{empty}	%keine Seitenzahl!
 \pdfbookmark{Selbstständigkeitserklärung}{Selbstständigkeitserklärung}
-Ich versichere hiermit, dass ich die vorliegende Arbeit selbständig verfasst und keine anderen als die im Literaturverzeichnis angegebenen Quellen benutzt habe.Stellen, die wörtlich oder sinngemäß aus veröffentlichten oder noch nicht veröffentlichten Quellen entnommen sind, sind als solche kenntlich gemacht.Die Zeichnungen oder Abbildungen in dieser Arbeit sind von mir selbst erstellt worden oder mit einem entsprechenden Quellennachweis versehen.Diese Arbeit ist in gleicher oder ähnlicher Form noch bei keiner anderen Prüfungsbehörde eingereicht worden.\\[2ex]
-\dcplace , den \dcdate\\[6ex]
-\flushleft
+Ich versichere hiermit, dass ich die vorliegende Arbeit selbständig verfasst und keine anderen als die im Literaturverzeichnis angegebenen Quellen benutzt habe.\\ \\
+Stellen, die wörtlich oder sinngemäß aus veröffentlichten oder noch nicht veröffentlichten Quellen entnommen sind, sind als solche kenntlich gemacht.\\ \\ Die Zeichnungen oder Abbildungen in dieser Arbeit sind von mir selbst erstellt worden oder mit einem entsprechenden Quellennachweis versehen.\\ \\ Diese Arbeit ist in gleicher oder ähnlicher Form noch bei keiner anderen Prüfungsbehörde eingereicht worden.\\ \\[2ex]
+Aachen, den \today \hspace{4cm} \dotfill 
 \tableofcontents
+
+\clearpage
+\chapter*{Abkürzungsverzeichnis}\label{abkuerzungsverzeichnis}
+\begin{acronym}[YTM]
+\setlength{\itemsep}{-\parsep}
+
+\acro{gravitation}[$g$]{\hspace{1cm}Gravitation in Nähe der Erdoberfläche}
+\acro{Nu}[$Nu$]{\hspace{1cm}Nußelt-Zahl}
+\acro{nu_luft}[$\nu_{Luft}$]{\hspace{1cm}Kinematische Viskosität von Luft}
+\acro{Pr}[$Pr$]{\hspace{1cm}Prandtl-Zahl}
+\acro{Q}[$\dot Q$]{\hspace{1cm}Wärmestrom}
+\acro{Ra}[$Ra$]{\hspace{1cm}Rayleigh-Zahl}
+\acro{rho_luft}[$\rho_{Luft}$]{\hspace{1cm}Dichte von Luft}
+\acro{temperatur}[$T$]{\hspace{1cm}Temperatur}
+\acro{umgebungstemperatur}[$T_{\infty}$]{\hspace{1cm}Umgebungstemperatur}
+
+\end{acronym}
 
 \cleardoublepage
 \chapter*{Abstract}
 \thispagestyle{plain}
 \addcontentsline{toc}{chapter}{Abstract}
-Hier steht dein Abstracttext. Dieser sollte einen kurzen Überblick über Ziel, Methode und Ergebnis deiner Arbeit geben.
+In einer zunehmend digitalisierten und automatisierten Welt wächst täglich die Menge an neu generierten Geodaten – insbesondere Mess- und räumlichen Daten.\\ \\
+Die Suche nach und Einbindung von OGC-Geodatendiensten wie WMS (Web Map Service) und WFS (Web Feature Service) in Geoinformationssysteme wie QGIS kann tatsächlich schwierig sein. Die Suche erfordert den Anwender oft das Durchforsten verschiedener Quellen und die manuelle Überpüfung von Dienstbeschreibung. Eine automatisiert und effiziente Lösung kann teilweise helfen, diesen Prozess zu verbessern. \\ 
+Die Suche nach Messdaten wie Grundwasserständen, Pegelständen und Klimadaten (Niederschlag,Temperatur) und deren Umformatierung in ein einheitliches Format gestalten sich als schwierig und kompliziert, da es eine Vielzahl von Datenanbietern mit unterschiedliche Datenstrukturen, Formen, etc. gibt.\\ \\
+Die Bereitstellung dieser Rohdaten erfolgt meinst im CSV-Format oder als individuell strukturtierte ASCII-Dateien. Im Kontext von der Datenkonsum, gibt es bei der Ahu den sogenannten ahuManager-Client, der diese Daten konsumiert. Bevor diese konsumieren können, müssen die Rohdaten in ein kompatibeles Format umformatiert werden, was bisher teilweise von Hand erledigt werden (in Excel o.ä.). Diese manuelle Vorgehen kann perspektivisch zum Teil oder ganz automatisiert werden, was die Produktivität steigert und die Fehleranfälligkeit vermeidet. \\ \\
+Daher befasst sich diese Arbeit  mit dem Thema, wie eine webbasierte Applikation zur Ausschöpfung und Bereitstellung von rohen Geodaten im Kontext von der Abteilung Geomatik von Ahu GmbH entwickelt werden kann.
 
 \clearpage
 \chapter{Einleitung}
 
 \section{Motivation der Arbeit}
+
+
 \section{Ziel der Arbeit}
 
 
 \chapter{Some examples to get started}
 \section{How to create Sections and Subsections}
 
-Simply use the section and subsection commands, as in this example document! With Overleaf, all the formatting and numbering is handled automatically according to the template you've chosen. If you're using the Visual Editor, you can also create new section and subsections via the buttons in the editor toolbar.
-
 \section{How to include Figures}
-
-First you have to upload the image file from your computer using the upload link in the file-tree menu. Then use the includegraphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
-
 Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
 \subsection{How to add Tables}
 
@@ -140,8 +161,6 @@ Gadgets & 13
 \end{table}
 
 \section{How to add Comments and Track Changes}
-
-Comments can be added to your project by highlighting some text and clicking ``Add comment'' in the top right of the editor pane. To view existing comments, click on the Review menu in the toolbar above. To reply to a comment, click on the Reply button in the lower right corner of the comment. You can close the Review pane by clicking its name on the toolbar when you're done reviewing for the time being.
 
 Track changes are available on all our \href{https://www.overleaf.com/user/subscription/plans}{premium plans}, and can be toggled on or off using the option at the top of the Review pane. Track changes allow you to keep track of every change made to the document, along with the person making the change. 
 
