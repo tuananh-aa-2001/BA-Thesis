@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  9 MAY 2025 16:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  11 MAY 2025 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -446,24 +446,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 (ersteversion.aux)
 \openout1 = `ersteversion.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -473,15 +473,15 @@ LaTeX Font Info:    ... okay on input line 15.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69684pt, 56.90553pt)
+* v-part:(T,H,B)=(42.67912pt, 731.23582pt, 71.1319pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=418.25368pt
-* \textheight=591.5302pt
-* \oddsidemargin=17.3571pt
-* \evensidemargin=17.3571pt
-* \topmargin=-10.73834pt
+* \textwidth=483.69684pt
+* \textheight=731.23582pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-69.46587pt
 * \headheight=18.125pt
 * \headsep=21.75pt
 * \topskip=12.0pt
@@ -529,7 +529,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 15.
+Package hyperref Info: Link coloring ON on input line 16.
  (ersteversion.out)
 (ersteversion.out)
 \@outlinefile=\write3
@@ -542,7 +542,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 15.
+(scrreprt)           before \begin{document} on input line 16.
  (C:\Users\Tuan\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
@@ -593,12 +593,12 @@ Package geometry Warning: `portrait': not available in `\newgeometry'; skipped.
 <firmenlogo.jpg, id=3, 205.76875pt x 205.76875pt>
 File: firmenlogo.jpg Graphic file (type jpg)
 <use firmenlogo.jpg>
-Package pdftex.def Info: firmenlogo.jpg  used on input line 23.
+Package pdftex.def Info: firmenlogo.jpg  used on input line 24.
 (pdftex.def)             Requested size: 105.2751pt x 105.27348pt.
 <FHAC.jpg, id=4, 45.5301pt x 136.5903pt>
 File: FHAC.jpg Graphic file (type jpg)
 <use FHAC.jpg>
-Package pdftex.def Info: FHAC.jpg  used on input line 27.
+Package pdftex.def Info: FHAC.jpg  used on input line 28.
 (pdftex.def)             Requested size: 48.36958pt x 145.1164pt.
 [1
 
@@ -607,30 +607,18 @@ Package pdftex.def Info: FHAC.jpg  used on input line 27.
 
 {C:/Users/Tuan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./firmenlogo.
 jpg> <./FHAC.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
 
-Overfull \hbox (24.13054pt too wide) in paragraph at lines 96--99
-\OT1/cmr/m/n/12 Stellen, die w[]ortlich oder sinn-gem[]a^^Y aus ver[]offentlich
-ten oder noch nicht ver[]offentlichten
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
- []
-
-
-Overfull \hbox (28.59032pt too wide) in paragraph at lines 96--99
-\OT1/cmr/m/n/12 Diese Ar-beit ist in glei-cher oder []ahnlicher Form noch bei k
-ei-ner an-de-ren Pr[]ufungsbeh[]orde
  []
 
 [2
@@ -646,90 +634,96 @@ ei-ner an-de-ren Pr[]ufungsbeh[]orde
 ]
 
 LaTeX Warning: Hyper reference `acro:gravitation' on page 4 undefined on input 
-line 106.
+line 107.
 
 
 LaTeX Warning: Hyper reference `acro:gravitation' on page 4 undefined on input 
-line 106.
+line 107.
 
 
-LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 107.
+LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 108.
 
 
 
-LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 107.
+LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 108.
 
 
 
 LaTeX Warning: Hyper reference `acro:nu_luft' on page 4 undefined on input line
- 108.
+ 109.
 
 
 LaTeX Warning: Hyper reference `acro:nu_luft' on page 4 undefined on input line
- 108.
+ 109.
 
 
-LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 109.
-
-
-
-LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 109.
+LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 110.
 
 
 
-LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 110.
-
-
-LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 110.
-
-
-LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 111.
+LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 110.
 
 
 
-LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 111.
+LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 112.
 
 
 
-LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
-e 112.
+LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 112.
+
 
 
 LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
-e 112.
+e 113.
+
+
+LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
+e 113.
 
 
 LaTeX Warning: Hyper reference `acro:temperatur' on page 4 undefined on input l
-ine 113.
+ine 114.
 
 
 LaTeX Warning: Hyper reference `acro:temperatur' on page 4 undefined on input l
-ine 113.
+ine 114.
 
 
 LaTeX Warning: Hyper reference `acro:umgebungstemperatur' on page 4 undefined o
-n input line 114.
+n input line 115.
 
 
 LaTeX Warning: Hyper reference `acro:umgebungstemperatur' on page 4 undefined o
-n input line 114.
+n input line 115.
 
 [4
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 122--127
+Underfull \hbox (badness 10000) in paragraph at lines 123--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--127
+Underfull \hbox (badness 10000) in paragraph at lines 123--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--127
+Underfull \hbox (badness 10000) in paragraph at lines 123--128
 
+ []
+
+
+Overfull \hbox (22.4159pt too wide) in paragraph at lines 123--128
+\OT1/cmr/m/n/12 Daher be-fasst sich die-se Ar-beit mit dem The-ma, wie ei-ne we
+b-ba-sier-te Ap-pli-ka-ti-on zur Wertsch[]opfung
  []
 
 [5
@@ -738,25 +732,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--127
 
 ]
 chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
 [6
 
 
 ]
 chapter 2.
-<frog.jpg, id=81, 748.7975pt x 741.77126pt>
+<frog.jpg, id=91, 748.7975pt x 741.77126pt>
 File: frog.jpg Graphic file (type jpg)
 <use frog.jpg>
-Package pdftex.def Info: frog.jpg  used on input line 146.
-(pdftex.def)             Requested size: 104.56342pt x 103.57562pt.
+Package pdftex.def Info: frog.jpg  used on input line 147.
+(pdftex.def)             Requested size: 120.92421pt x 119.78372pt.
 [7
 
- <./frog.jpg>] [8]
+ <./frog.jpg>]
 
-LaTeX Warning: Citation `greenwade93' on page 9 undefined on input line 205.
+LaTeX Warning: Citation `greenwade93' on page 8 undefined on input line 196.
 
-[9]
+[8] [9]
+chapter 3.
+<vaadin_architekture.jpg, id=125, 1939.245pt x 2055.68pt>
+File: vaadin_architekture.jpg Graphic file (type jpg)
+<use vaadin_architekture.jpg>
+Package pdftex.def Info: vaadin_architekture.jpg  used on input line 208.
+(pdftex.def)             Requested size: 256.07582pt x 284.4997pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--216
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--216
+
+ []
+
+[10
+
+ <./vaadin_architekture.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+
+Overfull \hbox (21.47379pt too wide) in paragraph at lines 220--222
+\OT1/cmr/m/n/12 Entwicklung ein-ge-setzt wird. Es au-to-ma-ti-siert Auf-ga-ben 
+wie das Her-un-ter-la-den von Abh[]angigkeiten,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
+
+ []
+
+[11]
 No file ersteversion.bbl.
-[10] (ersteversion.aux)
+[12] (ersteversion.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -769,13 +813,13 @@ Package rerunfilecheck Info: File `ersteversion.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14852 strings out of 474486
- 258104 string characters out of 5755015
- 1932542 words of memory out of 5000000
- 36918 multiletter control sequences out of 15000+600000
- 564689 words of font info for 59 fonts, out of 8000000 for 9000
+ 14879 strings out of 474486
+ 258569 string characters out of 5755015
+ 1934542 words of memory out of 5000000
+ 36935 multiletter control sequences out of 15000+600000
+ 564983 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,8n,107p,10936b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,8n,107p,10936b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Tuan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
 200.pk><C:/Users/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
 s/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tuan/MiKTeX/f
@@ -786,9 +830,9 @@ rs/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tuan/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on ersteversion.pdf (10 pages, 315681 bytes).
+Output written on ersteversion.pdf (12 pages, 537204 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
