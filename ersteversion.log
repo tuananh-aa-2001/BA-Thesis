@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  11 MAY 2025 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  12 MAY 2025 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,32 +438,309 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip68
 )
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(C:\Users\Tuan\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count294
+
+(C:\Users\Tuan\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\Tuan\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count295
+\c@listtotal=\count296
+\c@listcount=\count297
+\c@liststart=\count298
+\c@liststop=\count299
+\c@citecount=\count300
+\c@citetotal=\count301
+\c@multicitecount=\count302
+\c@multicitetotal=\count303
+\c@instcount=\count304
+\c@maxnames=\count305
+\c@minnames=\count306
+\c@maxitems=\count307
+\c@minitems=\count308
+\c@citecounter=\count309
+\c@maxcitecounter=\count310
+\c@savedcitecounter=\count311
+\c@uniquelist=\count312
+\c@uniquename=\count313
+\c@refsection=\count314
+\c@refsegment=\count315
+\c@maxextratitle=\count316
+\c@maxextratitleyear=\count317
+\c@maxextraname=\count318
+\c@maxextradate=\count319
+\c@maxextraalpha=\count320
+\c@abbrvpenalty=\count321
+\c@highnamepenalty=\count322
+\c@lownamepenalty=\count323
+\c@maxparens=\count324
+\c@parenlevel=\count325
+\blx@tempcnta=\count326
+\blx@tempcntb=\count327
+\blx@tempcntc=\count328
+\c@blx@maxsection=\count329
+\blx@maxsegment@0=\count330
+\blx@notetype=\count331
+\blx@parenlevel@text=\count332
+\blx@parenlevel@foot=\count333
+\blx@sectionciteorder@0=\count334
+\blx@sectionciteorderinternal@0=\count335
+\blx@entrysetcounter=\count336
+\blx@biblioinstance=\count337
+\labelnumberwidth=\skip69
+\labelalphawidth=\skip70
+\biblabelsep=\skip71
+\bibitemsep=\skip72
+\bibnamesep=\skip73
+\bibinitsep=\skip74
+\bibparsep=\skip75
+\bibhang=\skip76
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language80
+\c@mincomprange=\count338
+\c@maxcomprange=\count339
+\c@mincompwidth=\count340
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'apa.dbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex-apa\apa.dbx
+File: apa.dbx 2023/03/20 v9.17 APA biblatex style data model
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count341
+\c@savedafterword=\count342
+\c@annotator=\count343
+\c@savedannotator=\count344
+\c@author=\count345
+\c@savedauthor=\count346
+\c@bookauthor=\count347
+\c@savedbookauthor=\count348
+\c@commentator=\count349
+\c@savedcommentator=\count350
+\c@editor=\count351
+\c@savededitor=\count352
+\c@editora=\count353
+\c@savededitora=\count354
+\c@editorb=\count355
+\c@savededitorb=\count356
+\c@editorc=\count357
+\c@savededitorc=\count358
+\c@foreword=\count359
+\c@savedforeword=\count360
+\c@holder=\count361
+\c@savedholder=\count362
+\c@introduction=\count363
+\c@savedintroduction=\count364
+\c@namea=\count365
+\c@savednamea=\count366
+\c@nameb=\count367
+\c@savednameb=\count368
+\c@namec=\count369
+\c@savednamec=\count370
+\c@translator=\count371
+\c@savedtranslator=\count372
+\c@shortauthor=\count373
+\c@savedshortauthor=\count374
+\c@shorteditor=\count375
+\c@savedshorteditor=\count376
+\c@narrator=\count377
+\c@savednarrator=\count378
+\c@execproducer=\count379
+\c@savedexecproducer=\count380
+\c@execdirector=\count381
+\c@savedexecdirector=\count382
+\c@with=\count383
+\c@savedwith=\count384
+\c@labelname=\count385
+\c@savedlabelname=\count386
+\c@institution=\count387
+\c@savedinstitution=\count388
+\c@lista=\count389
+\c@savedlista=\count390
+\c@listb=\count391
+\c@savedlistb=\count392
+\c@listc=\count393
+\c@savedlistc=\count394
+\c@listd=\count395
+\c@savedlistd=\count396
+\c@liste=\count397
+\c@savedliste=\count398
+\c@listf=\count399
+\c@savedlistf=\count400
+\c@location=\count401
+\c@savedlocation=\count402
+\c@organization=\count403
+\c@savedorganization=\count404
+\c@origlocation=\count405
+\c@savedoriglocation=\count406
+\c@origpublisher=\count407
+\c@savedorigpublisher=\count408
+\c@publisher=\count409
+\c@savedpublisher=\count410
+\c@language=\count411
+\c@savedlanguage=\count412
+\c@origlanguage=\count413
+\c@savedoriglanguage=\count414
+\c@citation=\count415
+\c@savedcitation=\count416
+\c@pageref=\count417
+\c@savedpageref=\count418
+\shorthandwidth=\skip77
+\shortjournalwidth=\skip78
+\shortserieswidth=\skip79
+\shorttitlewidth=\skip80
+\shortauthorwidth=\skip81
+\shorteditorwidth=\skip82
+\locallabelnumberwidth=\skip83
+\locallabelalphawidth=\skip84
+\localshorthandwidth=\skip85
+\localshortjournalwidth=\skip86
+\localshortserieswidth=\skip87
+\localshorttitlewidth=\skip88
+\localshortauthorwidth=\skip89
+\localshorteditorwidth=\skip90
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count419
+\c@textcitetotal=\count420
+\c@textcitemaxnames=\count421
+\c@biburlbigbreakpenalty=\count422
+\c@biburlbreakpenalty=\count423
+\c@biburlnumpenalty=\count424
+\c@biburlucpenalty=\count425
+\c@biburllcpenalty=\count426
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count427
+)
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex-apa\apa.bbx
+File: apa.bbx 2023/03/20 v9.17 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count428
+\c@bbx:relatedtotal=\count429
+)
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
+ed, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already d
+efined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already def
+ined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already
+ defined, overwriting.
+)
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex-apa\apa.cbx
+File: apa.cbx 2023/03/20 v9.17 APA biblatex citation style
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined
+, overwriting.
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:\Users\Tuan\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
 (C:\Users\Tuan\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
+\l__color_backend_stack_int=\count430
 \l__pdf_internal_box=\box55
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2024-01-04 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
+(C:\Users\Tuan\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
 )
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count431
+\@quotereset=\count432
 (ersteversion.aux)
 \openout1 = `ersteversion.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -501,16 +778,16 @@ LaTeX Font Info:    ... okay on input line 16.
 
 (C:\Users\Tuan\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
+\scratchcounter=\count433
 \scratchdimen=\dimen165
 \scratchbox=\box56
-\nofMPsegments=\count296
-\nofMParguments=\count297
+\nofMPsegments=\count434
+\nofMParguments=\count435
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count298
+\MPscratchCnt=\count436
 \MPscratchDim=\dimen166
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
+\MPnumerator=\count437
+\makeMPintoPDFobject=\count438
 \everyMPtoPDFconversion=\toks26
 ) (C:\Users\Tuan\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -529,11 +806,11 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 16.
+Package hyperref Info: Link coloring ON on input line 19.
  (ersteversion.out)
 (ersteversion.out)
-\@outlinefile=\write3
-\openout3 = `ersteversion.out'.
+\@outlinefile=\write4
+\openout4 = `ersteversion.out'.
 
 Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           Using `bookmark' together with `hyperref' is recommended,
@@ -542,15 +819,63 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 16.
+(scrreprt)           before \begin{document} on input line 19.
  (C:\Users\Tuan\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
 (C:\Users\Tuan\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
-\BKM@id=\count301
+\BKM@id=\count439
 ))
+Package biblatex Info: Trying to load language 'ngerman' -> 'ngerman-apa'...
+Package biblatex Info: ... file 'ngerman-apa.lbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex-apa\ngerman-apa.lbx
+File: ngerman-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
+File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german' -> 'german-apa'...
+Package biblatex Info: ... file 'german-apa.lbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex-apa\german-apa.lbx
+File: german-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)))
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
+File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german' -> 'german-apa'...
+Package biblatex Info: ... file 'german-apa.lbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex-apa\german-apa.lbx
+File: german-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(C:\Users\Tuan\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `ersteversion.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'ersteversion.bbl' not found.
+
+No file ersteversion.bbl.
+Package biblatex Info: Reference section=0 on input line 19.
+Package biblatex Info: Reference segment=0 on input line 19.
 
 Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 
@@ -593,12 +918,12 @@ Package geometry Warning: `portrait': not available in `\newgeometry'; skipped.
 <firmenlogo.jpg, id=3, 205.76875pt x 205.76875pt>
 File: firmenlogo.jpg Graphic file (type jpg)
 <use firmenlogo.jpg>
-Package pdftex.def Info: firmenlogo.jpg  used on input line 24.
+Package pdftex.def Info: firmenlogo.jpg  used on input line 27.
 (pdftex.def)             Requested size: 105.2751pt x 105.27348pt.
 <FHAC.jpg, id=4, 45.5301pt x 136.5903pt>
 File: FHAC.jpg Graphic file (type jpg)
 <use FHAC.jpg>
-Package pdftex.def Info: FHAC.jpg  used on input line 28.
+Package pdftex.def Info: FHAC.jpg  used on input line 31.
 (pdftex.def)             Requested size: 48.36958pt x 145.1164pt.
 [1
 
@@ -607,17 +932,17 @@ Package pdftex.def Info: FHAC.jpg  used on input line 28.
 
 {C:/Users/Tuan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./firmenlogo.
 jpg> <./FHAC.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
@@ -626,102 +951,102 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
 
 ] (ersteversion.toc)
-\tf@toc=\write4
-\openout4 = `ersteversion.toc'.
+\tf@toc=\write5
+\openout5 = `ersteversion.toc'.
 
  [3
 
 ]
 
 LaTeX Warning: Hyper reference `acro:gravitation' on page 4 undefined on input 
-line 107.
+line 110.
 
 
 LaTeX Warning: Hyper reference `acro:gravitation' on page 4 undefined on input 
-line 107.
+line 110.
 
 
-LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 108.
+LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 111.
 
 
 
-LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 108.
+LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 111.
 
 
 
 LaTeX Warning: Hyper reference `acro:nu_luft' on page 4 undefined on input line
- 109.
+ 112.
 
 
 LaTeX Warning: Hyper reference `acro:nu_luft' on page 4 undefined on input line
- 109.
+ 112.
 
 
-LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 110.
-
-
-
-LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 110.
+LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 113.
 
 
 
-LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 111.
-
-
-LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 111.
-
-
-LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 112.
+LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 113.
 
 
 
-LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 112.
+LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 114.
+
+
+LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 114.
+
+
+LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 115.
 
 
 
-LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
-e 113.
+LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 115.
+
 
 
 LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
-e 113.
+e 116.
+
+
+LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
+e 116.
 
 
 LaTeX Warning: Hyper reference `acro:temperatur' on page 4 undefined on input l
-ine 114.
+ine 117.
 
 
 LaTeX Warning: Hyper reference `acro:temperatur' on page 4 undefined on input l
-ine 114.
+ine 117.
 
 
 LaTeX Warning: Hyper reference `acro:umgebungstemperatur' on page 4 undefined o
-n input line 115.
+n input line 118.
 
 
 LaTeX Warning: Hyper reference `acro:umgebungstemperatur' on page 4 undefined o
-n input line 115.
+n input line 118.
 
 [4
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 123--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 
-Overfull \hbox (22.4159pt too wide) in paragraph at lines 123--128
+Overfull \hbox (22.4159pt too wide) in paragraph at lines 126--131
 \OT1/cmr/m/n/12 Daher be-fasst sich die-se Ar-beit mit dem The-ma, wie ei-ne we
 b-ba-sier-te Ap-pli-ka-ti-on zur Wertsch[]opfung
  []
@@ -733,12 +1058,12 @@ b-ba-sier-te Ap-pli-ka-ti-on zur Wertsch[]opfung
 ]
 chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
@@ -747,60 +1072,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
 ]
 chapter 2.
-<frog.jpg, id=91, 748.7975pt x 741.77126pt>
-File: frog.jpg Graphic file (type jpg)
-<use frog.jpg>
-Package pdftex.def Info: frog.jpg  used on input line 147.
-(pdftex.def)             Requested size: 120.92421pt x 119.78372pt.
 [7
 
- <./frog.jpg>]
+]
 
-LaTeX Warning: Citation `greenwade93' on page 8 undefined on input line 196.
+LaTeX Warning: Citation 'greenwade93' on page 8 undefined on input line 188.
 
-[8] [9]
+[8]
 chapter 3.
-<vaadin_architekture.jpg, id=125, 1939.245pt x 2055.68pt>
+<vaadin_architekture.jpg, id=117, 1939.245pt x 2055.68pt>
 File: vaadin_architekture.jpg Graphic file (type jpg)
 <use vaadin_architekture.jpg>
-Package pdftex.def Info: vaadin_architekture.jpg  used on input line 208.
+Package pdftex.def Info: vaadin_architekture.jpg  used on input line 200.
 (pdftex.def)             Requested size: 256.07582pt x 284.4997pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--211
+LaTeX Warning: Citation 'architecture21' on page 9 undefined on input line 201.
+
+
+
+LaTeX Warning: Citation 'architecture21' on page 9 undefined on input line 201.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--216
+Underfull \hbox (badness 10000) in paragraph at lines 205--208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--216
+Underfull \hbox (badness 10000) in paragraph at lines 205--208
 
  []
 
-[10
+[9
 
  <./vaadin_architekture.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 209--211
 
  []
 
 
-Overfull \hbox (21.47379pt too wide) in paragraph at lines 220--222
+LaTeX Warning: Citation 'deinhard24' on page 10 undefined on input line 213.
+
+
+Overfull \hbox (21.47379pt too wide) in paragraph at lines 212--214
 \OT1/cmr/m/n/12 Entwicklung ein-ge-setzt wird. Es au-to-ma-ti-siert Auf-ga-ben 
 wie das Her-un-ter-la-den von Abh[]angigkeiten,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--222
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 [11]
-No file ersteversion.bbl.
-[12] (ersteversion.aux)
+<liquibase.png, id=136, 317.38576pt x 58.41824pt>
+File: liquibase.png Graphic file (type png)
+<use liquibase.png>
+Package pdftex.def Info: liquibase.png  used on input line 240.
+(pdftex.def)             Requested size: 312.98761pt x 56.9054pt.
+<postgresql.png, id=138, 425.1885pt x 63.23625pt>
+File: postgresql.png Graphic file (type png)
+<use postgresql.png>
+Package pdftex.def Info: postgresql.png  used on input line 248.
+(pdftex.def)             Requested size: 369.911pt x 56.9063pt.
+ [12 <./liquibase.png> <./postgresql.png>]
+<liquibase-changelog.png, id=150, 208.3785pt x 73.4745pt>
+File: liquibase-changelog.png Graphic file (type png)
+<use liquibase-changelog.png>
+Package pdftex.def Info: liquibase-changelog.png  used on input line 267.
+(pdftex.def)             Requested size: 256.07826pt x 85.36386pt.
+
+
+LaTeX Warning: Empty bibliography on input line 273.
+
+[13 <./liquibase-changelog.png>] (ersteversion.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -809,17 +1164,28 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `ersteversion.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                ersteversion
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'ersteversion.run.xml'.
+\openout1 = `ersteversion.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 14879 strings out of 474486
- 258569 string characters out of 5755015
+ 22847 strings out of 474486
+ 418984 string characters out of 5755015
  1934542 words of memory out of 5000000
- 36935 multiletter control sequences out of 15000+600000
+ 44822 multiletter control sequences out of 15000+600000
  564983 words of font info for 60 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 108i,8n,107p,10936b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 1143 hyphenation exceptions out of 8191
+ 108i,8n,107p,10936b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Tuan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
 200.pk><C:/Users/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/User
 s/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tuan/MiKTeX/f
@@ -830,9 +1196,9 @@ rs/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tuan/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on ersteversion.pdf (12 pages, 537204 bytes).
+Output written on ersteversion.pdf (13 pages, 461888 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 296 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 

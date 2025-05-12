@@ -7,6 +7,9 @@
 \usepackage{graphicx}
 \usepackage[onehalfspacing]{setspace}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{references.bib}
+
 \newcommand{\dcplace}{Aachen}
 \newcommand{\dcdate}{04. Mai 2025}
 \newcommand{\dcauthorfirstname}{Max}
@@ -142,13 +145,6 @@ Die Hauptaufgabe dieser Arbeit besteht darin, ein Konzeption für die prototypis
 Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
 \subsection{How to add Tables}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.25\linewidth]{frog.jpg}
-\caption{\label{fig:frog}This frog was uploaded via the file-tree menu.}
-\end{figure}
-
-
 Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
 
 \begin{table}
@@ -174,10 +170,6 @@ You can make lists with automatic numbering \dots
 \item and like this.
 \end{enumerate}
 \dots or bullet points \dots
-\begin{itemize}
-\item Like this,
-\item and like this.
-\end{itemize}
 
 \section{How to write Mathematics}
 
@@ -206,7 +198,7 @@ Vaadin verfolgt einen serverseitigen Rendering-Ansatz. Während eine AJAX-basier
 \begin{figure}[h!]
 \centering
 \includegraphics[width=9cm, height=10cm]{vaadin_architekture.jpg}
-\caption{\label{vaadin:architektur}Übersicht \href{https://vaadin.com/docs/v8/framework/architecture/architecture-overview} {Vaadin Architektur}}
+\caption{\label{vaadin:architektur}Übersicht Vaadin Architektur \cite{architecture21}}
 \end{figure}
 
 \section{Spring Framework}
@@ -218,7 +210,7 @@ Mit dem Wachstum der Spring-Plattform nahm auch die Komplexität der Entwicklung
 Spring Boot wurde als Reaktion auf diese Anforderungen entwickelt. Es erleichtert die Erstellung von Spring-Anwendungen durch sinnvolle Standard-Einstellungen, Starter-Abhängigkeiten und produktionsreife Funktionen für Konfiguration und Überwachung. Durch die Einführung eingebetteter Servlet-Container wurde es möglich, Anwendungen als eigenständige, ausführbare JAR-Dateien zu verpacken. 
 \section{Maven}
 Maven ist ein Build-Management- und Projektverwaltungswerkzeug, das häufig in der Java-Entwicklung eingesetzt wird. Es automatisiert Aufgaben wie das Herunterladen von Abhängigkeiten, das Kompilieren von Quellcode und das Ausführen von Builds sowie Tests. Maven verwendet eine zentrale Konfigurationsdatei, die \texttt{pom.xml}, um alle Aspekte des Projekts wie Libraries, Plugins und Build-Prozesse zu steuern.\\ \\
-Die Funktionsweise von Maven baisert auf einem deklaravitven Ansatz. Das bedeutet, dass der Entwickler alle relevanten Informationen über das Projekt in einer zentralen Konfigurartionsdatei, der sogenannten \texttt{pom.xml}( Projekt Object Model) angibt, wie z.B. Abhängigkeiten, Build-Prozesse und Plugins.
+Die Funktionsweise von Maven baisert auf einem deklaravitven Ansatz. Das bedeutet, dass der Entwickler alle relevanten Informationen über das Projekt in einer zentralen Konfigurartionsdatei, der sogenannten \texttt{pom.xml}( Projekt Object Model) angibt, wie z.B. Abhängigkeiten, Build-Prozesse und Plugins : \cite{deinhard24}.
 \section*{\small \textbf{1. Die pom.xml-Datei (Project Object Model)}}
 Die \texttt{pom.xml} ist das Herzstück eines Maven-Projekts. Sie enthält Informationen wie:
 \begin{itemize}
@@ -238,6 +230,46 @@ Maven besitzt einen vordefinierten Build-Lifecycle, der aus mehreren Phasen best
 \item install: Installiert das Paket in das lokale Maven-Repository, damit es in anderen Projekten verwendet werden kann.
 \end{itemize}
 
-\bibliographystyle{alpha}
-\bibliography{sample}
+\section{Vaadin Initializer als Einstieg}
+Gegenüber dem üblichen \href{https://start.spring.io/} {Spring Initializer}, der ein vorkonfiguriertes Spring-Projekt bereitstellt, bietet der \href{https://start.vaadin.com/app/p} {Vaadin Initializer} den Vorteil, dass er speziell auf Vaadin-Projekte zugeschnitten ist und eine vereinfachte und schnellere Projektgenerierung ermöglicht, insbessondere wenn man Spring Boot als Backend verwendet.\\ \\ Mit dem Vaadin Initializer kann man direkt ein Vaadin Flow-basiertes Projekt mit einem Spring Boot-Backend erstellen, während man mit dem Spring Initializer ein allgemeines Spring Boot-Projekt generiert und dann manuell die Vaadin-Abhängigkeiten hinzufügen muss.
+
+\section{Liquibase}
+Dank Versionsverwaltung wie Git kann man in den meisten Projekten den Weg einer Code-Änderung von der der Entwicklung über Test bis hin zum produktiven Deployment richtig verfolgen und nachvollziehen. Was für den Code gilt, sollte auch für die Datenbankanpassungen gelten. Liquibase ist eine Bibliothek um Änderungen an einem Datenbankschema verfolgen, verwalten und anweden zu können. Mit folgendem Eintrag in \texttt{pom.xml} kann man in ein Spring-Projekt integrieren.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=11cm, height=2cm]{liquibase.png}
+\caption{\label{liquibase:dependency} Liquibase-Dependency}
+\end{figure}
+
+Für die Speicherung der Daten wird die PostgreSQL-Datenbank entschieden. PostgreSQL selbst eine leistungsstarke, offene Datenbank, die kompatibel zu Liquibase passt. Die Aktivierung der Datenbank wird in der Datei \texttt{application.properties} innerhalb der Spring-Applikation wie folgt konfiguriert:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm, height=2cm]{postgresql.png}
+\caption{\label{datenbank:konfiguration} Datenbank-Konfiguration}
+\end{figure}
+
+Für die Verwendung von Liquibase sind folgende Dateien notwendig:
+\section*{\small \textbf{1. Liquibase Konfiguration - liquibase.properties}}
+In dieser Datei werden allgemeine Einstellungen wie der Datenbankzugang und die zu verwendenden Changelog-Konfiguration festgelegt:
+\section*{\small \textbf{2. Changelog Konfiguration - changelog-root.xml}}
+Ein so genannter Root-ChangeLog wird erstellt, welcher in XML geschrieben ist und eine output-changelog.xml inkludiert, welche im Ordner ,,versions'' zu finden ist. Diese Datei folgt einer Empfehlung der Liquibase-Dokumentation. 
+
+\section*{\small \textbf{2. Changelog Konfiguration - output-changelog.xml}}
+Diese Datei enthält sämtliche Datenbanksänderungen und die Änderungen werden in Form von ChangeSet beschrieben.
+
+\section*{\small \textbf{2. Changelog Konfiguration - liquibase-new-diff-changelog.xml}}
+Diese Datei enthält nur bestimmte Änderungen von bestimmten Tabellen wenn man das Schema der Datenbank modifiziert. Wie in out-changelog.xml werden Änderungen auch in Form von ChangeSet beschrieben.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=9cm, height=3cm]{liquibase-changelog.png}
+\caption{\label{datenbank:konfiguration} Liquibase-Konfiguration}
+\end{figure}
+
+
+
+\printbibliography
+
 \end{document}
