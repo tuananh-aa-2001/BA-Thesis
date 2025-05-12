@@ -9,13 +9,57 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{references.bib}
-
 \newcommand{\dcplace}{Aachen}
 \newcommand{\dcdate}{04. Mai 2025}
 \newcommand{\dcauthorfirstname}{Max}
 \newcommand{\dcauthorlastname}{Mustermann}
 
-
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{bggray}{gray}{0.95}
+\definecolor{codeblue}{rgb}{0.1, 0.1, 0.8}
+\definecolor{codered}{rgb}{0.8, 0.1, 0.1}
+\definecolor{codegreen}{rgb}{0.1, 0.6, 0.1}
+\definecolor{codeorange}{rgb}{0.9, 0.5, 0.1}
+\lstset{
+    basicstyle=\ttfamily\small\color{codeblue},
+    backgroundcolor=\color{bggray},
+    keywordstyle=\color{codered}\bfseries,
+    stringstyle=\color{codegreen}, 
+    commentstyle=\color{gray}\itshape, 
+    breaklines=true, 
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstdefinelanguage{properties}{
+    morecomment=[l]{\#},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    basicstyle=\ttfamily\small\color{codeblue},
+    keywordstyle=\color{codeorange}\bfseries,
+    commentstyle=\color{codegreen}\itshape,
+    backgroundcolor=\color{bggray},
+    breaklines=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstdefinelanguage{POM}{
+    language=XML,
+    basicstyle=\ttfamily\small\color{codeblue},
+    keywordstyle=\color{codeorange}\bfseries,
+    stringstyle=\color{codegreen},
+    backgroundcolor=\color{bggray},
+    morekeywords={dependency, groupId, artifactId, version, dependencies},
+    breaklines=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
 \begin{document}
 \begin{titlepage}
 	%ab hier kleinere Raender, mehr bedruckbare Flaeche.
@@ -107,7 +151,7 @@ Aachen, den \today \hspace{4cm} \dotfill
 \begin{acronym}[YTM]
 \setlength{\itemsep}{-\parsep}
 
-\acro{gravitation}[$g$]{\hspace{1cm}Gravitation in Nähe der Erdoberfläche}
+\acro{REST-API}{\hspace{1cm}Representational State Transfer Application Program Interface}
 \acro{Nu}[$Nu$]{\hspace{1cm}Nußelt-Zahl}
 \acro{nu_luft}[$\nu_{Luft}$]{\hspace{1cm}Kinematische Viskosität von Luft}
 \acro{Pr}[$Pr$]{\hspace{1cm}Prandtl-Zahl}
@@ -137,59 +181,6 @@ Momentan besteht es Bedarf für ein zentrales System zur automatisierten Suche u
 
 \section{Ziel der Arbeit}
 Die Hauptaufgabe dieser Arbeit besteht darin, ein Konzeption für die prototypische Entwicklung einer webbasierten Applikation zu erstellen und umzusetzen. Die Ziele der Applikation enthalten eine übergreifende Suche von Geodaten und deren Umformatierung in ein passendes vorgegebenes Zielformat. Das weitere Zeil ist die Einbindung von mindenstens einer OGC-Geodatendiensten.\\ \\ Durch die Umsetzungen dieser Ziele soll perspektivisch eine Software entstehen, die die offenen Problematik abdeckt.
-
-\chapter{Some examples to get started}
-\section{How to create Sections and Subsections}
-
-\section{How to include Figures}
-Note that your figure will automatically be placed in the most appropriate place for it, given the surrounding text and taking into account other figures or tables that may be close by. You can find out more about adding images to your documents in this help article on \href{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}{including images on Overleaf}.
-\subsection{How to add Tables}
-
-Use the table and tabular environments for basic tables --- see Table~\ref{tab:widgets}, for example. For more information, please see this help article on \href{https://www.overleaf.com/learn/latex/tables}{tables}. 
-
-\begin{table}
-\centering
-\begin{tabular}{l|r}
-Item & Quantity \\\hline
-Widgets & 42 \\
-Gadgets & 13
-\end{tabular}
-\caption{\label{tab:widgets}An example table.}
-\end{table}
-
-\section{How to add Comments and Track Changes}
-
-Track changes are available on all our \href{https://www.overleaf.com/user/subscription/plans}{premium plans}, and can be toggled on or off using the option at the top of the Review pane. Track changes allow you to keep track of every change made to the document, along with the person making the change. 
-
-\section{How to add Lists}
-
-You can make lists with automatic numbering \dots
-
-\begin{enumerate}
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or bullet points \dots
-
-\section{How to write Mathematics}
-
-\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i\]
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
-
-\section{How to change the margins and paper size}
-If however you're using a more general template, such as this one, and would like to alter the margins, a common way to do so is via the geometry package. You can find the geometry package loaded in the preamble at the top of this example file, and if you'd like to learn more about how to adjust the settings, please visit this help article on \href{https://www.overleaf.com/learn/latex/page_size_and_margins}{page size and margins}.
-
-\section{How to change the document language and spell check settings}
-\href{https://www.overleaf.com/learn/latex/International_language_support}{international language support}.
-
-\section{How to add Citations and a References List}
-You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
-If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
-
-\section{Good luck!}
-We hope you find Overleaf useful, and do take a look at our \href{https://www.overleaf.com/learn}{help library} for more tutorials and user guides! Please also let us know if you have any feedback using the Contact Us link at the bottom of the Overleaf menu --- or use the contact form at \url{https://www.overleaf.com/contact}.
 
 \chapter{Übersicht von Technologien}
 \section{Vaadin}
@@ -235,41 +226,98 @@ Gegenüber dem üblichen \href{https://start.spring.io/} {Spring Initializer}, d
 
 \section{Liquibase}
 Dank Versionsverwaltung wie Git kann man in den meisten Projekten den Weg einer Code-Änderung von der der Entwicklung über Test bis hin zum produktiven Deployment richtig verfolgen und nachvollziehen. Was für den Code gilt, sollte auch für die Datenbankanpassungen gelten. Liquibase ist eine Bibliothek um Änderungen an einem Datenbankschema verfolgen, verwalten und anweden zu können. Mit folgendem Eintrag in \texttt{pom.xml} kann man in ein Spring-Projekt integrieren.
-\begin{figure}[h!]
-\centering
-\includegraphics[width=11cm, height=2cm]{liquibase.png}
-\caption{\label{liquibase:dependency} Liquibase-Dependency}
-\end{figure}
-
+\vspace{1.0cm}
+\begin{lstlisting}[language=POM]
+<dependency>
+    <groupId>org.liquibase</groupId>
+    <artifactId>liquibase-core</artifactId>
+    <version>4.23.1</version>
+</dependency>
+\end{lstlisting}
+\vspace{1.0cm}
 Für die Speicherung der Daten wird die PostgreSQL-Datenbank entschieden. PostgreSQL selbst eine leistungsstarke, offene Datenbank, die kompatibel zu Liquibase passt. Die Aktivierung der Datenbank wird in der Datei \texttt{application.properties} innerhalb der Spring-Applikation wie folgt konfiguriert:
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm, height=2cm]{postgresql.png}
-\caption{\label{datenbank:konfiguration} Datenbank-Konfiguration}
-\end{figure}
-
+\vspace{1.0cm}
+\begin{lstlisting}[language=properties]
+spring.datasource.url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.username=opendataconn_ng_usr
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.liquibase.change-log=classpath:/db/changelog-root.xml
+\end{lstlisting}
+\vspace{1.0cm}
 Für die Verwendung von Liquibase sind folgende Dateien notwendig:
-\section*{\small \textbf{1. Liquibase Konfiguration - liquibase.properties}}
-In dieser Datei werden allgemeine Einstellungen wie der Datenbankzugang und die zu verwendenden Changelog-Konfiguration festgelegt:
-\section*{\small \textbf{2. Changelog Konfiguration - changelog-root.xml}}
-Ein so genannter Root-ChangeLog wird erstellt, welcher in XML geschrieben ist und eine output-changelog.xml inkludiert, welche im Ordner ,,versions'' zu finden ist. Diese Datei folgt einer Empfehlung der Liquibase-Dokumentation. 
-
-\section*{\small \textbf{2. Changelog Konfiguration - output-changelog.xml}}
-Diese Datei enthält sämtliche Datenbanksänderungen und die Änderungen werden in Form von ChangeSet beschrieben.
-
-\section*{\small \textbf{2. Changelog Konfiguration - liquibase-new-diff-changelog.xml}}
-Diese Datei enthält nur bestimmte Änderungen von bestimmten Tabellen wenn man das Schema der Datenbank modifiziert. Wie in out-changelog.xml werden Änderungen auch in Form von ChangeSet beschrieben.
-
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=9cm, height=3cm]{liquibase-changelog.png}
 \caption{\label{datenbank:konfiguration} Liquibase-Konfiguration}
 \end{figure}
+\section*{\small \textbf{1. Liquibase Konfiguration - liquibase.properties}}
+In dieser Datei werden allgemeine Einstellungen wie der Datenbankzugang und die zu verwendenden Changelog-Konfiguration festgelegt.
+\vspace{1.0cm}
+\begin{lstlisting}[language=properties]
+# Database Configuration
+url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
+username=opendataconn_ng_usr
+password=
+driver=org.postgresql.Driver
+
+# Reference Configuration
+referenceUrl=hibernate:spring:de.ahu.opendata?dialect=org.hibernate.dialect.PostgreSQLDialect
+referenceDriver=liquibase.ext.hibernate.database.connection.HibernateDriver
+
+# Output Files
+changeLogFile=src/main/resources/db/changelog-root.xml
+diffChangeLogFile=src/main/resources/db/liquibase-new-diff-changelog.xml
+outputChangeLogFile=src/main/resources/db/versions/output-changelog.xml
+\end{lstlisting}
+\section*{\small \textbf{2. Changelog Konfiguration - changelog-root.xml}}
+Ein so genannter Root-ChangeLog wird erstellt, welcher in XML geschrieben ist und eine output-changelog.xml inkludiert, welche im Ordner ,,versions'' zu finden ist. Diese Datei sorgt dafür, dass Liquibase das ChangeSet findet.
+\vspace{1.0cm}
+\begin{lstlisting}
+<?xml version="1.0" encoding="UTF-8"?>   
+<databaseChangeLog
+   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd
+      http://www.liquibase.org/xml/ns/pro 
+      http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.23.xsd">  
+    <includeAll path="db/versions"/>  
+</databaseChangeLog>
+\end{lstlisting}
+
+\section*{\small \textbf{3. Changelog Konfiguration - output-changelog.xml}}
+Diese Datei enthält sämtliche Datenbankänderungen und die Änderungen werden in Form von ChangeSet beschrieben und verwaltet.Im Folgnden ist ein Abschniit im XML-Format für das Anlagen einer Tabelle Abonnement wiedergegeben. \\ 
+\begin{lstlisting}
+<changeSet author="ng (generated)" id="1743435452264-1">
+    <createTable tableName="abonnement">
+        <column name="id" type="VARCHAR(32)">
+            <constraints nullable="false" primaryKey="true" primaryKeyName="abonnementPK" />
+        </column>
+        <column name="description" type="TEXT" />
+        <column name="label" type="VARCHAR(255)">
+            <constraints nullable="false" />
+        </column>
+        <column name="base_url" type="VARCHAR(255)" />
+        <column name="file_format" type="VARCHAR(255)" />
+        <column name="end_datum" type="date" />
+        <column name="location_id" type="VARCHAR(255)" />
+        <column name="parameter" type="VARCHAR(255)" />
+        <column name="start_datum" type="date" />
+        <column name="sub_url" type="VARCHAR(255)" />
+    </createTable>
+</changeSet>
+\end{lstlisting}
+\section*{\small \textbf{4. Changelog Konfiguration - liquibase-new-diff-changelog.xml}}
+Diese Datei enthält nur bestimmte Änderungen von bestimmten Tabellen, die man in die Datei \texttt{output-changelog.xml} einfügt, wenn man das Schema der Datenbank modifiziert. Änhlich wie in \texttt{output-changelog.xml} werden Änderungen auch in Form von ChangeSet beschrieben.
+
+
+\chapter{Anwendungsarchitektur}
+
 
 
 
 \printbibliography
-
 \end{document}
