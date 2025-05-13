@@ -1,10 +1,14 @@
 \documentclass[a4paper,12pt]{scrreprt}
 \usepackage[ngerman]{babel}
-\usepackage[a4paper]{geometry}
-\geometry{a4paper,total={170mm,257mm},left=20mm,top=15mm}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{acronym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
 \usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{kpfonts}
 \usepackage[onehalfspacing]{setspace}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[backend=biber,style=apa]{biblatex}
@@ -13,6 +17,14 @@
 \newcommand{\dcdate}{04. Mai 2025}
 \newcommand{\dcauthorfirstname}{Max}
 \newcommand{\dcauthorlastname}{Mustermann}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}} % Kapitelname in normaler Schrift
+\fancyhead[R]{} 
+\setlength{\parindent}{0pt}
+\fancyfoot[C]{\thepage} 
 
 \usepackage{listings}
 \usepackage{xcolor}
@@ -60,6 +72,8 @@
     showtabs=false,
     tabsize=2
 }
+
+
 \begin{document}
 \begin{titlepage}
 	%ab hier kleinere Raender, mehr bedruckbare Flaeche.
@@ -182,15 +196,33 @@ Momentan besteht es Bedarf für ein zentrales System zur automatisierten Suche u
 \section{Ziel der Arbeit}
 Die Hauptaufgabe dieser Arbeit besteht darin, ein Konzeption für die prototypische Entwicklung einer webbasierten Applikation zu erstellen und umzusetzen. Die Ziele der Applikation enthalten eine übergreifende Suche von Geodaten und deren Umformatierung in ein passendes vorgegebenes Zielformat. Das weitere Zeil ist die Einbindung von mindenstens einer OGC-Geodatendiensten.\\ \\ Durch die Umsetzungen dieser Ziele soll perspektivisch eine Software entstehen, die die offenen Problematik abdeckt.
 
+\section{Aufbau der Arbeit}
+\section*{\small \textbf{Kapitel 1: Einleitung}}
+Im ertsten Kapitel werden die Motivation und Zwecke für diese Arbeit erklärt. Es wird kurz auf die Problematik des gewählten Themas eingegangen und dieses perspektivisch für die Firma auch Vorteile bringt.
+
+\section*{\small \textbf{Kapitel 2: Übersicht von Technologien}}
+In diesem Kapitel werden wichtige Begriffe und in der Entwicklungsphase verwendete Technologien vorgestellt. Von der Bibliothek zur Verfolgung der Datenbankänderungen über das Backend-Framework bis hin zu in der Benutzeroberfläche verwendetem UI-Framework.   
+\section*{\small \textbf{Kapitel 3: Anforderungsanalyse}}
+Diese Kapitel 
+\section*{\small \textbf{Kapitel 4: Konzeption}}
+Dieses Kapitel erläutert die angewandete Architektur des Prototypens anhand von unterschiedlichen Sichten.
+\section*{\small \textbf{Kapitel 5: Implementierung}}
+Anhand zahlreichen Code-Beispiele und technischen Erläuterungen wird die wirkliche Implementierung nochmal veranschaulicht. 
+\section*{\small \textbf{Kapitel 6: Evaluierung}}
+Das vorletzte Kapitel bewertet, inwiefern die vom Anfang festgelegte und erarbeitete Anforderungen erfüllt wurde. 
+\section*{\small \textbf{Kapitel 7: Fazit und Ausblick für weitere Entwicklung}}
+Abschließend wird noch einmal die gesamte Arbeit zusammenfassend bewertet und ein kurzer Ausblick für weiteren Entwicklungen oder Verbesserungen in der Zukunft gegegeben.
+
 \chapter{Übersicht von Technologien}
 \section{Vaadin}
-Vaadin ist ein serverseitiges Web-Framework, das dem Entwickler erlaubt, moderne Webanwendung in Java zu entwicklen, ohne dass explizit HTML,CSS oder JavaScript geschrieben werden muss. Vaddin verfügt über eine große Komponentenbibliothek, die eine Vielzahl an vorgefertigten UI-Elementen wie Buttons, Tabellen, Formulare, Dialoge und Layouts bietet. \\ \\
-Vaadin verfolgt einen serverseitigen Rendering-Ansatz. Während eine AJAX-basierte Vaadin Client-Side Engine dafür sorgt, dass die Benutzeroberfläche im Browser durch ein Widget-Set gerendert wird. Die Benutzeroberfläche kann aus eingebauten Komponenten, Add-Ons und benutzerdefinierten Komponenten bestehen. Diese Client-Side Engine kommuniziert über HTTP oder WebSockets mit dem Server. Die gesamte UI-Logik wird dann auf dem Server ausgeführt. Die Vaadin Servlet empfängt Client-Anfragen und aktualisiert die Benutzeroberfläche. Die UI-Komponenten werden serverseitig erstellt und verwaltet. Änderungen in der UI werden durch die Vaddin Client-Side Engine an den Browser zurückgespielt.  
+Vaadin ist ein serverseitiges Web-Framework, das dem Entwickler erlaubt, moderne Webanwendung in Java zu entwicklen, ohne dass explizit HTML,CSS oder JavaScript geschrieben werden muss. Vaddin verfügt über eine große Komponentenbibliothek, die eine Vielzahl an vorgefertigten UI-Elementen wie Buttons, Tabellen, Formulare, Dialoge und Layouts bietet.
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=9cm, height=10cm]{vaadin_architekture.jpg}
 \caption{\label{vaadin:architektur}Übersicht Vaadin Architektur \cite{architecture21}}
 \end{figure}
+Vaadin verfolgt einen serverseitigen Rendering-Ansatz. Während eine AJAX-basierte Vaadin Client-Side Engine dafür sorgt, dass die Benutzeroberfläche im Browser durch ein Widget-Set gerendert wird. Die Benutzeroberfläche kann aus eingebauten Komponenten, Add-Ons und benutzerdefinierten Komponenten bestehen. Diese Client-Side Engine kommuniziert über HTTP oder WebSockets mit dem Server. Die gesamte UI-Logik wird dann auf dem Server ausgeführt. Die Vaadin Servlet empfängt Client-Anfragen und aktualisiert die Benutzeroberfläche. Die UI-Komponenten werden serverseitig erstellt und verwaltet. Änderungen in der UI werden durch die Vaddin Client-Side Engine an den Browser zurückgespielt.  
 
 \section{Spring Framework}
 Spring Framework ist ein Java-Framework, das um 2003 als Reaktion auf die damals noch zu komplizierte J2EE-Platform entwickelt wurde. Spring ermöglicht eine einfachere und unkompliziertere Entwicklung von Enterprise-Applikation in Java. Eines der wichtigsten Konzepte von Spring war die Inversion of Control (IoC).
@@ -221,12 +253,11 @@ Maven besitzt einen vordefinierten Build-Lifecycle, der aus mehreren Phasen best
 \item install: Installiert das Paket in das lokale Maven-Repository, damit es in anderen Projekten verwendet werden kann.
 \end{itemize}
 
-\section{Vaadin Initializer als Einstieg}
+\section{Vaadin Initializer}
 Gegenüber dem üblichen \href{https://start.spring.io/} {Spring Initializer}, der ein vorkonfiguriertes Spring-Projekt bereitstellt, bietet der \href{https://start.vaadin.com/app/p} {Vaadin Initializer} den Vorteil, dass er speziell auf Vaadin-Projekte zugeschnitten ist und eine vereinfachte und schnellere Projektgenerierung ermöglicht, insbessondere wenn man Spring Boot als Backend verwendet.\\ \\ Mit dem Vaadin Initializer kann man direkt ein Vaadin Flow-basiertes Projekt mit einem Spring Boot-Backend erstellen, während man mit dem Spring Initializer ein allgemeines Spring Boot-Projekt generiert und dann manuell die Vaadin-Abhängigkeiten hinzufügen muss.
 
 \section{Liquibase}
 Dank Versionsverwaltung wie Git kann man in den meisten Projekten den Weg einer Code-Änderung von der der Entwicklung über Test bis hin zum produktiven Deployment richtig verfolgen und nachvollziehen. Was für den Code gilt, sollte auch für die Datenbankanpassungen gelten. Liquibase ist eine Bibliothek um Änderungen an einem Datenbankschema verfolgen, verwalten und anweden zu können. Mit folgendem Eintrag in \texttt{pom.xml} kann man in ein Spring-Projekt integrieren.
-\vspace{1.0cm}
 \begin{lstlisting}[language=POM]
 <dependency>
     <groupId>org.liquibase</groupId>
@@ -234,9 +265,7 @@ Dank Versionsverwaltung wie Git kann man in den meisten Projekten den Weg einer 
     <version>4.23.1</version>
 </dependency>
 \end{lstlisting}
-\vspace{1.0cm}
 Für die Speicherung der Daten wird die PostgreSQL-Datenbank entschieden. PostgreSQL selbst eine leistungsstarke, offene Datenbank, die kompatibel zu Liquibase passt. Die Aktivierung der Datenbank wird in der Datei \texttt{application.properties} innerhalb der Spring-Applikation wie folgt konfiguriert:
-\vspace{1.0cm}
 \begin{lstlisting}[language=properties]
 spring.datasource.url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
 spring.datasource.driver-class-name=org.postgresql.Driver
@@ -245,7 +274,6 @@ spring.datasource.password=
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 spring.liquibase.change-log=classpath:/db/changelog-root.xml
 \end{lstlisting}
-\vspace{1.0cm}
 Für die Verwendung von Liquibase sind folgende Dateien notwendig:
 \begin{figure}[h!]
 \centering
@@ -254,7 +282,6 @@ Für die Verwendung von Liquibase sind folgende Dateien notwendig:
 \end{figure}
 \section*{\small \textbf{1. Liquibase Konfiguration - liquibase.properties}}
 In dieser Datei werden allgemeine Einstellungen wie der Datenbankzugang und die zu verwendenden Changelog-Konfiguration festgelegt.
-\vspace{1.0cm}
 \begin{lstlisting}[language=properties]
 # Database Configuration
 url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
@@ -273,7 +300,6 @@ outputChangeLogFile=src/main/resources/db/versions/output-changelog.xml
 \end{lstlisting}
 \section*{\small \textbf{2. Changelog Konfiguration - changelog-root.xml}}
 Ein so genannter Root-ChangeLog wird erstellt, welcher in XML geschrieben ist und eine output-changelog.xml inkludiert, welche im Ordner ,,versions'' zu finden ist. Diese Datei sorgt dafür, dass Liquibase das ChangeSet findet.
-\vspace{1.0cm}
 \begin{lstlisting}
 <?xml version="1.0" encoding="UTF-8"?>   
 <databaseChangeLog
