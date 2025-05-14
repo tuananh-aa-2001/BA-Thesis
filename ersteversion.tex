@@ -194,7 +194,7 @@ Diese Bachelorarbeit wird in Zusammenarbeit mit dem Bereich Geomatik der Ahu Gmb
 Momentan besteht es Bedarf für ein zentrales System zur automatisierten Suche und Verwaltung der Geodaten aus verschiedenen Datenanbietern und diese Daten in einer homogen Struktur zusammenzubringen und einen vorhandenen Client(z.B ahuManager) bereitzustellen. Unter anderem  wird auch die Einbindung von OGC-Geodatendiensten für besseren und effizienten Prozess zur Durchsuche und Verwaltung gesorgt. 
 
 \section{Ziel der Arbeit}
-Die Hauptaufgabe dieser Arbeit besteht darin, ein Konzeption für die prototypische Entwicklung einer webbasierten Applikation zu erstellen und umzusetzen. Die Ziele der Applikation enthalten eine übergreifende Suche von Geodaten und deren Umformatierung in ein passendes vorgegebenes Zielformat. Das weitere Zeil ist die Einbindung von mindenstens einer OGC-Geodatendiensten.\\ \\ Durch die Umsetzungen dieser Ziele soll perspektivisch eine Software entstehen, die die offenen Problematik abdeckt.
+Die Hauptaufgabe dieser Arbeit besteht darin, ein Konzeption für die prototypische Entwicklung einer webbasierten Applikation zu erstellen und umzusetzen. Die Ziele der Applikation enthalten eine übergreifende Suche von Geodaten und deren Umformatierung in ein passendes vorgegebenes Zielformat. Das weitere Zeil ist die Einbindung von mindenstens einer OGC-Geodatendiensten.\\ \\ Durch die Umsetzungen dieser Ziele soll perspektivisch eine Software entstehen, die die offene Problematik eine mögliche Lösung anbietet.
 
 \section{Aufbau der Arbeit}
 \section*{\small \textbf{Kapitel 1: Einleitung}}
@@ -202,16 +202,16 @@ Im ertsten Kapitel werden die Motivation und Zwecke für diese Arbeit erklärt. 
 
 \section*{\small \textbf{Kapitel 2: Übersicht von Technologien}}
 In diesem Kapitel werden wichtige Begriffe und in der Entwicklungsphase verwendete Technologien vorgestellt. Von der Bibliothek zur Verfolgung der Datenbankänderungen über das Backend-Framework bis hin zu in der Benutzeroberfläche verwendetem UI-Framework.   
-\section*{\small \textbf{Kapitel 3: Anforderungsanalyse}}
+\section*{\small \textbf{Kapitel 3: Anforderungsanalyse und Spezifikation}}
 Diese Kapitel 
-\section*{\small \textbf{Kapitel 4: Konzeption}}
+\section*{\small \textbf{Kapitel 4: Konzeption und Architektur}}
 Dieses Kapitel erläutert die angewandete Architektur des Prototypens anhand von unterschiedlichen Sichten.
 \section*{\small \textbf{Kapitel 5: Implementierung}}
 Anhand zahlreichen Code-Beispiele und technischen Erläuterungen wird die wirkliche Implementierung nochmal veranschaulicht. 
 \section*{\small \textbf{Kapitel 6: Evaluierung}}
 Das vorletzte Kapitel bewertet, inwiefern die vom Anfang festgelegte und erarbeitete Anforderungen erfüllt wurde. 
 \section*{\small \textbf{Kapitel 7: Fazit und Ausblick für weitere Entwicklung}}
-Abschließend wird noch einmal die gesamte Arbeit zusammenfassend bewertet und ein kurzer Ausblick für weiteren Entwicklungen oder Verbesserungen in der Zukunft gegegeben.
+Abschließend wird noch einmal die gesamte Arbeit zusammenfassend bewertet und ein kurzer Ausblick für weiteren Entwicklungen oder Verbesserungen in der Zukunft gegeben.
 
 \chapter{Übersicht von Technologien}
 \section{Vaadin}
@@ -288,11 +288,9 @@ url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
 username=opendataconn_ng_usr
 password=
 driver=org.postgresql.Driver
-
 # Reference Configuration
 referenceUrl=hibernate:spring:de.ahu.opendata?dialect=org.hibernate.dialect.PostgreSQLDialect
 referenceDriver=liquibase.ext.hibernate.database.connection.HibernateDriver
-
 # Output Files
 changeLogFile=src/main/resources/db/changelog-root.xml
 diffChangeLogFile=src/main/resources/db/liquibase-new-diff-changelog.xml
@@ -313,7 +311,6 @@ Ein so genannter Root-ChangeLog wird erstellt, welcher in XML geschrieben ist un
     <includeAll path="db/versions"/>  
 </databaseChangeLog>
 \end{lstlisting}
-
 \section*{\small \textbf{3. Changelog Konfiguration - output-changelog.xml}}
 Diese Datei enthält sämtliche Datenbankänderungen und die Änderungen werden in Form von ChangeSet beschrieben und verwaltet.Im Folgnden ist ein Abschniit im XML-Format für das Anlagen einer Tabelle Abonnement wiedergegeben. \\ 
 \begin{lstlisting}
@@ -339,11 +336,46 @@ Diese Datei enthält sämtliche Datenbankänderungen und die Änderungen werden 
 \section*{\small \textbf{4. Changelog Konfiguration - liquibase-new-diff-changelog.xml}}
 Diese Datei enthält nur bestimmte Änderungen von bestimmten Tabellen, die man in die Datei \texttt{output-changelog.xml} einfügt, wenn man das Schema der Datenbank modifiziert. Änhlich wie in \texttt{output-changelog.xml} werden Änderungen auch in Form von ChangeSet beschrieben.
 
+\section{Datenbankmanagementsystem}
+Wie bereits in dem letzten Abschnitt offengelegt, wird ein PostgreSQL als das Datenbankmanagementsystem gewählt. 
+Da alle Datenbanken von Ahu GmbH zentral im lokaten Netzwerk liegen und die meisten Projekte PostgreSQL-Datenbank verwenden, ist es deswegen selbstständlich, dass für dieses Projekt auch eine PostgreSQL-Datenbank verwendet wird. \\
+Außerdem spricht der Einsatz einer PostgreSQL-Datenbank aufgrund ihrer zahlreichen Vorteile für sich.
+\begin{enumerate}
+\item Open-Source: geringe Kosten und hohe Flexibiltät und Innovation, die bei anderen Datenbanklösung nicht immer möglich sind. 
+\item Leistung und Skalierbarkeit : PostgreSQL unterstützt eine Vielzahl von Leistungsoptimierung und verfügt über eine hohe Lese-/Schreibgeschwindigkeit, insbesondere bei der Unterstützung von Geodaten.
+\item Fundierte Sprachunterstützung : Aufgrund seiner Kompatibilität und Unterstützung mehrerer Programmiersprachen ist PostgreSQL eine der flexibelsten Datenbanken für Entwickler. Python, JavaScript, C/C++, Java und weitere beliebte Programmiersprachen bieten ausgereifte Unterstützung für PostgreSQL.
+\end{enumerate}
 
-\chapter{Anwendungsarchitektur}
+\chapter{Anforderungsanalyse und Spezifikation }
+\section{Analyse}
+Während der Analysephase werden die \textbf{\textit{Stakeholder}} identifiziert und dern funktionale Anforderungen mittels \textbf{\textit{User Stories}} gesammelt.
+\subsection{Anwendungsszenario}
+Die zu entwickelnde Applikation soll als zentrale Stelle für die Durchsuche der Geodaten und Verwaltung der relevanten Geodaten dienen und ist auch in der Lage, diese Geodaten durch eine Schnittstelle einen anderen Client zur Verfügung stellen zu können.
+\subsection{Stakeholder}
+In der Softwareentwicklung sind Stakeholder Personen, Gruppen oder Organisation, die ein Interesse am Erfolg eines Softwareprojekts haben und von dessen Ergebnissen direkt oder indirekt beeinflusst werden.
 
+\subsection{User-Stories}
+Mittels User-Stories können funktionale Anforderungen der Stakholder erfasst werden.
+\begin{enumerate}
+\item Als Benutzer möchte ich in der Web-Oberfläche eine Übersicht über populäre Datenquellen sehen, die  relevante Geodaten bereitstellen.
+\item Als Benutzer möchte ich mithilfe von Schlagwörten nach OGC-Webservices durchsuchen und die entsprechenden Referenzen als Url-Links zu den Schlagwörten erhalten.
+\item Als Benutzer möchte ich gezielt nach Messdaten wie Grundwasserständen, Pegelständen, Niederschlag, etc. recherchieren und datei Informationen über das Datenformat und wesentliche Inhalte der Datensätze erhalten.
+\item Als Benuzter möchte ich Messdaten, die meist im CSV-Format oder individuell strukturierte ASCII-Dateien vorliegen, in ein passendes Zielformat konvertieren lassen.
+\item Als Benutzer möchte ich die Daten in Form einer List von DatenStreams angezeigt bekommen.
+\item Als Benutzer möchte ich in der Lage sein, bestimmte Datensätze abonnieren zu können.
+\item Als Benutzer möchte ich die gefundenen Geo - und Messdaten visuell auf einer Karte darstellen lassen.
+\end{enumerate}
 
+\section{Spezifikation}
+Mit den im letzten Abschnitt erhobenen User-Stories können nun die funktionalen Anforderung genauer spezifiziert werden. Dort werden Use-Cases genauer definiert.
 
+\chapter{Konzeption und Architektur}
+
+\chapter{Implementierung}
+
+\chapter{Evaluierung}
+
+\chapter{Fazit und Ausblick}
 
 \printbibliography
 \end{document}

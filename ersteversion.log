@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  13 MAY 2025 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  14 MAY 2025 08:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1635,16 +1635,44 @@ LaTeX Font Info:    Font shape `OT1/jkptt/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/jkptt/m/sl' tried instead on input line 286
 .
  [12 <./liquibase-changelog.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 [13] [14]
 chapter 3.
 
-LaTeX Warning: Empty bibliography on input line 348.
+Overfull \hbox (12.01006pt too wide) in paragraph at lines 362--363
+[]\OT1/jkp/m/n/12 Als Be-nut-zer m[]ochte ich ge-zielt nach Mess-da-ten wie Gru
+nd-was-serst[]anden, Pe-gelst[]anden,
+ []
 
 [15
+
+]
+Overfull \hbox (3.08212pt too wide) in paragraph at lines 365--366
+[]\OT1/jkp/m/n/12 Als Be-nut-zer m[]ochte ich in der La-ge sein, be-stimm-te Da
+-tens[]atze abon-nie-ren zu k[]onnen. 
+ []
+
+[16]
+chapter 4.
+[17
+
+]
+chapter 5.
+[18
+
+]
+chapter 6.
+[19
+
+]
+chapter 7.
+
+LaTeX Warning: Empty bibliography on input line 380.
+
+[20
 
 ] (ersteversion.aux)
  ***********
@@ -1667,24 +1695,25 @@ Package logreq Info: Writing requests to 'ersteversion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27224 strings out of 474486
- 476696 string characters out of 5755015
- 2092542 words of memory out of 5000000
- 49037 multiletter control sequences out of 15000+600000
- 588813 words of font info for 105 fonts, out of 8000000 for 9000
+ 27277 strings out of 474486
+ 477495 string characters out of 5755015
+ 2077542 words of memory out of 5000000
+ 49062 multiletter control sequences out of 15000+600000
+ 592291 words of font info for 111 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,13n,107p,10936b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/Tuan/M
-iKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/pu
-blic/kpfonts/jkpmn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpmn
-e.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/
-Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpssbne.pfb><C:/Users/Tuan/MiKTeX/fonts
-/type1/public/kpfonts/jkpsy.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfont
-s/jkpttbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-<C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on ersteversion.pdf (15 pages, 396873 bytes).
+<C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Users/Tuan/
+MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1
+/public/kpfonts/jkpmi.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpm
+n8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/T
+uan/MiKTeX/fonts/type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts
+/type1/public/kpfonts/jkpssbne.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpf
+onts/jkpsy.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.pfb><
+C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb><C:/Users/Tuan/Mi
+KTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
+Output written on ersteversion.pdf (20 pages, 419343 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
