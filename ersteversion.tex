@@ -348,7 +348,12 @@ Außerdem spricht der Einsatz einer PostgreSQL-Datenbank aufgrund ihrer zahlreic
 
 \chapter{Anforderungsanalyse und Spezifikation }
 \section{Analyse}
-Während der Analysephase werden die \textbf{\textit{Stakeholder}} identifiziert und dern funktionale Anforderungen mittels \textbf{\textit{User Stories}} gesammelt.
+Während der Analysephase werden die \textbf{\textit{Stakeholder}} identifiziert und deren Anforderungen mittels \textbf{\textit{User Stories}} gesammelt. Die Anforderungen können in drei verschiedenen Untergruppen eingeteilt werden, um die systematisch und spezifisch behandeln zu können.
+\begin{enumerate}
+\item Funktionale Anforderungen beschreiben die Funktionen, die eine ganze Anwendung oder auch nur eine von ihren Komponenten erfüllen soll. Eine Funktion besteht aus drei Schritten: Eingabe der Daten-Systemverhalten-Ausgabe der Daten. Sie kann die Daten berechnen und manipulieren, Geschäftsprozesse ausführen, Benutzerinteraktionen herstellen oder andere Aufgabe ausführen.
+\item Nicht-fuktionale Anforderungen beschreiben, wie das System es tut, während die funktionalen Anforderungen bestimmen, was das System tut. Darunter zählen die Leistungsstandards und Qualitätsmerkmale von Software, z.B. die Benutzerfreundlichkeit, Effektivität, Sicherheit, Skalierbarkeit usw.
+\item Randbedingungen sind Vorgaben, die den Lösungsraum einschränken und das Verhalten der Software beeinflussen.
+\end{enumerate}
 \subsection{Anwendungsszenario}
 Die zu entwickelnde Applikation soll als zentrale Stelle für die Durchsuche der Geodaten und Verwaltung der relevanten Geodaten dienen und ist auch in der Lage, diese Geodaten durch eine Schnittstelle einen anderen Client zur Verfügung stellen zu können.
 \subsection{Stakeholder}
@@ -368,6 +373,48 @@ Mittels User-Stories können funktionale Anforderungen der Stakholder erfasst we
 
 \section{Spezifikation}
 Mit den im letzten Abschnitt erhobenen User-Stories können nun die funktionalen Anforderung genauer spezifiziert werden. Dort werden Use-Cases genauer definiert.
+\subsection{Use-Cases}
+Einfach ausgedrückt wird mit einem Use-Case die nach außen sichtbare Interaktion eines Nutzers mit einem System dokumentiert. Dieser Nutzer kann entweder eine Person, eine Organisation oder ein anderes System sein.\\
+Für die prototypische Anwendung werden folgenden Use-Cases ausgearbeitet.
+\section*{\small \textbf{Use-Case 1: Historische Wetterdaten von Wetterdatendienst einsehen}}
+Akteur : Benutzer\\
+Ziel: Historische Wetterdaten einer bestimmten Messtation einsehen\\
+Vorbedingung: keine\\
+Nachbedingung: keine\\
+\underline{Ablauf}:
+\begin{enumerate}
+\item Benutzer navigiert zu der Historische Wetterdaten - Seite
+\item Am Anfang zeigt die Seite einige Dropdowns zur Durchsuche der Daten und eine Default-Karte, auf der noch keine Station zu sehen ist
+\item Benutzer wählt die gewünschte Auflösung aus (stündlich, täglich, monatlich, jährlich)
+\item Benutzer wählt dann die Hauptparameter aus und ein Dropdown für Unterparamter blendet sich ein.
+\item Benutzer wählt anschließend die Unterparamter aus.
+\item Das System reagiert auf den Wert von Unterparamter und zeigt sich eine deutschlandweite Karte, wo alle relevanten Messstationen zu dem ausgewählten Unterparamter zu sehen sind. 
+\item Weitere Dropdowns werden danach eingeblendet, entweder möchte Benutzer die Messstationen in einem bestimmten Bundesland sehen oder direkt eine gezielte Messstation auswählen
+\item Nach Auswahl einer Station wird die Station auf der Karte fokussiert und die Daten zur gewählten Station als Diagramm dargestellt. 
+\end{enumerate}
+
+\section*{\small \textbf{Use-Case 2: Wettervorhersagedaten von Wetterdatendienst einsehen}}
+Akteur : Benutzer\\
+Ziel:  Vorhersagedaten einer bestimmten Messtation einsehen\\
+Vorbedingung: keine\\
+Nachbedingung: keine\\
+\underline{Ablauf}:
+\begin{enumerate}
+\item Benutzer navigiert zu der Wettervorhersage - Seite
+\item Die Seite stellt bereits eine Tabelle mit verschiedenen Parameter zum Ansehen der Wetterdaten.
+\item Benutzer wählt eine Station aus dem Dropdown aus.
+\item Nach der Auswahl erscheint automatisch ein Button zur Überprüfung der Verfügbarkeit der Wetterdaten.
+\item Benutzer klickt auf dieses Button und wartet auf die Meldung des Systems.
+\item Das System überprüft all in der Grid befindliche Parameter,ob jeweiliger Parameter überhaupt Daten liefert. 
+\item Anhand des Status,ob es die Daten zu jeweiligen Parameter gibt, wird es in der Grid ein weitere Spalte zur Einsicht der Daten geben. 
+\item Benutzer klickt auf das Icon in der neu erscheinenden Spalte.
+\item Ein Fenster öffnet sich und stellt die Daten in Form eines Diagramm bereits. 
+\end{enumerate}
+
+
+\section*{\small \textbf{Use-Case 3:}}
+\section*{\small \textbf{Use-Case 4:}}
+
 
 \chapter{Konzeption und Architektur}
 
