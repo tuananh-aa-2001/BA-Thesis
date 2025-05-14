@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  14 MAY 2025 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  14 MAY 2025 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1287,12 +1287,12 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `ersteversion.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'ersteversion.bbl' not found.
-
-No file ersteversion.bbl.
+Package biblatex Info: ... file 'ersteversion.bbl' found.
+ (ersteversion.bbl)
 Package biblatex Info: Reference section=0 on input line 77.
 Package biblatex Info: Reference segment=0 on input line 77.
 \c@lstlisting=\count452
+
 
 Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 
@@ -1499,15 +1499,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--189
 ]
 chapter 1.
 
-Overfull \hbox (4.54805pt too wide) in paragraph at lines 193--195
-\OT1/jkp/m/n/12 ring-sys-te-me und Web-Anwedungen, die es Dienst-lei-tern, Be-t
-rei-bern und Auf-sichts-beh[]ordern
- []
-
-
-Overfull \hbox (27.2753pt too wide) in paragraph at lines 193--195
-\OT1/jkp/m/n/12 erm[]oglichen, ein kos-tenef-fi-zi-en-tes Ma-na-ge-ment f[]ur G
-eo-da-ten (Grund-wass-ser,Oberfl[]achenwasser,
+Overfull \hbox (1.84808pt too wide) in paragraph at lines 193--195
+\OT1/jkp/m/n/12 beh[]orden erm[]oglichen, ein kos-tenef-fi-zi-en-tes Ma-na-ge-m
+ent f[]ur Geo-da-ten(Grundwasser, Ober-
  []
 
 
@@ -1548,6 +1542,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
 Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
+ []
+
+
+Overfull \hbox (4.09209pt too wide) in paragraph at lines 232--234
+\OT1/jkp/m/n/12 fach Me-tho-de, um schlan-ke We-ban-wen-dun-gen zu er-stel-len,
+ die un-abh[]angig als ei-genst[]andige
  []
 
 
@@ -1593,9 +1593,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--237
  []
 
 
-Overfull \hbox (13.6321pt too wide) in paragraph at lines 235--237
-\OT1/jkp/m/n/12 ar-ti-ons-da-tei, der so-ge-nann-ten \OT1/jkptt/m/n/12 pom.xml\
-OT1/jkp/m/n/12 ( Pro-jekt Ob-ject Mo-del) an-gibt, wie z.B. Abh[]angigkeiten,
+Overfull \hbox (2.8441pt too wide) in paragraph at lines 235--237
+\OT1/jkp/m/n/12 ti-ons-da-tei, der so-ge-nann-ten \OT1/jkptt/m/n/12 pom.xml\OT1
+/jkp/m/n/12 ( Pro-jekt Ob-ject Mo-del) an-gibt, wie z.B. Abh[]angigkeiten,
  []
 
 [9]
@@ -1641,12 +1641,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
 [13] [14]
 chapter 3.
-
-Overfull \hbox (2.17084pt too wide) in paragraph at lines 354--355
-[]\OT1/jkp/m/n/12 Nicht-fuktionale An-for-de-run-gen be-schrei-ben, wie das Sys
--tem es tut, w[]ahrend die funk-
- []
-
 [15
 
 ]
@@ -1668,7 +1662,7 @@ r m[]ochte Be-nut-zer die Mess-
  []
 
 
-Overfull \hbox (6.54941pt too wide) in paragraph at lines 406--407
+Overfull \hbox (6.54941pt too wide) in paragraph at lines 405--406
 []\OT1/jkp/m/n/12 Nach der Aus-wahl er-scheint au-to-ma-tisch ein But-ton zur [
 ]Uberpr[]ufung der Verf[]ugbarkeit
  []
@@ -1688,7 +1682,7 @@ chapter 6.
 ]
 chapter 7.
 
-LaTeX Warning: Empty bibliography on input line 427.
+LaTeX Warning: Empty bibliography on input line 432.
 
 [22
 
@@ -1713,10 +1707,10 @@ Package logreq Info: Writing requests to 'ersteversion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27307 strings out of 474486
- 477770 string characters out of 5755015
+ 27313 strings out of 474486
+ 477861 string characters out of 5755015
  2077542 words of memory out of 5000000
- 49065 multiletter control sequences out of 15000+600000
+ 49066 multiletter control sequences out of 15000+600000
  592291 words of font info for 111 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,13n,107p,10936b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1729,9 +1723,9 @@ uan/MiKTeX/fonts/type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts
 onts/jkpsy.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.pfb><
 C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb><C:/Users/Tuan/Mi
 KTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on ersteversion.pdf (22 pages, 430007 bytes).
+Output written on ersteversion.pdf (22 pages, 430760 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 166 named destinations out of 1000 (max. 500000)
+ 445 PDF objects out of 1000 (max. 8388607)
+ 169 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
