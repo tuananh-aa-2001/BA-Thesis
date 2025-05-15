@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  15 MAY 2025 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  15 MAY 2025 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1631,7 +1631,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
 ] [7]
 chapter 2.
-<vaadin_architekture.jpg, id=119, 1939.245pt x 2055.68pt>
+<vaadin_architekture.jpg, id=121, 1939.245pt x 2055.68pt>
 File: vaadin_architekture.jpg Graphic file (type jpg)
 <use vaadin_architekture.jpg>
 Package pdftex.def Info: vaadin_architekture.jpg  used on input line 254.
@@ -1696,7 +1696,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (C:\Users\Tuan\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) [11]
-<liquibase-changelog.png, id=161, 208.3785pt x 73.4745pt>
+<liquibase-changelog.png, id=163, 208.3785pt x 73.4745pt>
 File: liquibase-changelog.png Graphic file (type png)
 <use liquibase-changelog.png>
 Package pdftex.def Info: liquibase-changelog.png  used on input line 312.
@@ -1811,10 +1811,6 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ersteversion.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'ersteversion.run.xml'.
 \openout1 = `ersteversion.run.xml'.
 
@@ -1836,9 +1832,9 @@ type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpf
 onts/jkpssbne.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.pf
 b><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb><C:/Users/Tuan
 /MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on ersteversion.pdf (30 pages, 470652 bytes).
+Output written on ersteversion.pdf (30 pages, 471051 bytes).
 PDF statistics:
- 640 PDF objects out of 1000 (max. 8388607)
+ 641 PDF objects out of 1000 (max. 8388607)
  300 named destinations out of 1000 (max. 500000)
  229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
