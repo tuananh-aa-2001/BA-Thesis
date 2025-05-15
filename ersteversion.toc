@@ -19,8 +19,9 @@
 \contentsline {subsection}{\numberline {3.1.3}User-Stories}{16}{subsection.3.1.3}%
 \contentsline {section}{\numberline {3.2}Spezifikation}{16}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Use-Cases}{16}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}Konzeption und Architektur}{21}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Implementierung}{22}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Evaluierung}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{24}{chapter.7}%
+\contentsline {chapter}{\numberline {4}Konzeption und Architektur}{22}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Implementierung}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Übersicht über wichtige Klassen und Entitäten}{23}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Evaluierung}{28}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{29}{chapter.7}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
