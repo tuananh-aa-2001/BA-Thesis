@@ -1,0 +1,161 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{deinhard24}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b63817b602da17c8e1e5f368b07e577a}{%
+           family={Deinhard},
+           familyi={D\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{fullhash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{bibnamehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{authorbibnamehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{authornamehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{authorfullhash}{b63817b602da17c8e1e5f368b07e577a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Was ist Maven?}
+      \field{urlday}{1}
+      \field{urlmonth}{9}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.it-schulungen.com/wir-ueber-uns/wissensblog/was-ist-maven.html
+      \endverb
+      \verb{url}
+      \verb https://www.it-schulungen.com/wir-ueber-uns/wissensblog/was-ist-maven.html
+      \endverb
+    \endentry
+    \entry{architecture21}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0945359809dad1fbf3dea1c95a0da951}{%
+           family={Document},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{fullhash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{bibnamehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{authorbibnamehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{authornamehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{authorfullhash}{0945359809dad1fbf3dea1c95a0da951}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Overview}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://vaadin.com/docs/v8/framework/architecture/architecture-overview
+      \endverb
+      \verb{url}
+      \verb https://vaadin.com/docs/v8/framework/architecture/architecture-overview
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{deinhard24}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b63817b602da17c8e1e5f368b07e577a}{%
+           family={Deinhard},
+           familyi={D\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{fullhash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{bibnamehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{authorbibnamehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{authornamehash}{b63817b602da17c8e1e5f368b07e577a}
+      \strng{authorfullhash}{b63817b602da17c8e1e5f368b07e577a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Was ist Maven?}
+      \field{urlday}{1}
+      \field{urlmonth}{9}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.it-schulungen.com/wir-ueber-uns/wissensblog/was-ist-maven.html
+      \endverb
+      \verb{url}
+      \verb https://www.it-schulungen.com/wir-ueber-uns/wissensblog/was-ist-maven.html
+      \endverb
+    \endentry
+    \entry{architecture21}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0945359809dad1fbf3dea1c95a0da951}{%
+           family={Document},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{fullhash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{bibnamehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{authorbibnamehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{authornamehash}{0945359809dad1fbf3dea1c95a0da951}
+      \strng{authorfullhash}{0945359809dad1fbf3dea1c95a0da951}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Overview}
+      \field{urlday}{3}
+      \field{urlmonth}{2}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://vaadin.com/docs/v8/framework/architecture/architecture-overview
+      \endverb
+      \verb{url}
+      \verb https://vaadin.com/docs/v8/framework/architecture/architecture-overview
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

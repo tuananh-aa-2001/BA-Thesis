@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  14 MAY 2025 14:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  14 MAY 2025 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -646,6 +646,11 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `boldsf'
 (Font)                  U/jkpexa/m/n --> U/jkpexa/bx/n on input line 643.
 LaTeX Info: Redefining \not on input line 1603.
 )
+(C:\Users\Tuan\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
+)
 (C:\Users\Tuan\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
@@ -1053,7 +1058,7 @@ Class scrreprt Warning: Usage of package `fancyhdr' together
 (scrreprt)              `\addtokomafont' for the page style elements need
 (scrreprt)              explicite user intervention to work.
 (scrreprt)              Nevertheless, using requested
-(scrreprt)              package `fancyhdr' on input line 22.
+(scrreprt)              package `fancyhdr' on input line 23.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
@@ -1072,12 +1077,12 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip102
 \f@nch@widthC=\skip103
 \f@nch@widthR=\skip104
-\@temptokenb=\toks25
+\@temptokenb=\toks27
 )
 (C:\Users\Tuan\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count435
 \lst@gtempboxa=\box56
-\lst@token=\toks26
+\lst@token=\toks28
 \lst@length=\count436
 \lst@currlwidth=\dimen165
 \lst@column=\count437
@@ -1125,54 +1130,54 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotelevel=\count443
 \@quotereset=\count444
 LaTeX Font Info:    Trying to load font information for OT1+jkp on input line 7
-7.
+8.
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
 ) (ersteversion.aux)
 \openout1 = `ersteversion.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 77.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 78.
 LaTeX Font Info:    Trying to load font information for OML+jkp on input line 7
-7.
+8.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 78.
 LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 7
-7.
+8.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 78.
 LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 7
-7.
+8.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 78.
 LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 
-77.
+78.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1215,14 +1220,14 @@ LaTeX Font Info:    ... okay on input line 77.
 \scratchbox=\box58
 \nofMPsegments=\count446
 \nofMParguments=\count447
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks29
 \MPscratchCnt=\count448
 \MPscratchDim=\dimen170
 \MPnumerator=\count449
 \makeMPintoPDFobject=\count450
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks30
 )
-Package hyperref Info: Link coloring ON on input line 77.
+Package hyperref Info: Link coloring ON on input line 78.
  (ersteversion.out) (ersteversion.out)
 \@outlinefile=\write4
 \openout4 = `ersteversion.out'.
@@ -1234,7 +1239,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 77.
+(scrreprt)           before \begin{document} on input line 78.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
@@ -1289,8 +1294,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ersteversion.bbl' found.
  (ersteversion.bbl)
-Package biblatex Info: Reference section=0 on input line 77.
-Package biblatex Info: Reference segment=0 on input line 77.
+Package biblatex Info: Reference section=0 on input line 78.
+Package biblatex Info: Reference segment=0 on input line 78.
 \c@lstlisting=\count452
 
 
@@ -1335,12 +1340,12 @@ Package geometry Warning: `portrait': not available in `\newgeometry'; skipped.
 <firmenlogo.jpg, id=3, 205.76875pt x 205.76875pt>
 File: firmenlogo.jpg Graphic file (type jpg)
 <use firmenlogo.jpg>
-Package pdftex.def Info: firmenlogo.jpg  used on input line 85.
+Package pdftex.def Info: firmenlogo.jpg  used on input line 86.
 (pdftex.def)             Requested size: 105.2751pt x 105.27348pt.
 <FHAC.jpg, id=4, 45.5301pt x 136.5903pt>
 File: FHAC.jpg Graphic file (type jpg)
 <use FHAC.jpg>
-Package pdftex.def Info: FHAC.jpg  used on input line 89.
+Package pdftex.def Info: FHAC.jpg  used on input line 90.
 (pdftex.def)             Requested size: 48.36958pt x 145.1164pt.
 [1
 
@@ -1350,22 +1355,22 @@ Package pdftex.def Info: FHAC.jpg  used on input line 89.
 {C:/Users/Tuan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Tuan/
 MiKTeX/fonts/enc/dvips/base/8r.enc} <./firmenlogo.jpg> <./FHAC.jpg>]
 LaTeX Font Info:    Trying to load font information for OT1+jkpss on input line
- 155.
+ 156.
 
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\ot1jkpss.fd
 File: ot1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for OT1/jkpss.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
 
  []
 
@@ -1406,89 +1411,163 @@ File: ujkpsyc.fd 2006/08/15 v1.0
 ]
 
 LaTeX Warning: Hyper reference `acro:REST-API' on page 4 undefined on input lin
-e 168.
+e 167.
 
 
 LaTeX Warning: Hyper reference `acro:REST-API' on page 4 undefined on input lin
-e 168.
+e 167.
 
 
-LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 169.
+LaTeX Warning: Hyper reference `acro:OGC' on page 4 undefined on input line 168
+.
+
+
+LaTeX Warning: Hyper reference `acro:OGC' on page 4 undefined on input line 168
+.
+
+
+LaTeX Warning: Hyper reference `acro:WMS' on page 4 undefined on input line 169
+.
+
+
+LaTeX Warning: Hyper reference `acro:WMS' on page 4 undefined on input line 169
+.
+
+
+LaTeX Warning: Hyper reference `acro:WFS' on page 4 undefined on input line 170
+.
+
+
+LaTeX Warning: Hyper reference `acro:WFS' on page 4 undefined on input line 170
+.
+
+
+LaTeX Warning: Hyper reference `acro:JSON' on page 4 undefined on input line 17
+1.
+
+
+LaTeX Warning: Hyper reference `acro:JSON' on page 4 undefined on input line 17
+1.
+
+
+LaTeX Warning: Hyper reference `acro:CSV' on page 4 undefined on input line 172
+.
+
+
+LaTeX Warning: Hyper reference `acro:CSV' on page 4 undefined on input line 172
+.
+
+
+LaTeX Warning: Hyper reference `acro:ASCII' on page 4 undefined on input line 1
+73.
+
+
+LaTeX Warning: Hyper reference `acro:ASCII' on page 4 undefined on input line 1
+73.
+
+
+LaTeX Warning: Hyper reference `acro:QGIS' on page 4 undefined on input line 17
+4.
+
+
+LaTeX Warning: Hyper reference `acro:QGIS' on page 4 undefined on input line 17
+4.
+
+
+LaTeX Warning: Hyper reference `acro:UI' on page 4 undefined on input line 175.
 
 
 
-LaTeX Warning: Hyper reference `acro:Nu' on page 4 undefined on input line 169.
+LaTeX Warning: Hyper reference `acro:UI' on page 4 undefined on input line 175.
 
 
 
-LaTeX Warning: Hyper reference `acro:nu_luft' on page 4 undefined on input line
- 170.
+LaTeX Warning: Hyper reference `acro:HTML' on page 4 undefined on input line 17
+6.
 
 
-LaTeX Warning: Hyper reference `acro:nu_luft' on page 4 undefined on input line
- 170.
+LaTeX Warning: Hyper reference `acro:HTML' on page 4 undefined on input line 17
+6.
 
 
-LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 171.
+LaTeX Warning: Hyper reference `acro:CSS' on page 4 undefined on input line 177
+.
 
 
-
-LaTeX Warning: Hyper reference `acro:Pr' on page 4 undefined on input line 171.
-
-
-
-LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 172.
+LaTeX Warning: Hyper reference `acro:CSS' on page 4 undefined on input line 177
+.
 
 
-LaTeX Warning: Hyper reference `acro:Q' on page 4 undefined on input line 172.
+LaTeX Warning: Hyper reference `acro:HTTP' on page 4 undefined on input line 17
+8.
 
 
-LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 173.
+LaTeX Warning: Hyper reference `acro:HTTP' on page 4 undefined on input line 17
+8.
 
 
-
-LaTeX Warning: Hyper reference `acro:Ra' on page 4 undefined on input line 173.
-
-
-
-LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
-e 174.
+LaTeX Warning: Hyper reference `acro:URL' on page 4 undefined on input line 179
+.
 
 
-LaTeX Warning: Hyper reference `acro:rho_luft' on page 4 undefined on input lin
-e 174.
+LaTeX Warning: Hyper reference `acro:URL' on page 4 undefined on input line 179
+.
 
 
-LaTeX Warning: Hyper reference `acro:temperatur' on page 4 undefined on input l
-ine 175.
+LaTeX Warning: Hyper reference `acro:AJAX' on page 4 undefined on input line 18
+0.
 
 
-LaTeX Warning: Hyper reference `acro:temperatur' on page 4 undefined on input l
-ine 175.
+LaTeX Warning: Hyper reference `acro:AJAX' on page 4 undefined on input line 18
+0.
 
 
-LaTeX Warning: Hyper reference `acro:umgebungstemperatur' on page 4 undefined o
-n input line 176.
+LaTeX Warning: Hyper reference `acro:J2EE' on page 4 undefined on input line 18
+1.
 
 
-LaTeX Warning: Hyper reference `acro:umgebungstemperatur' on page 4 undefined o
-n input line 176.
+LaTeX Warning: Hyper reference `acro:J2EE' on page 4 undefined on input line 18
+1.
+
+
+LaTeX Warning: Hyper reference `acro:XML' on page 4 undefined on input line 182
+.
+
+
+LaTeX Warning: Hyper reference `acro:XML' on page 4 undefined on input line 182
+.
+
+
+LaTeX Warning: Hyper reference `acro:JAR' on page 4 undefined on input line 183
+.
+
+
+LaTeX Warning: Hyper reference `acro:JAR' on page 4 undefined on input line 183
+.
+
+
+LaTeX Warning: Hyper reference `acro:WAR' on page 4 undefined on input line 184
+.
+
+
+LaTeX Warning: Hyper reference `acro:WAR' on page 4 undefined on input line 184
+.
 
 [4
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 184--189
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--189
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--189
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
 
  []
 
@@ -1499,18 +1578,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--189
 ]
 chapter 1.
 
-Overfull \hbox (1.84808pt too wide) in paragraph at lines 193--195
+Overfull \hbox (1.84808pt too wide) in paragraph at lines 200--202
 \OT1/jkp/m/n/12 beh[]orden erm[]oglichen, ein kos-tenef-fi-zi-en-tes Ma-na-ge-m
 ent f[]ur Geo-da-ten(Grundwasser, Ober-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
@@ -1519,104 +1598,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
 ] [7]
 chapter 2.
-<vaadin_architekture.jpg, id=109, 1939.245pt x 2055.68pt>
+<vaadin_architekture.jpg, id=116, 1939.245pt x 2055.68pt>
 File: vaadin_architekture.jpg Graphic file (type jpg)
 <use vaadin_architekture.jpg>
-Package pdftex.def Info: vaadin_architekture.jpg  used on input line 222.
+Package pdftex.def Info: vaadin_architekture.jpg  used on input line 229.
 (pdftex.def)             Requested size: 256.07582pt x 284.4997pt.
-
-LaTeX Warning: Citation 'architecture21' on page 8 undefined on input line 223.
-
-
-
-LaTeX Warning: Citation 'architecture21' on page 8 undefined on input line 223.
-
-
 [8
 
  <./vaadin_architekture.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
  []
 
 
-Overfull \hbox (4.09209pt too wide) in paragraph at lines 232--234
+Overfull \hbox (4.09209pt too wide) in paragraph at lines 239--241
 \OT1/jkp/m/n/12 fach Me-tho-de, um schlan-ke We-ban-wen-dun-gen zu er-stel-len,
  die un-abh[]angig als ei-genst[]andige
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
+Underfull \hbox (badness 10000) in paragraph at lines 239--241
 
  []
 
 
-Overfull \hbox (43.04324pt too wide) in paragraph at lines 232--234
+Overfull \hbox (43.04324pt too wide) in paragraph at lines 239--241
 \OT1/jkp/m/n/12 stel-lung von Spring-Anwendungen durch sinn-vol-le Standard-Ein
 stellungen, Starter-Abh[]angigkeiten
  []
 
 
-Overfull \hbox (11.83508pt too wide) in paragraph at lines 232--234
+Overfull \hbox (11.83508pt too wide) in paragraph at lines 239--241
 \OT1/jkp/m/n/12 und pro-duk-ti-ons-rei-fe Funk-tio-nen f[]ur Kon-fi-gu-ra-ti-on
  und []Uberwachung. Durch die Einf[]uhrung
  []
 
 
-Overfull \hbox (22.66801pt too wide) in paragraph at lines 232--234
+Overfull \hbox (22.66801pt too wide) in paragraph at lines 239--241
 \OT1/jkp/m/n/12 ein-ge-bet-te-ter Servlet-Container wur-de es m[]oglich, An-wen
 -dun-gen als ei-genst[]andige, ausf[]uhrbare
  []
 
 LaTeX Font Info:    Trying to load font information for OT1+jkptt on input line
- 235.
+ 242.
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\ot1jkptt.fd
 File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
 )
-
-LaTeX Warning: Citation 'deinhard24' on page 9 undefined on input line 236.
-
-
-Overfull \hbox (46.563pt too wide) in paragraph at lines 235--237
+Overfull \hbox (46.563pt too wide) in paragraph at lines 242--244
 \OT1/jkp/m/n/12 Entwicklung ein-ge-setzt wird. Es au-to-ma-ti-siert Auf-ga-ben 
 wie das Her-un-ter-la-den von Abh[]angigkeiten,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
 
-Overfull \hbox (2.8441pt too wide) in paragraph at lines 235--237
+Overfull \hbox (2.8441pt too wide) in paragraph at lines 242--244
 \OT1/jkp/m/n/12 ti-ons-da-tei, der so-ge-nann-ten \OT1/jkptt/m/n/12 pom.xml\OT1
 /jkp/m/n/12 ( Pro-jekt Ob-ject Mo-del) an-gibt, wie z.B. Abh[]angigkeiten,
  []
 
 [9]
 LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 2
-40.
+47.
  (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
-Overfull \hbox (11.73619pt too wide) in paragraph at lines 242--243
+Overfull \hbox (11.73619pt too wide) in paragraph at lines 249--250
 []\OT1/jkp/m/n/12 Plugins: Zus[]atzliche Werk-zeu-ge, die den Build-Prozess er-
 wei-tern (z.B. Compiler-Plugins,
  []
 
 
-Overfull \hbox (24.70822pt too wide) in paragraph at lines 244--245
+Overfull \hbox (24.70822pt too wide) in paragraph at lines 251--252
 []\OT1/jkp/m/n/12 Build-Spezifikationen: Kom-pi-lie-rungs-an-wei-sun-gen, Test-
 kon-fi-gu-ra-tio-nen und Deployment-
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
@@ -1626,16 +1693,16 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (C:\Users\Tuan\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) [11]
-<liquibase-changelog.png, id=146, 208.3785pt x 73.4745pt>
+<liquibase-changelog.png, id=158, 208.3785pt x 73.4745pt>
 File: liquibase-changelog.png Graphic file (type png)
 <use liquibase-changelog.png>
-Package pdftex.def Info: liquibase-changelog.png  used on input line 280.
+Package pdftex.def Info: liquibase-changelog.png  used on input line 287.
 (pdftex.def)             Requested size: 256.07826pt x 85.36386pt.
 LaTeX Font Info:    Font shape `OT1/jkptt/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/jkptt/m/sl' tried instead on input line 286
+(Font)              Font shape `OT1/jkptt/m/sl' tried instead on input line 293
 .
  [12 <./liquibase-changelog.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
@@ -1644,47 +1711,57 @@ chapter 3.
 [15
 
 ]
-Overfull \hbox (12.01006pt too wide) in paragraph at lines 367--368
+Overfull \hbox (12.01006pt too wide) in paragraph at lines 374--375
 []\OT1/jkp/m/n/12 Als Be-nut-zer m[]ochte ich ge-zielt nach Mess-da-ten wie Gru
 nd-was-serst[]anden, Pe-gelst[]anden,
  []
 
 
-Overfull \hbox (3.08212pt too wide) in paragraph at lines 370--371
+Overfull \hbox (3.08212pt too wide) in paragraph at lines 377--378
 []\OT1/jkp/m/n/12 Als Be-nut-zer m[]ochte ich in der La-ge sein, be-stimm-te Da
 -tens[]atze abon-nie-ren zu k[]onnen. 
  []
 
 [16]
-Overfull \hbox (3.25005pt too wide) in paragraph at lines 392--393
+Overfull \hbox (3.25005pt too wide) in paragraph at lines 399--400
 []\OT1/jkp/m/n/12 Weitere Drop-downs wer-den da-nach ein-ge-blen-det, ent-we-de
 r m[]ochte Be-nut-zer die Mess-
  []
 
 
-Overfull \hbox (6.54941pt too wide) in paragraph at lines 405--406
+Overfull \hbox (6.54941pt too wide) in paragraph at lines 412--413
 []\OT1/jkp/m/n/12 Nach der Aus-wahl er-scheint au-to-ma-tisch ein But-ton zur [
 ]Uberpr[]ufung der Verf[]ugbarkeit
  []
 
-[17] [18]
+[17]
+Overfull \hbox (15.21408pt too wide) in paragraph at lines 429--430
+[]\OT1/jkp/m/n/12 Das Sys-tem zeigt dann so-wohl his-to-ri-sche als auch die Vo
+r-her-sa-ge-da-ten, falls die gew[]ahlte
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--438
+
+ []
+
+[18] [19] [20]
 chapter 4.
-[19
-
-]
-chapter 5.
-[20
-
-]
-chapter 6.
 [21
 
 ]
-chapter 7.
-
-LaTeX Warning: Empty bibliography on input line 432.
-
+chapter 5.
 [22
+
+]
+chapter 6.
+[23
+
+]
+chapter 7.
+[24
+
+] [25
 
 ] (ersteversion.aux)
  ***********
@@ -1697,35 +1774,29 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ersteversion.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                ersteversion
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'ersteversion.run.xml'.
 \openout1 = `ersteversion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27313 strings out of 474486
- 477861 string characters out of 5755015
+ 27450 strings out of 474486
+ 480167 string characters out of 5755015
  2077542 words of memory out of 5000000
- 49066 multiletter control sequences out of 15000+600000
- 592291 words of font info for 111 fonts, out of 8000000 for 9000
+ 49159 multiletter control sequences out of 15000+600000
+ 594061 words of font info for 114 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,13n,107p,10936b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Users/Tuan/
 MiKTeX/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1
-/public/kpfonts/jkpmi.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpm
-n8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/T
-uan/MiKTeX/fonts/type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts
-/type1/public/kpfonts/jkpssbne.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpf
-onts/jkpsy.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.pfb><
-C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb><C:/Users/Tuan/Mi
-KTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on ersteversion.pdf (22 pages, 430760 bytes).
+/public/kpfonts/jkpmit8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/j
+kpmn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/User
+s/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/Tuan/MiKTeX/fo
+nts/type1/public/kpfonts/jkpssbne.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/
+kpfonts/jkpttbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8
+a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
+Output written on ersteversion.pdf (25 pages, 440886 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 169 named destinations out of 1000 (max. 500000)
+ 504 PDF objects out of 1000 (max. 8388607)
+ 207 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

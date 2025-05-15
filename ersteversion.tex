@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{kpfonts}
+\usepackage[utf8]{inputenc}
 \usepackage[onehalfspacing]{setspace}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[backend=biber,style=apa]{biblatex}
@@ -162,19 +163,25 @@ Aachen, den \today \hspace{4cm} \dotfill
 
 \clearpage
 \chapter*{Abkürzungsverzeichnis}\label{abkuerzungsverzeichnis}
-\begin{acronym}[YTM]
-\setlength{\itemsep}{-\parsep}
-
-\acro{REST-API}{\hspace{1cm}Representational State Transfer Application Program Interface}
-\acro{Nu}[$Nu$]{\hspace{1cm}Nußelt-Zahl}
-\acro{nu_luft}[$\nu_{Luft}$]{\hspace{1cm}Kinematische Viskosität von Luft}
-\acro{Pr}[$Pr$]{\hspace{1cm}Prandtl-Zahl}
-\acro{Q}[$\dot Q$]{\hspace{1cm}Wärmestrom}
-\acro{Ra}[$Ra$]{\hspace{1cm}Rayleigh-Zahl}
-\acro{rho_luft}[$\rho_{Luft}$]{\hspace{1cm}Dichte von Luft}
-\acro{temperatur}[$T$]{\hspace{1cm}Temperatur}
-\acro{umgebungstemperatur}[$T_{\infty}$]{\hspace{1cm}Umgebungstemperatur}
-
+\begin{acronym}[\hspace{3cm}]
+\acro{REST-API}{Representational State Transfer Application Program Interface}
+\acro{OGC}{Open Geospatial Consortium}
+\acro{WMS}{Web Map Server}
+\acro{WFS}{Web Feature Server}
+\acro{JSON}{JavaScript Object Notation}
+\acro{CSV}{Comma Separated Values}
+\acro{ASCII}{American Standard Code for Information Interchange}
+\acro{QGIS}{Quantum Geographic Information System}
+\acro{UI}{User Interface}
+\acro{HTML}{Hypertext Markup Language}
+\acro{CSS}{Cascading Style Sheets}
+\acro{HTTP}{Hypertext Transfer Protocol}
+\acro{URL}{Uniform Resource Locator}
+\acro{AJAX}{Asynchronous JavaScript and XML}
+\acro{J2EE}{Java 2 Platform, Enterprise Edition}
+\acro{XML}{Extensible Markup Language}
+\acro{JAR}{Java Archive}
+\acro{WAR}{Web Application Archive}
 \end{acronym}
 
 \cleardoublepage
@@ -376,30 +383,30 @@ Mit den im letzten Abschnitt erhobenen User-Stories können nun die funktionalen
 \subsection{Use-Cases}
 Einfach ausgedrückt wird mit einem Use-Case die nach außen sichtbare Interaktion eines Nutzers mit einem System dokumentiert. Dieser Nutzer kann entweder eine Person, eine Organisation oder ein anderes System sein.\\
 Für die prototypische Anwendung werden folgenden Use-Cases ausgearbeitet.
-\section*{\small \textbf{Use-Case 1: Historische Wetterdaten von Wetterdatendienst einsehen}}
+\section*{\small \textbf{Use-Case 1: Historische Wetterdaten von \href{https://wetterdienst.readthedocs.io/en/latest/} {Wetterdatendienst} einsehen}}
 Akteur : Benutzer\\
 Ziel: Historische Wetterdaten einer bestimmten Messtation einsehen\\
 Vorbedingung: keine\\
 Nachbedingung: keine\\
 \underline{Ablauf}:
 \begin{enumerate}
-\item Benutzer navigiert zu der Historische Wetterdaten - Seite
-\item Am Anfang zeigt die Seite einige Dropdowns zur Durchsuche der Daten und eine Karte, auf der noch keine Station zu sehen ist
-\item Benutzer wählt die gewünschte Auflösung aus (stündlich, täglich, monatlich, jährlich)
+\item Benutzer navigiert zu Historische Wetterdaten Tab.
+\item Am Anfang zeigt die Seite einige Dropdowns zur Durchsuche der Daten und eine Karte, auf der noch keine Station zu sehen ist.
+\item Benutzer wählt die gewünschte Auflösung aus (stündlich, täglich, monatlich, jährlich).
 \item Benutzer wählt dann die Hauptparameter aus und ein Dropdown für Unterparamter blendet sich ein.
 \item Benutzer wählt anschließend die Unterparamter aus.
 \item Das System reagiert auf den Wert von Unterparamter und zeigt sich eine deutschlandweite Karte, wo alle relevanten Messstationen zu dem ausgewählten Unterparamter zu sehen sind. 
-\item Weitere Dropdowns werden danach eingeblendet, entweder möchte Benutzer die Messstationen in einem bestimmten Bundesland sehen oder direkt eine gezielte Messstation auswählen
+\item Weitere Dropdowns werden danach eingeblendet, entweder möchte Benutzer die Messstationen in einem bestimmten Bundesland sehen oder direkt eine gezielte Messstation auswählen.
 \item Nach Auswahl einer Station wird die Station auf der Karte fokussiert und die Daten zur gewählten Station als Diagramm dargestellt. 
 \end{enumerate}
-\section*{\small \textbf{Use-Case 2: Wettervorhersagedaten von Wetterdatendienst einsehen}}
+\section*{\small \textbf{Use-Case 2: Wettervorhersagedaten von \href{https://wetterdienst.readthedocs.io/en/latest/} {Wetterdatendienst} einsehen}}
 Akteur : Benutzer\\
 Ziel:  Vorhersagedaten einer bestimmten Messtation einsehen\\
 Vorbedingung: keine\\
 Nachbedingung: keine\\
 \underline{Ablauf}:
 \begin{enumerate}
-\item Benutzer navigiert zu der Wettervorhersage - Seite
+\item Benutzer navigiert zu  Wettervorhersage Tab.
 \item Die Seite stellt bereits eine Tabelle mit verschiedenen Parameter zum Ansehen der Wetterdaten.
 \item Benutzer wählt eine Station aus dem Dropdown aus.
 \item Nach der Auswahl erscheint automatisch ein Button zur Überprüfung der Verfügbarkeit der Wetterdaten.
@@ -410,16 +417,64 @@ Nachbedingung: keine\\
 \item Ein Fenster öffnet sich und stellt die Daten in Form eines Diagramm bereits. 
 \end{enumerate}
 \section*{\small \textbf{Use-Case 3: Pegelstanddaten von \href{https://www.pegelonline.wsv.de/gast/start} {PegelOnline} einsehen}}
+Akteur : Benutzer\\
+Ziel:  Pegelstanddaten einer bestimmten Messtation einsehen\\
+Vorbedingung: keine\\
+Nachbedingung: keine\\
+\underline{Ablauf}:
 \begin{enumerate}
-\item Benutzer navigiert zu der Pegelständedaten - Seite
-\item Benutzer sieht eine Karte mit Pegelstationen deutschlandweit, die je nach aktueller Lage farblich kategorisiert sind.
-\item 
-	Inhalt...
+\item Benutzer navigiert zu Pegelständedaten Tab.
+\item Benutzer sieht links die Filtermöglichkeiten und rechts eine Karte mit Pegelstationen deutschlandweit, die je nach aktueller Lage farblich kategorisiert sind.
+\item Benutzer wählt eine Station von dem Filter „Pegelstation” aus.
+\item Das System zeigt dann sowohl historische als auch die Vorhersagedaten, falls die gewählte Station überhaupt Daten zurückliefert, in einem Diagramm.
+\end{enumerate}
+\section*{\small \textbf{Use-Case 4: OGC-Geodatendiensten einsehen}}
+OGC-Geodatendienste,wie Web Map Server, Web Feature Server, etc. sind die Webservices, die auf einer standardisierten Schnittstelle basieren, die es ermöglichen, Geodaten zwischen verschiedenen Systemen auszutauschen. Sie werden von der OGC entwickelt und sind international anerkannt.\\\\
+Akteur : Benutzer\\
+Ziel:  OGC-Geodatendiensten einsehen\\
+Vorbedingung: keine\\
+Nachbedingung: keine\\
+\underline{Ablauf}:
+\begin{enumerate}
+\item Benutzer navigiert zu GovData-Das Datenportal - Tab.
+\item Benutzer sieht links die Filtermöglichkeiten und rechts einen Platzhalter für die Ergebnisse, wenn die Filter angewendet werden.
+\item Benutzer geht allen Filtern durch und gibt einen Suchbegriff ein und klickt auf das Button "Suche starten".
+\item Die Applikation liefert eine Liste von Ergebnisse anhand der Eingaben.
+\item Benutzer sieht optimal eine Liste von Treffer in einer tabellarischen Form mit wesentlichen Information zu dem jeweiligen Datensatz.
+\item Benutzer klickt auf eine Zeile der Tabelle und sieht die detaillierten Information zu dem selektierten Datensatz inklusive die Geodatendiensten.
+\item Benutzer klickt auf ein weiteres Button zur Vorschau der Geodatendienste.
+\item Das System holt die Daten der Geodatendienste dynamisch ab und analysiert es und stellt die geparste Daten in ein Dialog bereits. 	
+\end{enumerate}
+\section*{\small \textbf{Use-Case 5: Datenstream eines Klimaphänomen einsehen}}
+
+Akteur : Benutzer\\
+Ziel: Datenstream eines Klimaphänomen einsehen\\
+Vorbedingung: keine\\
+Nachbedingung: keine\\
+\underline{Ablauf}:
+\begin{enumerate}
+	\item Benutzer navigiert zu zentraler Suche - Tab.
+	\item Benutzer sieht nur einzigen Eingabefeld, wo er ein Klimaphänomen eingibt. Die Klimaphänomene sind in dieser Entwicklungsstufe zunächst vorgegeben.
+	\item Je nach Klimaphänomen bekommt der Benutzer links eine Liste von Datenstream aus verschiedenen Datenquellen in einer tabellarischen Form und rechts eine Karte, wo alle Messstellen dem Klimaphänomen relevant sind.
+	\item Benutzer kann die Messstellen sowohl nach deren Koordinaten als auch nach deren Anbietern filtern.
+	\item Benutzer sieht eine Spalte mit „Daten anzeigen” und klickt auf das Button.
+	\item Ein Dialogfenster öffnet sich wo je nach Klimaphänomen ein Dropdown zur Auswahl erscheint.
+	\item Benutzer wählt einen Eintrag aus dem Dropdown aus und bekommt die wirklichen Daten zu der selektierten Messstellen und zu dem eingegebenen Klimaphänomen.
 \end{enumerate}
 
-
-\section*{\small \textbf{Use-Case 4:}}
-
+\section*{\small \textbf{Use-Case 6: Daten zu einem Klimaphänomen abonnieren}}
+Akteur : Benutzer\\
+Ziel: den Datenstream zu einem Klimaphänomen abonnieren\\
+Vorbedingung: keine\\
+Nachbedingung: keine\\
+\underline{Ablauf}:
+\begin{enumerate}
+\item Noch in dem Dialogfenster findet Benutzer ein Button zum Abonnieren der Daten. 
+\item Benutzer klickt auf das Button und ein anderes Dialog öffnet sich.
+\item Benutzer überprüft die wesentliche Metadaten der zu abonnieren Klimadaten und kann das Start/ Enddatum bearbeiten sowie das gewünschte Format auswählen.
+\item Benutzer klickt auf das „Speichern” Button und  das Abonnement-Dialog schließt sich von allein.
+\item Benutzer wechselt zu einer sogenannten Abonnement-Verwaltung Tab und sieht den eben abonnierten Datensatz in einer Tabelle.
+\end{enumerate}
 
 \chapter{Konzeption und Architektur}
 
