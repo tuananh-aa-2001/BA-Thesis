@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  15 MAY 2025 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  15 MAY 2025 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1631,7 +1631,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
 ] [7]
 chapter 2.
-<vaadin_architekture.jpg, id=121, 1939.245pt x 2055.68pt>
+<vaadin_architekture.jpg, id=123, 1939.245pt x 2055.68pt>
 File: vaadin_architekture.jpg Graphic file (type jpg)
 <use vaadin_architekture.jpg>
 Package pdftex.def Info: vaadin_architekture.jpg  used on input line 254.
@@ -1696,7 +1696,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (C:\Users\Tuan\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) [11]
-<liquibase-changelog.png, id=163, 208.3785pt x 73.4745pt>
+<liquibase-changelog.png, id=165, 208.3785pt x 73.4745pt>
 File: liquibase-changelog.png Graphic file (type png)
 <use liquibase-changelog.png>
 Package pdftex.def Info: liquibase-changelog.png  used on input line 312.
@@ -1791,14 +1791,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 629--632
  []
 
 [26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 663--667
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--667
+
+ []
+
+
+Overfull \hbox (12.3226pt too wide) in paragraph at lines 663--667
+\T1/jkp/m/n/12 tion/-da-ta und \T1/jkp/b/n/12 @Re-quest-Pa-ram \T1/jkp/m/n/12 e
+x-tra-hiert den \T1/jkp/b/n/12 id\T1/jkp/m/n/12 -Parameter aus der URL-Abfragez
+eichenkette.
+ []
+
+<suchSeite.png, id=448, 844.3545pt x 328.8285pt>
+File: suchSeite.png Graphic file (type png)
+<use suchSeite.png>
+Package pdftex.def Info: suchSeite.png  used on input line 671.
+(pdftex.def)             Requested size: 483.69684pt x 188.37247pt.
+<pegel.png, id=449, 1199.682pt x 711.8595pt>
+File: pegel.png Graphic file (type png)
+<use pegel.png>
+Package pdftex.def Info: pegel.png  used on input line 672.
+(pdftex.def)             Requested size: 483.69684pt x 287.00893pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--673
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--673
+
+ []
+
+[28] [29 <./suchSeite.png> <./pegel.png>]
 chapter 6.
-[28
+[30
 
 ]
 chapter 7.
-[29
+[31
 
-] [30
+] [32
 
 ] (ersteversion.aux)
  ***********
@@ -1816,10 +1853,10 @@ Package logreq Info: Writing requests to 'ersteversion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27911 strings out of 474486
- 485509 string characters out of 5755015
+ 27969 strings out of 474486
+ 486422 string characters out of 5755015
  1970542 words of memory out of 5000000
- 49515 multiletter control sequences out of 15000+600000
+ 49552 multiletter control sequences out of 15000+600000
  643473 words of font info for 115 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,12n,107p,10936b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1832,9 +1869,9 @@ type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpf
 onts/jkpssbne.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.pf
 b><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb><C:/Users/Tuan
 /MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on ersteversion.pdf (30 pages, 471051 bytes).
+Output written on ersteversion.pdf (32 pages, 2434395 bytes).
 PDF statistics:
- 641 PDF objects out of 1000 (max. 8388607)
- 300 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 681 PDF objects out of 1000 (max. 8388607)
+ 321 named destinations out of 1000 (max. 500000)
+ 247 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -639,8 +639,37 @@
 		\item T : die Entitätsklasse, die verwaltet wird, in diesem Fall(Abonnement).
 		\item Id: der Datentyp des Primärschlüssels (String).
 	\end{itemize}
+	\vspace{1cm}
+	Für die Entität \textbf{Abonnement} wird ein sogenannten AbonnementController bereitgestellt, mit dem der Zugriff auf die Daten von außen ermöglicht.
+	\begin{lstlisting}
+		@RestController
+		@RequestMapping("/api/subscription")
+		public class AbonnementController {
+			@Autowired
+			private AbonnementService abonnementService;
+			
+			@GetMapping(value = "/data")
+			public ResponseEntity<String> getAboData(@RequestParam @NotBlank String id) {
+				return abonnementService.fetchAbonnementData(id).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("kein Abonnement fuer die " + id + "gefunden.))
+			}
+			
+			@GetMapping(value = "/incremental_data")
+			public ResponseEntity<String> getIncrementalData(@RequestParam @NotBlank String id) {
+				return abonnementService.fetchInrementalData(id).orElseGet(
+				() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("Kein Abonnement fuer die " + id + " gefunden."));
+			}
+		}
+	\end{lstlisting}
+	Die Annotation \textbf{@RestController} ist eine Kombination aus \textbf{@Controller} und \textbf{@ResponseBody} und markiert diese Klasse als REST-Controlle und die Methodenrückgaben werden automatisch in HTTP-Responses konvertiert.\\ \\
+	Die Annotation \textbf{@RequestMapping(/api/subscription)} definiert den Basis-URL-Pfad für alle Endpunkte in dieser Klasse.
+	Mit der Annotation \textbf{@Autowired} sucht Spring automatisch nach einer passenden Bean und injiziert diese in das Controller-Feld \textbf{abonnementService}. Dies ist in Spring als \textbf{Dependency Injection} genannt.\\ \\
+	Die Annotation \textbf{@GetMapping(/data)} definiert einen GET-Endpunkt unter /api/subscription/data und \textbf{@RequestParam} extrahiert den \textbf{id}-Parameter aus der URL-Abfragezeichenkette. \textbf{@NotBlank} ist ein Bean Validation und validiert, dass der \textbf{id}-Parameter nicht leer ist und falls der leer ist, wird ein 400 Bad Request zurückgegeben. \textbf{ResponseEntity$<$String$>$} wird verwendet, um eine HTTP-Response mit einem StatusCode und einem Body zurückzugeben.
 	
-	
+	\section{Front-End-Komponente }
+	Im Rahmen dieses Abschnittes wird die Implementierung des Use-Cases \textit{Datenstream eines Klimaphänomen einsehen} erläutert. Die Entwicklung erfolgt unter Verwendung von Vaadin-Framework.\\ \\
+	Die Umsetzung eines UI-Komponents erfolgt unter Java-Programmiersprache als Klasse, welche ein Komponent wie z.B. ein VerticalLayout oder HorizontalLayout oder ein Dialog von Paket \textbf{com.vaadin.flow.component.Component} erbt.\\
+	\includegraphics[width=17cm]{suchSeite.png} \\ \\
+	\includegraphics[width=17cm]{pegel.png}
 	\chapter{Evaluierung}
 	
 	\chapter{Fazit und Ausblick}
