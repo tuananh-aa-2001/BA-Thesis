@@ -94,8 +94,12 @@
 	stringstyle=\color{mauve},
 	breaklines=true,
 	breakatwhitespace=true,
-	tabsize=3
+	tabsize=3,
+	inputencoding=utf8,
+	literate={ä}{{\"a}}1 {ö}{{\"o}}1 {ü}{{\"u}}1 {Ä}{{\"A}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1
 }
+
+\usepackage{float}
 
 \begin{document}
 	\begin{titlepage}
@@ -523,22 +527,22 @@
 	Wie bereits am Anfang des 2.Kapitels erwähnt, wird als Einstiegspunkt für die Entwicklung eine Vaadin Applikation durch Bereitstellung von Vaadin Initializer genommen. Dies Package enthält die grundlegenden Komponente für eine simple Benutzeroberfläche. 
 	
 	In diesem Package gibt es eine kurz Main-Klasse(\textbf{Application.java}) als Startpunkt für die Applikation, die folgenden Aufbau hat: \\
-	\begin{lstlisting}
-		@SpringBootApplication
-		@Theme(value = "opendata-konnektor")
-		@EnableCaching
-		public class Application implements AppShellConfigurator {
-			public static void main(String[] args) {
-				SpringApplication.run(Application.class, args);
-			}
-		}
-	\end{lstlisting}
+\begin{lstlisting}
+@SpringBootApplication
+@Theme(value = "opendata-konnektor")
+@EnableCaching
+public class Application implements AppShellConfigurator {
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
+\end{lstlisting}
 	Die Annotation \textbf{@SpringBootApplication} kombiniert aus:
-	\begin{enumerate}
-		\item  \textbf{@Configuration}: markiert die Klasse als Konfigurationsklasse für Spring.
-		\item  \textbf{@EnableAutoConfiguration}: ermöglicht die automatische Konfiguration basierend auf den Abhängigkeiten im Klassenpfad.
-		\item  \textbf{@ComponentScan}: sucht nach Komponenten, Konfigurationsklassen und Services im aktuellen Pakte und allen Unterpakten.
-	\end{enumerate}
+		\begin{enumerate}
+			\item  \textbf{@Configuration}: markiert die Klasse als Konfigurationsklasse für Spring.
+			\item  \textbf{@EnableAutoConfiguration}: ermöglicht die automatische Konfiguration basierend auf den Abhängigkeiten im Klassenpfad.
+			\item  \textbf{@ComponentScan}: sucht nach Komponenten, Konfigurationsklassen und Services im aktuellen Pakte und allen Unterpakten.
+		\end{enumerate}
 	Die Annotation \textbf{@Theme(value = "opendata-konnektor")} legt das Vaadin-Theme fest. \textbf{value} definiert den Namen des Themes und Themens werden verwendet, um das Erscheinungsbild der Anwendung anzupassen.\\
 	Die Annotation \textbf{@EnableCaching} aktiviert die Spring Caching-Funktionalität und ermöglicht die Verwendung von Cache-Mechanismen(\textbf{@Cacheable},\textbf{@Cacheable},\textbf{@CacheEvict}).\\
 	\textbf{AppShellConfigurator} ist eine Schnittstelle (\textbf{interface}) aus dem Vaadin Framework. Sie wird verwende, um die \textbf{App Shell} einer Vaadin-Anwendung zu konfigurieren. Was ist die App Shell in Vaadin ?
@@ -549,48 +553,48 @@
 	\end{itemize}
 	
 	Um jedes Object oder jede Entität möglichst spezifisch zu halten, wird am Anfang eine grundlegende, nicht abgeleitete Basisentität, die als Vorlage oder Basis dient, auf der andere Entitäten aufgebaut werden können, indem sie deren Eigenschaften erben, ohne diese erneut zu definieren.In Java-Programmiersprache wird dieses Verhalten als \textbf{Vererbung} bezeichnet. Als Beispiel wird die Klasse \textbf{„BaseEntity“}  erläutert:
-	\begin{lstlisting}
-		@MappedSuperclass
-		@Getter
-		@Setter
-		public class BaseEntity implements Comparable<BaseEntity> {
-			@Id
-			@GeneratedValue(generator = "generateIfNotAssigned")
-			@GenericGenerator(name = "generateIfNotAssigned", strategy = "org.hibernate.id.UUIDHexGenerator")
-			@Column(length = 32)
-			@Access(jakarta.persistence.AccessType.PROPERTY)
-			private String id;
+\begin{lstlisting}
+@MappedSuperclass
+@Getter
+@Setter
+public class BaseEntity implements Comparable<BaseEntity> {
+	@Id
+	@GeneratedValue(generator = "generateIfNotAssigned")
+	@GenericGenerator(name = "generateIfNotAssigned", strategy = "org.hibernate.id.UUIDHexGenerator")
+	@Column(length = 32)
+	@Access(jakarta.persistence.AccessType.PROPERTY)
+	private String id;
 			
-			@Length(min = 1)
-			@NotNull
-			private String label;
+	@Length(min = 1)
+	@NotNull
+	private String label;
 			
-			@Column(columnDefinition = "TEXT")
-			private String description;
+	@Column(columnDefinition = "TEXT")
+	private String description;
 			
-			@Column(name = "base_url")
-			private String url;
+	@Column(name = "base_url")
+	private String url;
 			
-			@Column(name = "last_updated")
-			private LocalDate lastUpdated;
+	@Column(name = "last_updated")
+	private LocalDate lastUpdated;
 			
-			public int compareTo(BaseEntity o) {
-				return (id != null) ? id.compareTo(o.getId()) : hashCode() - o.hashCode();
-			}
-			@Override
-			public int hashCode() {
-				return (id != null) ? id.hashCode() : 1;
-			}
-			@Override
-			public boolean equals(Object obj) {
-				if (!(obj instanceof BaseEntity)) {
-					return false;
-				}
-				BaseEntity be = (BaseEntity) obj;
-				return (id != null) ? id.equals(be.getId()) : this == be;
-			}
-		}	
-	\end{lstlisting}
+	public int compareTo(BaseEntity o) {
+		return (id != null) ? id.compareTo(o.getId()) : hashCode() - o.hashCode();
+	}
+	@Override
+	public int hashCode() {
+		return (id != null) ? id.hashCode() : 1;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof BaseEntity)) {
+			return false;
+		}
+		BaseEntity be = (BaseEntity) obj;
+		return (id != null) ? id.equals(be.getId()) : this == be;
+	}
+}	
+\end{lstlisting}
 	Die Annotation \textbf{@MappedSuperclass} kennzeichnet die Klasse als Basisklasse für andere JPA-Entitäten. Die Felder und Methoden dieser Klasse werden nicht direkt in der Datenbank abgebildet, sondern in die Tabellen der abgeleiteten Klassen integriert.Außerdem wird es verwendet, um gemeinsame Eigenschaften (\textbf{id, label}), etc. zentral zu definieren.\\ \\
 	Die Annotation \textbf{@Getter} und \textbf{@Setter} sind Lombok Annotation, die automatisch Getter/Setter-Methoden für alle Felder der Klasse generiert.\\
 	Die Annotation \textbf{@Id} ist ein JPA-Annotation und kennzeichnet das Primärschlüsselfeld der Entität.\\ \\
@@ -600,39 +604,39 @@
 	Die Annotation \textbf{@Length(min = 1)} ist eine Hibernate-Validator Annotation und legt die minimale Länge für das Feld auf 1 Zeichen fest.\\
 	Die Annotation \textbf{@NotNull} ist ein Bean Validation Annotation und verhinder, dass \textbf{label} auf \textbf{null} gesetzt wird und immer einen Wert haben muss.\\
 	Die Annotation \textbf{@Column(columnDefinition = "TEXT")} ist JPA Annotation und definiert die Datenbankspalte \textbf{description} als \textbf{TEXT} und \textbf{TEXT} erlaubt lange Zeichenketten (mehr als \textbf{VARACHAR}). 
-	\begin{lstlisting}
-		implements Comparable<BaseEntity>
-	\end{lstlisting} Damit kann die Klasse verglichen und sortiert werden, basierend auf der \textbf{id}  in der Methode \textbf{compareTo}.
+\begin{lstlisting}
+	implements Comparable<BaseEntity>
+\end{lstlisting} Damit kann die Klasse verglichen und sortiert werden, basierend auf der \textbf{id}  in der Methode \textbf{compareTo}.
 	Die Annotation \textbf{@Override} stellt sicher, dass die Methode die korrekte Signatur aus dem \textbf{Comparable} Interface hat. \\ \\
 	Um die Verwendung der obigen beschriebenen Klasse zu veranschaulichen, wird als Beispiel die Klasse \textbf{„Abonnement“}  erläutert:
-	\begin{lstlisting}
-		@Entity
-		@Table(name = "abonnement")
-		@Getter
-		@Setter
-		@NoArgsConstructor
-		@AllArgsConstructor
-		public class Abonnement extends BaseEntity {
-			@Column(name = "file_format")
-			private String dateiFormat;
-			private String parameter;
-			@Column(name = "location_id")
-			private String locationId;
-			@Column(name = "start_datum")
-			private LocalDate startDatum;
-			@Column(name = "end_datum")
-			private LocalDate endDatum;
-			@Column(name = "sub_url")
-			private String subscriptionUrl;
-		}
-	\end{lstlisting}
+\begin{lstlisting}
+@Entity
+@Table(name = "abonnement")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Abonnement extends BaseEntity {
+	@Column(name = "file_format")
+	private String dateiFormat;
+	private String parameter;
+	@Column(name = "location_id")
+	private String locationId;
+	@Column(name = "start_datum")
+	private LocalDate startDatum;
+	@Column(name = "end_datum")
+	private LocalDate endDatum;
+	@Column(name = "sub_url")
+	private String subscriptionUrl;
+}
+\end{lstlisting}
 	Die Klasse \textbf{Abonnement} erbt von der Basisklasse \textbf{BaseEntity}. Dadurch übernimmt sie automatisch alle Eigenschaften (\textbf{id,label,description,url,etc.}) und Methoden(\textbf{compareTo, hashCode, equals}) der Basisklasse.\\
 	Die Annotation \textbf{@Enity} markiert die Klasse als JPA-Entität und wird in der Datenbank als Tabelle gespeichert. Die Annotation \textbf{@NoArgsConstructor} (Lombok) generiert einen parameterlosen Konstruktor und \textbf{@AllArgsConstructor} hingegen einen Konstruktor mit allen Feldern als Parameter.\\ \\
 	Anschließend an die Entität, wird das zugehörige Repository, in Form eines Interfaces implementiert. Es erweitert \textbf{JpaRepository}, wodurch eine Vielzahl von CRUD-Operationen und zusätzlichen Methoden bereitgestellt werden.
-	\begin{lstlisting}
-		@Repository
-		public interface AbonnementRepository extends JpaRepository<Abonnement, String>{}
-	\end{lstlisting}
+\begin{lstlisting}
+@Repository
+public interface AbonnementRepository extends JpaRepository<Abonnement, String>{}
+\end{lstlisting}
 	Die Annotation \textbf{@Repository} kennzeichnet die Schnittstelle als Datenbank-Repository und wird von Spring verwendet, um die Klasse als Datenzugriffsschicht zu erkennen und ermöglicht die automatische Fehlerbehandlung bei Datenbankoperationen.\\
 	\textbf{JpaRepository$<$T, ID$>$} ist eine generische Schnittstelle, die CRUD-Methoden bereitstellt:
 	\begin{itemize}
@@ -641,38 +645,372 @@
 	\end{itemize}
 	\vspace{1cm}
 	Für die Entität \textbf{Abonnement} wird ein sogenannten AbonnementController bereitgestellt, mit dem der Zugriff auf die Daten von außen ermöglicht.
-	\begin{lstlisting}
-		@RestController
-		@RequestMapping("/api/subscription")
-		public class AbonnementController {
-			@Autowired
-			private AbonnementService abonnementService;
+\begin{lstlisting}
+@RestController
+@RequestMapping("/api/subscription")
+public class AbonnementController {
+	
+	@Autowired
+	private AbonnementService abonnementService;
 			
-			@GetMapping(value = "/data")
-			public ResponseEntity<String> getAboData(@RequestParam @NotBlank String id) {
-				return abonnementService.fetchAbonnementData(id).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("kein Abonnement fuer die " + id + "gefunden.))
-			}
+	@GetMapping(value = "/data")
+	public ResponseEntity<String> getAboData(@RequestParam @NotBlank String id) {
+		return abonnementService.fetchAbonnementData(id).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("kein Abonnement fuer die " + id + "gefunden.))
+	}
 			
-			@GetMapping(value = "/incremental_data")
-			public ResponseEntity<String> getIncrementalData(@RequestParam @NotBlank String id) {
-				return abonnementService.fetchInrementalData(id).orElseGet(
-				() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("Kein Abonnement fuer die " + id + " gefunden."));
-			}
+	@GetMapping(value = "/incremental_data")
+	public ResponseEntity<String> getIncrementalData(@RequestParam @NotBlank String id) {
+		return abonnementService.fetchInrementalData(id).orElseGet(
+		() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("Kein Abonnement fuer die " + id + " gefunden."));
+	}
+}
+\end{lstlisting}
+Die Annotation \textbf{@RestController} ist eine Kombination aus \textbf{@Controller} und \textbf{@ResponseBody} und markiert diese Klasse als REST-Controlle und die Methodenrückgaben werden automatisch in HTTP-Responses konvertiert.\\ \\
+Die Annotation \textbf{@RequestMapping(/api/subscription)} definiert den Basis-URL-Pfad für alle Endpunkte in dieser Klasse.
+Mit der Annotation \textbf{@Autowired} sucht Spring automatisch nach einer passenden Bean und injiziert diese in das Controller-Feld \textbf{abonnementService}. Dies ist in Spring als \textbf{Dependency Injection} genannt.\\ \\
+Die Annotation \textbf{@GetMapping(/data)} definiert einen GET-Endpunkt unter /api/subscription/data und \textbf{@RequestParam} extrahiert den \textbf{id}-Parameter aus der URL-Abfragezeichenkette. \textbf{@NotBlank} ist ein Bean Validation und validiert, dass der \textbf{id}-Parameter nicht leer ist und falls der leer ist, wird ein 400 Bad Request zurückgegeben. \textbf{ResponseEntity$<$String$>$} wird verwendet, um eine HTTP-Response mit einem StatusCode und einem Body zurückzugeben.
+	
+\section{Front-End-Komponente }
+Im Rahmen dieses Abschnittes wird die Implementierung des Use-Cases \textit{Datenstream eines Klimaphänomen einsehen} erläutert. Die Entwicklung erfolgt unter Verwendung von Vaadin-Framework.\\ \\
+Die Umsetzung eines UI-Komponents erfolgt unter Java-Programmiersprache als Klasse, welche ein Komponent wie z.B. ein VerticalLayout oder HorizontalLayout oder ein Dialog von Paket \textbf{com.vaadin.flow.component.Component} erbt.
+\begin{lstlisting}
+import com.vaadin.flow.component.combobox.ComboBox;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+		
+@Route(value = "suche", layout = MainLayout.class)
+@Slf4j
+public class SearchGeoDataView extends VerticalLayout {
+			
+	private ComboBox<String> tfSearch = new ComboBox<>();
+	tfSearch.setPlaceholder("Suche nach Phaenomen");
+	tfSearch.setClearButtonVisible(true);
+	List<String> phaenomenList = List.of("Niederschlag", "Grundwasser", "Pegel", "Bodentemperatur",
+	"Lufttemperatur", "Luftfeuchtigkeit", "Windgeschwindigkeit", "Windrichtung", "Windstärke", "Windböe",
+	"Sonnenscheindauer", "Gesamtbewölkung");
+	tfSearch.setItems(phaenomenList.stream().sorted().toList());
+	tfSearch.setAllowCustomValue(true);
+	tfSearch.setWidth("20%");
+	tfSearch.getStyle().set("borderRadius", "12px").set("padding", "0.5rem 1rem")
+	.set("boxShadow", "0 2px 6px rgba(0, 0, 0, 0.1)").set("backgroundColor", "#fff");
+		
+	HorizontalLayout searchLayout = new HorizontalLayout(tfSearch);
+	searchLayout.setWidthFull();
+	searchLayout.setJustifyContentMode(JustifyContentMode.CENTER);
+	add(searchLayout);
+}
+\end{lstlisting}
+Mit dem obigen Code ergibt sich folgende Abbildung ohne die Navigationsleiste: 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=17cm]{suchSeite.png}
+	\caption{\label{suche:Seite}Suche Seite}
+\end{figure}
+	
+Wie üblich in Java, initialisiert man ein Komponente in Vaadin auch mit dem Schlüsselwort \textbf{new}. Bei dem Beispiel wird ein DropDown-Feld zur Auswahl von \textbf{String}-Werten erstellt.\\ \\
+Mit Abruf von \textbf{tfSearch.getStyle()} wird dies Dropdown stilisiert und mit \textbf{tfSearch.setItems(...)} mit vordefinierten Phänomenen gefüllt. Mit \textbf{HorizontalLayout searchLayout = new HorizontalLayout(tfSearch)} wird ComboBox in ein \textbf{HorizontalLayout}  eingebettet und zentriert ausgerichtet.\\
+Am Ende mit \textbf{add(searchLayout)} wird das Layout zur Benutzeroberfläche hinzugefügt.\\ \\
+Zurück zu der Navigationsleiste, um so einen Leiste in Vaadin erstellen zu können, wird anhand des Code ins Details eingegangen.\\
+
+Die Annotation \textbf{@Layout} wird verwendet, um die Klasse als Layout festzulegen. In Vaadin bestimmt ein Layout, wie der Seiteninhalt strukturiert wird, insbesondere wie Komponenten innerhalb des Layouts angeordnet werden.\\	
+
+Die Annotation \textbf{@AnonymousAllowed} erlaubt es anonymen Benutzern (nicht authentifizierten Benutzern), auf dieses Layout zuzugreifen. Ohne diese Annotation wäre der Zugriff auf diese Klasse möglicherweise eingeschränkt.
+\begin{lstlisting}
+@Layout
+@AnonymousAllowed
+public class MainLayout extends AppLayout {
+	public MainLayout() {
+		addToNavbar(createHeaderContent());
+	}
+	private Component createHeaderContent() {
+		Header header = new Header();
+		header.addClassNames(BoxSizing.CONTENT, Display.FLEX, FlexDirection.COLUMN, Width.FULL);
+				
+		Nav navMain = new Nav();
+		navMain.addClassNames(Display.FLEX, Overflow.AUTO, Padding.Horizontal.MEDIUM, Padding.Vertical.XSMALL,
+		TextColor.PRIMARY, BoxShadow.MEDIUM, Width.FULL);
+		UnorderedList navMainItemList = new UnorderedList();
+		navMainItemList.addClassNames(Display.INLINE_FLEX, Gap.LARGE, ListStyleType.NONE, Margin.NONE, Padding.SMALL,
+		TextColor.PRIMARY);
+		navMain.add(navMainItemList);
+				
+		for (MenuItemInfo menuItem : createMainMenuItems()) {
+			navMainItemList.add(menuItem);
 		}
-	\end{lstlisting}
-	Die Annotation \textbf{@RestController} ist eine Kombination aus \textbf{@Controller} und \textbf{@ResponseBody} und markiert diese Klasse als REST-Controlle und die Methodenrückgaben werden automatisch in HTTP-Responses konvertiert.\\ \\
-	Die Annotation \textbf{@RequestMapping(/api/subscription)} definiert den Basis-URL-Pfad für alle Endpunkte in dieser Klasse.
-	Mit der Annotation \textbf{@Autowired} sucht Spring automatisch nach einer passenden Bean und injiziert diese in das Controller-Feld \textbf{abonnementService}. Dies ist in Spring als \textbf{Dependency Injection} genannt.\\ \\
-	Die Annotation \textbf{@GetMapping(/data)} definiert einen GET-Endpunkt unter /api/subscription/data und \textbf{@RequestParam} extrahiert den \textbf{id}-Parameter aus der URL-Abfragezeichenkette. \textbf{@NotBlank} ist ein Bean Validation und validiert, dass der \textbf{id}-Parameter nicht leer ist und falls der leer ist, wird ein 400 Bad Request zurückgegeben. \textbf{ResponseEntity$<$String$>$} wird verwendet, um eine HTTP-Response mit einem StatusCode und einem Body zurückzugeben.
+				
+		HorizontalLayout navControls = new HorizontalLayout();
+		navControls.setSpacing(false);
+		navControls.setJustifyContentMode(FlexComponent.JustifyContentMode.BETWEEN);
+		navControls.add(navMain);
+		header.add(navControls);
+		return header;
+	}
+			
+	private MenuItemInfo[] createMainMenuItems() {
+		return new MenuItemInfo[] { new MenuItemInfo(null, VaadinIcon.HOME.create(), StartView.class),
+			new MenuItemInfo(null, VaadinIcon.SEARCH.create(), SearchGeoDataView.class),
+			new MenuItemInfo("GovData-Das Datenportal", VaadinIcon.DATABASE.create(), GridGovData.class),
+			new MenuItemInfo("OpenGeodata.NRW", VaadinIcon.MODAL_LIST.create(), OpenDataNrwView.class),
+			new MenuItemInfo("Wettervorhersage", VaadinIcon.TABLE.create(), WettervorhersageView.class),
+			new MenuItemInfo("Historische Wetterdaten", VaadinIcon.SPLINE_CHART.create(),
+			HistoricalWetterDatenView.class),
+			new MenuItemInfo("Pegelständedaten", VaadinIcon.DROP.create(), PegelstandView.class),
+			new MenuItemInfo("Abonnement-Verwaltung", VaadinIcon.LINES_LIST.create(), GridAbonnement.class) };
+	}
+			
+	public static class MenuItemInfo extends ListItem {
+		private final Class<? extends Component> view;
+		public MenuItemInfo(String menuTitle, Component icon, Class<? extends Component> view) {
+			this.view = view;
+			RouterLink link = new RouterLink();
+			link.addClassNames(Display.FLEX, Gap.XSMALL, Height.MEDIUM, AlignItems.CENTER, Padding.Horizontal.SMALL,
+			TextColor.BODY);
+			link.setRoute(view);
+			Span text = new Span(menuTitle);
+			text.addClassNames(FontWeight.MEDIUM, FontSize.MEDIUM, Whitespace.NOWRAP);
+					
+			if (icon != null) {
+				link.add(icon);
+			}
+			link.add(text);
+			add(link);
+		}
+		public Class<?> getView() {
+			return view;
+		}
+	}
+}
+\end{lstlisting}
+Die Klasse \textbf{MainLayout} erweitert \textbf{AppLayout},welches in Vaadin ein standardisiertes Layout ist, das eine Navigationsleiste und einen Inhaltsbereich definiert. Im Konstruktor wird \textbf{createHeaderContent()} aufgerufen und zum Navigationsbereich (\textbf{Navbar}) hinzufügt.\\ 
+
+Die Methode \textbf{createHeaderContent()} erstellt den Header-Bereich der Anwendung. Die Komponente \textbf{Header} wird erstellt und gestylt. Das Navigationselement mit \textbf{Nav} wird erstellt und eine \textbf{UnorderedList} wird hinzugefügt. Für jedes \textbf{MenuItemInfo} wird ein Listenelement \textbf{ListItem} hinzufügt. Der Header wird zurückgegeben und in die Navbar eingefügt.\\
+
+Die Methode \textbf{createMainMenuItems()} erzeugt ein Array von \textbf{MenuItemInfo}- Objekten. Jedes \textbf{MenuItemInfo}- Objekte repräsentiert einen Menüpunkt mit einem Titel, einem Icon und einer zugehörigen View-Klasse. \\
+
+Die innere Klasse \textbf{MenuItemInfo} erweitert \textbf{ListItem} und stellt ein Navigationsmenüelement dar. Konstruktor erstellt einen \textbf{RouterLink}, fügt optional Icon und den Text hinzu. Die Methode \textbf{getView()} gibt die View-Klasse zurück, die beim Klicken auf das Menüelement aufgerufen wird.
+\clearpage
+Wählt man nun einen Eintrag aus der DropDownList aus,z.B.\textbf{Pegel}, ergibt sich folgende Abbildung:
+\begin{figure}[H]
+	 \centering
+	\includegraphics[width=18cm]{pegel.png}
+	\caption{\label{pegel:}Pegel}
+\end{figure}
+Bei der Abbildung sind es drei Hauptkomponenten deutlich zu erkennen, nämlich : die Tabelle, die Karte und die Filtermöglichkeiten nach Koordinaten und Servicename.
+\section*{\small \textbf{1. Die Tabelle}}
+In Vaadin wird eine Tabelle als Grid genannt und wird in dem Code wie folgt initialisiert.
+\begin{lstlisting}
+private Grid<StationDTO> stationGrid = null;
+
+private void initGridStation() {
+	stationGrid = new Grid<>(StationDTO.class, false);
+	dataProviderStations = stationGrid.setItems(mergedStations);
 	
-	\section{Front-End-Komponente }
-	Im Rahmen dieses Abschnittes wird die Implementierung des Use-Cases \textit{Datenstream eines Klimaphänomen einsehen} erläutert. Die Entwicklung erfolgt unter Verwendung von Vaadin-Framework.\\ \\
-	Die Umsetzung eines UI-Komponents erfolgt unter Java-Programmiersprache als Klasse, welche ein Komponent wie z.B. ein VerticalLayout oder HorizontalLayout oder ein Dialog von Paket \textbf{com.vaadin.flow.component.Component} erbt.\\
-	\includegraphics[width=17cm]{suchSeite.png} \\ \\
-	\includegraphics[width=17cm]{pegel.png}
-	\chapter{Evaluierung}
+	nameColumn = stationGrid.addColumn(station -> station.getName()).setHeader("Name")
+	.setAutoWidth(true).setFlexGrow(1);
+	providerColumn = stationGrid.addColumn(station -> station.getProvider()).setHeader("Provider/Gebiet")
+	.setAutoWidth(true).setResizable(true).setFlexGrow(1);
+	historischColumn = stationGrid.addColumn(new ComponentRenderer<>(station -> {
+		if (station instanceof WetterStationDTO wetter) {
+			Icon statusIndicator = new Icon();
+			if (wetter.getIsHistorical() != null && wetter.getIsHistorical()) {
+				statusIndicator = VaadinIcon.CHECK_CIRCLE.create();
+				statusIndicator.setColor("green");
+				statusIndicator.addClassName("text-body");
+				statusIndicator.setSize("1em");
+			}
+			
+			return statusIndicator;
+		}
+		if (station instanceof PegelStationDTO pegel) {
+			Icon statusIndicator = new Icon();
+			if (pegel.getIsHistorical() != null && pegel.getIsHistorical()) {
+				statusIndicator = VaadinIcon.CHECK_CIRCLE.create();
+				statusIndicator.setColor("green");
+				statusIndicator.addClassName("text-body");
+				statusIndicator.setSize("1em");
+			}
+			return statusIndicator;
+		}
+		return null;
+	})).setHeader("Historisch").setAutoWidth(true).setFlexGrow(0);
 	
-	\chapter{Fazit und Ausblick}
+	vorhersageColumn = stationGrid.addColumn(new ComponentRenderer<>(station -> {
+		if (station instanceof WetterStationDTO wetter) {
+			Icon statusIndicator = new Icon();
+			if (wetter.getIsForecast() != null && wetter.getIsForecast()) {
+				statusIndicator = VaadinIcon.CHECK_CIRCLE.create();
+				statusIndicator.setColor("blue");
+				statusIndicator.addClassName("text-body");
+				statusIndicator.setSize("1em");
+			}
+			return statusIndicator;
+		}
+		if (station instanceof PegelStationDTO pegel) {
+			Icon statusIndicator = new Icon();
+			if (pegel.getIsForecast() != null && pegel.getIsForecast()) {
+				statusIndicator = VaadinIcon.CHECK_CIRCLE.create();
+				statusIndicator.setColor("blue");
+				statusIndicator.addClassName("text-body");
+				statusIndicator.setSize("1em");
+			}
+			return statusIndicator;
+		}
+		return null;
+	})).setHeader("Vorhersage").setAutoWidth(true).setFlexGrow(0);
 	
-	\printbibliography
+btnColumn = stationGrid.addColumn(new ComponentRenderer<>(st -> {
+	Button btnShowData = new Button("Daten anzeigen");
+	btnShowData.addThemeVariants(ButtonVariant.LUMO_SMALL, ButtonVariant.LUMO_PRIMARY);
+		
+	btnShowData.addClickListener(click -> {
+	if (dialogData == null) {
+		dialogData = new Dialog();
+	} else {
+		dialogData.removeAll();
+		dialogData = new Dialog();
+	}
+	....
+	// Weitere Logik fuer die Datenverarbeitung
+	});
+	return btnShowData;
+})).setAutoWidth(true).setFlexGrow(1);
+	
+stationGrid.setColumnOrder(nameColumn, providerColumn, historischColumn, vorhersageColumn, btnColumn);
+stationGrid.setSizeFull();
+	
+stationGrid.getHeaderRows().clear();
+headerRow = stationGrid.appendHeaderRow();
+filter = new StationDTOFilter(dataProviderStations);
+headerRow.getCell(nameColumn).setComponent(createFilterHeader(filter::setStationName));
+headerRow.getCell(providerColumn).setComponent(createFilterHeader(filter::setProvider));
+\end{lstlisting}
+
+\section*{\small \textbf{2. Die Karte}}
+Die Karte ist eine Komponente, die an vielen Stellen in der Applikation wiederverwendbar ist, deswegen ist es sinnvoll, diese als eine eigene Klasse auszulagern.\\
+Die Methode zum Aufruf der Karte-Komponente:
+\begin{lstlisting}
+private void initOpenLayersMap() {
+	if (!mapVerticalLayout.getChildren().anyMatch(component -> component instanceof OpenLayersMap)) {
+		olMap = new OpenLayersMap();
+		olMap.setSizeFull();
+		olMap.showStationsOnMap(dataProviderStations.getItems().collect(Collectors.toList()));
+		mapVerticalLayout.add(olMap);
+	} else {
+	olMap.showStationsOnMap(dataProviderStations.getItems().collect(Collectors.toList()));
+	}
+}
+\end{lstlisting}
+
+Um möglichst einfach zu halten, werden nur die relevante Codeteile eingebracht.
+\begin{lstlisting}
+@NpmPackage(value = "ol", version = "8.2.0")
+@NpmPackage(value = "ol-ext", version = "4.0.13")
+@NpmPackage(value = "ol-layerswitcher", version = "4.1.1")
+@NpmPackage(value = "ol-popup", version = "5.1.0")
+@Tag("openlayers")
+@JsModule("./src/openlayers-connector.js")
+@Slf4j
+public class OpenLayersMap extends Div {
+	public OpenLayersMap() {
+		this.getParent().ifPresent(null);
+		initConnector();
+		
+		addDetachListener(detach -> {
+			shutDown();
+		});
+	}
+	public <T extends RestDTO> void showStationsOnMap(List<T> stations) {
+		runBeforeClientResponse(ui -> {
+			boolean isWetterstation = false;
+			if (stations != null && !stations.isEmpty()) {
+				isWetterstation = stations.get(0) instanceof WetterStationDTO;
+			}
+			String jsArray = buildStationsJson(stations);
+			ui.getPage()
+			.executeJs("window.Vaadin.Flow.openLayersConnector.showStations($0, $1, $2)", getElement(),
+			jsArray, isWetterstation);
+		});
+	}
+	private <T extends RestDTO> String buildStationsJson(List<T> stations) {
+		try {
+			if (stations == null || stations.isEmpty()) {
+				return "[]";
+			}
+			return objectMapper.writeValueAsString(stations);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "[]";
+		}
+	}
+	private void initConnector() {
+		runBeforeClientResponse(ui -> ui.getPage()
+		.executeJs("window.Vaadin.Flow.openLayersConnector.initLazy($0)", getElement()));
+	}
+	public void shutDown() {
+		UI.getCurrent().getPage()
+		.executeJs("window.Vaadin.Flow.openLayersConnector.clearAll($0)", getElement());
+	}
+}
+\end{lstlisting}
+
+\section*{\small \textbf{3. Die Filtermöglichkeiten}}
+\begin{lstlisting}
+private FormLayout formLayout = new FormLayout();
+private TextField tfMinLatitude = new TextField("Minimaler Breitengrad");
+private TextField tfMaxLatitude = new TextField("Maximaler Breitengrad");
+private TextField tfMinLongitude = new TextField("Minimaler Längengrad");
+private TextField tfMaxLongitude = new TextField("Maximale Längengrad");
+private Button btnFilterStations = new Button("Filtern");
+
+tfMinLatitude.setPlaceholder("Minimaler Breitengrad eingeben (47.2701 bis 55.0581)");
+tfMaxLatitude.setPlaceholder("Maximaler Breitengrad eingeben (47.2701 bis 55.0581)");
+tfMinLongitude.setPlaceholder("Minimaler Längengrad eingeben  (5.8663 bis 15.0419)");
+tfMaxLongitude.setPlaceholder("Maximaler Längegrad eingeben (5.8663 bis 15.0419)");
+tfMinLatitude.setValue("50.323");
+tfMaxLatitude.setValue("52.531");
+tfMinLongitude.setValue("5.866");
+tfMaxLongitude.setValue("9.462");
+
+btnFilterStations.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+btnFilterStations.addClickListener(submit -> {
+	double minLat = Double.parseDouble(tfMinLatitude.getValue());
+	double maxLat = Double.parseDouble(tfMaxLatitude.getValue());
+	double minLon = Double.parseDouble(tfMinLongitude.getValue());
+	double maxLon = Double.parseDouble(tfMaxLongitude.getValue());
+	
+	if (ddProvider.getValue() != null) {
+		ddProvider.setValue(null);
+	}
+	
+	List<StationDTO> filteredStations = mergedStations.stream()
+	.filter(station -> station.getLatitude() >= minLat && station.getLatitude() <= maxLat
+	&& station.getLongitude() >= minLon && station.getLongitude() <= maxLon)
+	.collect(Collectors.toList());
+	
+	if (filteredStations.isEmpty()) {
+		Utils.showHinweisBox("Keine Stationen innerhalb der Bounding Box gefunden.");
+	} else {
+		dataProviderStations = stationGrid.setItems(filteredStations);
+		initOpenLayersMap();
+		updateHeaderRows();
+	}
+	countResult.setText(dataProviderStations.getItemCount() + " Ergebnisse gefunden zu " + tfSearch.getValue());
+});
+
+ddProvider.setLabel("Servicename(n) auswählen");
+ddProvider.setItemLabelGenerator(String::toString);
+ddProvider.setWidth("20%");
+
+
+formLayout.setWidth("65%");
+formLayout.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 1), 
+new FormLayout.ResponsiveStep("500px", 2));
+\end{lstlisting}
+
+
+\chapter{Evaluierung}
+	
+\chapter{Fazit und Ausblick}
+	
+\printbibliography
 \end{document}
