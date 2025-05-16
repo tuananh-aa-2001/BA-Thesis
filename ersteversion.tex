@@ -505,28 +505,53 @@
 		\item Benutzer wechselt zu einer sogenannten Abonnement-Verwaltung Tab und sieht den eben abonnierten Datensatz in einer Tabelle.
 	\end{enumerate}
 	
-	\section*{\small \textbf{Use-Case 7: Abonnierte Datensätze in Grid abrufen}}
-	Akteur : Benutzer\\
-	Ziel: Abonnierte Datensätze abrufen\\
-	Vorbedingung: keine\\
-	Nachbedingung: keine\\
-	\underline{Ablauf}:
-	\begin{enumerate}
-		\item Benutzer navigiert nochmal zu Abonnement-Verwaltung Tab. 
-		\item Benutzer fokussiert sich auf rechte Seit der Grid und bewegt die Maus über das Icon mit dem Hilfetext „Abonnierte Daten abrufen” und klickt drauf.
-		\item Ein kleiner Dialog öffnet sich und zeigen sich zwei Optionen zum Abruf der Daten. Die eine ist mit dem Titel „Alle Daten im angegebenen Zeitraum” und die andere mit dem Titel „Inkrementelle Updates”
-		\item Benutzer wählt die erste Option aus und klickt drauf.
-		\item Das System reagiert drauf und leitet den Benutzer auf einen anderen URL weiter, wo er die abonnierten Datensätzen in dem gewünschten Format sieht. 
-	\end{enumerate}
+\section*{\small \textbf{Use-Case 7: Abonnierte Datensätze in Grid abrufen}}
+Akteur : Benutzer\\
+Ziel: Abonnierte Datensätze abrufen\\
+Vorbedingung: keine\\
+Nachbedingung: keine\\
+\underline{Ablauf}:
+\begin{enumerate}
+	\item Benutzer navigiert nochmal zu Abonnement-Verwaltung Tab. 
+	\item Benutzer fokussiert sich auf rechte Seit der Grid und bewegt die Maus über das Icon mit dem Hilfetext „Abonnierte Daten abrufen” und klickt drauf.
+	\item Ein kleiner Dialog öffnet sich und zeigen sich zwei Optionen zum Abruf der Daten. Die eine ist mit dem Titel „Alle Daten im angegebenen Zeitraum” und die andere mit dem Titel „Inkrementelle Updates”
+	\item Benutzer wählt die erste Option aus und klickt drauf.
+	\item Das System reagiert drauf und leitet den Benutzer auf einen anderen URL weiter, wo er die abonnierten Datensätzen in dem gewünschten Format sieht. 
+\end{enumerate}
 	
-	\chapter{Konzeption und Architektur}
+\chapter{Konzeption und Architektur}
+\section{Konzeption}
+Mit Sichten kann ein System aus unterschiedlichen Perspektiven gezeigt werden.
+Im Wesentlichen gibt es vier Typen:
+\begin{itemize}
+\item Kontextschicht
+\item Bausteinschicht
+\item Laufzeitschicht
+\item Verteilungsschicht
+\end{itemize}
+
+\section*{\large \textbf{Kontextsicht}}
+Die Kontextsicht (Level 0) zeigt das zu entwickelnde System als Blockbox, mit dem die Interaktion des Users stattfindet und welche weiteren Systeme beteiligt sind, aus den das zu entwickelnde System Daten importieren or exportieren kann.\\
+Die Abbildung 4.1 zeigt das System, welche sowohl die Schnittstelle zum Benutzer darstellt also auch mit anderen externen System zum Importieren der Daten. Daraus hinaus ist es mit einem Datenbankmanagementsystem zur Speicherung von Daten verbunden.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{Kontextangrenzung.png}
+	\caption{\label{} Kontextangrenzung}
+\end{figure}
+\section*{\large \textbf{Bausteinschicht}}
+Die Bausteinschicht zeigt den inneren Aufbau des Systems - und zwar denjenigen Teil, den entwickelt wird.
+
+
+
+\section{Design-Entscheidung}
 	
-	\chapter{Implementierung}
-	In diesem Kapitel wird über die Implementierung einzelner wichtiger Komponenten für die zuvor gewählte Architektur berichtet und ebenfalls auf während der Umsetzung auftretende Schwierigkeiten eingegangen. 
-	\section{Übersicht über wichtige Klassen und Entitäten}
-	Wie bereits am Anfang des 2.Kapitels erwähnt, wird als Einstiegspunkt für die Entwicklung eine Vaadin Applikation durch Bereitstellung von Vaadin Initializer genommen. Dies Package enthält die grundlegenden Komponente für eine simple Benutzeroberfläche. 
 	
-	In diesem Package gibt es eine kurz Main-Klasse(\textbf{Application.java}) als Startpunkt für die Applikation, die folgenden Aufbau hat: \\
+\chapter{Implementierung}
+In diesem Kapitel wird über die Implementierung einzelner wichtiger Komponenten für die zuvor gewählte Architektur berichtet und ebenfalls auf während der Umsetzung auftretende Schwierigkeiten eingegangen. 
+\section{Übersicht über wichtige Klassen und Entitäten}
+Wie bereits am Anfang des 2.Kapitels erwähnt, wird als Einstiegspunkt für die Entwicklung eine Vaadin Applikation durch Bereitstellung von Vaadin Initializer genommen. Dies Package enthält die grundlegenden Komponente für eine simple Benutzeroberfläche. 
+	
+In diesem Package gibt es eine kurz Main-Klasse(\textbf{Application.java}) als Startpunkt für die Applikation, die folgenden Aufbau hat: \\
 \begin{lstlisting}
 @SpringBootApplication
 @Theme(value = "opendata-konnektor")
@@ -801,6 +826,15 @@ In Vaadin wird eine Tabelle als Grid genannt und wird in dem Code wie folgt init
 \begin{lstlisting}
 private Grid<StationDTO> stationGrid = null;
 
+private Grid.Column<StationDTO> nameColumn = null;
+private Grid.Column<StationDTO> providerColumn = null;
+private Grid.Column<StationDTO> historischColumn = null;
+private Grid.Column<StationDTO> vorhersageColumn = null;
+private Grid.Column<StationDTO> btnColumn = null;
+private StationDTOFilter filter;
+private HeaderRow headerRow = null;
+private StationDTO currentStation = null;
+
 private void initGridStation() {
 	stationGrid = new Grid<>(StationDTO.class, false);
 	dataProviderStations = stationGrid.setItems(mergedStations);
@@ -818,7 +852,6 @@ private void initGridStation() {
 				statusIndicator.addClassName("text-body");
 				statusIndicator.setSize("1em");
 			}
-			
 			return statusIndicator;
 		}
 		if (station instanceof PegelStationDTO pegel) {
@@ -885,23 +918,40 @@ headerRow.getCell(nameColumn).setComponent(createFilterHeader(filter::setStation
 headerRow.getCell(providerColumn).setComponent(createFilterHeader(filter::setProvider));
 \end{lstlisting}
 
+Bei dem Code-Abschnitt wird ein \textbf{Grid<StationDTO>} initialisiert und es erstellt fünf Spalten:
+\begin{enumerate}
+\item \textbf{Name} – Zeigt den Namen der Station an.
+\item \textbf{Provider/Gebiet} – Zeigt den Anbieter oder das Gebiet der Station an.
+\item \textbf{Historisch} – Zeigt ein grünes Icon an, wenn die Station historisch ist (getIsHistorical() ist true)
+\item \textbf{Vorhersage} – Zeigt ein blaues Icon an, wenn Vorhersagedaten verfügbar sind (getIsForecast() ist true).
+\item \textbf{Daten anzeigen} – Fügt einen Button hinzu, der beim Klicken ein Dialogfenster zur Datenanzeige öffnet.
+\item Zusätzlich wird ein HeaderRow für die Filterung hinzugefügt, der Filter für Name und Provider ermöglicht.
+\end{enumerate}
+
+
 \section*{\small \textbf{2. Die Karte}}
 Die Karte ist eine Komponente, die an vielen Stellen in der Applikation wiederverwendbar ist, deswegen ist es sinnvoll, diese als eine eigene Klasse auszulagern.\\
 Die Methode zum Aufruf der Karte-Komponente:
 \begin{lstlisting}
 private void initOpenLayersMap() {
-	if (!mapVerticalLayout.getChildren().anyMatch(component -> component instanceof OpenLayersMap)) {
-		olMap = new OpenLayersMap();
-		olMap.setSizeFull();
-		olMap.showStationsOnMap(dataProviderStations.getItems().collect(Collectors.toList()));
-		mapVerticalLayout.add(olMap);
-	} else {
+  if (!mapVerticalLayout.getChildren().anyMatch(component -> component instanceof OpenLayersMap)) {
+	olMap = new OpenLayersMap();
+	olMap.setSizeFull();
 	olMap.showStationsOnMap(dataProviderStations.getItems().collect(Collectors.toList()));
-	}
+    mapVerticalLayout.add(olMap);
+  } else {
+	olMap.showStationsOnMap(dataProviderStations.getItems().collect(Collectors.toList()));
+  }
 }
 \end{lstlisting}
+Die Methode \textbf{initOpenLayersMap()} initialisiert eine \textbf{OpenLayersMap}-Komponente in einem Vaadin-Layout :
+\begin{itemize}
+\item prüft, ob bereits eine \textbf{OpenLayersMap} im \textbf{mapVerticalLayout} vorhanden ist.
+\item Falls nicht vorhanden, wird eine neue  \textbf{OpenLayersMap} erstellt und den Stationen aus dem  \textbf{dataProviderStations}-Datensatz hinzugefügt.
+\item Falls bereits vorhanden, wird die bestehende Karte aktualisiert, um die Stationen anzuzeigen.
+\item Ein \textbf{DataProvider} in Vaadin ist eine Datenquelle, die Daten für UI-Komponenten wie Grids bereitstellt. Es verwaltet die Daten und stellt Methoden zur Verfügung, um Daten zu filtern, zu sortieren und zu aktualisieren.
+\end{itemize}
 
-Um möglichst einfach zu halten, werden nur die relevante Codeteile eingebracht.
 \begin{lstlisting}
 @NpmPackage(value = "ol", version = "8.2.0")
 @NpmPackage(value = "ol-ext", version = "4.0.13")
@@ -946,12 +996,22 @@ public class OpenLayersMap extends Div {
 		runBeforeClientResponse(ui -> ui.getPage()
 		.executeJs("window.Vaadin.Flow.openLayersConnector.initLazy($0)", getElement()));
 	}
-	public void shutDown() {
-		UI.getCurrent().getPage()
-		.executeJs("window.Vaadin.Flow.openLayersConnector.clearAll($0)", getElement());
-	}
 }
 \end{lstlisting}
+
+Die Klasse \textbf{OpenLayersMap} erweitert Div und integriert eine  \textbf{OpenLayers}-Kartenkomponente.\\
+Annotationen:
+\begin{itemize}
+\item \textbf{@NpmPackage}: importiert JavaScript-Pakete (ol, ol-ext, ol-layerswitcher, ol-popup) in der angegebenen Version.
+\item \textbf{@Tag}: definiert das HTML-Tag als \textbf{openlayers}.
+\item \textbf{@JsModule}: verweist auf die JavaScript-Datei \textbf{openlayers-connector.js} zur Client-Integration.
+\end{itemize}
+Methoden:
+\begin{itemize}
+	\item \textbf{showStationsOnMap(List<T> stations)}: zeigt Stationen auf der Karte an und erkennt, ob es sich um Wetterstationen handelt.
+	\item \textbf{buildStationsJson(List<T> stations)}: konvertiert die Stationen-Liste in ein JSON-Array für die Client-Seite.
+	\item \textbf{initConnector()}: Initialisiert den JavaScript-Connector(initLazy).
+\end{itemize}
 
 \section*{\small \textbf{3. Die Filtermöglichkeiten}}
 \begin{lstlisting}
@@ -996,16 +1056,88 @@ btnFilterStations.addClickListener(submit -> {
 	}
 	countResult.setText(dataProviderStations.getItemCount() + " Ergebnisse gefunden zu " + tfSearch.getValue());
 });
-
-ddProvider.setLabel("Servicename(n) auswählen");
-ddProvider.setItemLabelGenerator(String::toString);
-ddProvider.setWidth("20%");
-
-
 formLayout.setWidth("65%");
 formLayout.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 1), 
 new FormLayout.ResponsiveStep("500px", 2));
 \end{lstlisting}
+Dieser Code-Abschnitt erstellt ein Formular zur Filterung von Stationen anhand von Koordinaten (Breitengrad und Längengrad).\\
+Formularkomponenten:
+\begin{itemize}
+	\item \textbf{Vier Textfelder:}: Eingabe von minimalen und maximalen Breiten- und Längengraden.
+	\item Button \textbf{Filtern}: Startet den Filterprozess.
+\end{itemize}
+Filterlogik beim Button-Klick:
+\begin{itemize}
+	\item holt die eingegebenen Koordinaten und filtert die mergedStations-Liste.
+	\item aktualisiert \textbf{dataProviderStations} mit den gefilterten Stationen.
+	\item aktualisiert die Karte mit \textbf{initOpenLayersMap()} und die Header-Row.
+\end{itemize}
+
+\begin{lstlisting}
+private Map<String, List<? extends StationDTO>> providerList = new HashMap<>();
+ddProvider.setLabel("Servicename(n) auswählen");
+ddProvider.setItemLabelGenerator(String::toString);
+ddProvider.setWidth("20%");
+	
+ddProvider.addValueChangeListener(event -> {
+	stationGrid.getHeaderRows().clear();
+	if (event.getValue() != null) {
+		List<? extends StationDTO> selectedStations = providerList.get(event.getValue());
+		if (selectedStations != null) {
+		if (tfMaxLatitude.getValue() != null && tfMinLongitude.getValue() != null) {
+			GridListDataView<StationDTO> dataView = stationGrid.getListDataView();
+			if (event.getValue().equals("OpenGeoData-NRW")) {
+					dataView.setFilter(st -> selectedStations.contains(st));
+					providerColumn.setHeader("Gebiet");
+			} else if (event.getValue().equals("Pegelonline-Dienst")) {
+					dataView.setFilter(st -> selectedStations.contains(st));
+					providerColumn.setHeader("Provider");
+			} else {
+					dataView.setFilter(st -> st.getProvider().equals(event.getValue()));
+					providerColumn.setHeader("Provider");
+			}
+			dataProviderStations = dataView;
+		} else {
+			if (event.getValue().equals("OpenGeoData-NRW")) {
+				providerColumn.setHeader("Gebiet");
+			} else {
+				providerColumn.setHeader("Provider");
+			}
+				dataProviderStations = stationGrid.setItems(selectedStations.stream()
+				.sorted(Comparator.comparing(StationDTO::getName)).collect(Collectors.toList()));
+			}
+			updateHeaderRows();
+		} else {
+			providerColumn.setHeader("Provider/Gebiet");
+			dataProviderStations = stationGrid.setItems(mergedStations);
+			updateHeaderRows();
+		}
+		stationGrid.getDataProvider().refreshAll();
+		initOpenLayersMap();
+		countResult.setText(dataProviderStations.getItemCount() + " Ergebnisse zu " + tfSearch.getValue()
+		+ (event.getValue() != null ? " von " + event.getValue() : ""));
+});
+\end{lstlisting}
+Dieser Code-Abschnitt implementiert die Filterlogik für den Dropdown-Provider.\\
+Filterlogik bei Wertänderung:
+\begin{itemize}
+	\item Überprüft, ob ein Dienstanbieter \textbf{(event.getValue())} ausgewählt ist:
+	\begin{itemize}
+		\item falls Koordinatenfilter aktiv: verwendet \textbf{GridListDataView}, um die gefilterten Stationen weiter zu filtern.
+		\item falls kein Koordinatenfilter: sortiert und setzt die Stationen basierend auf dem Dienstanbieter und aktualisiert die Header-Überschrift.
+	\end{itemize}
+	\item Falls kein Anbieter ausgewählt ist: setzt die ursprüngliche List als Datensatz und setzt die Standard-Header-Überschrift.
+	\item Aktualisiert die Karte mit \textbf{initOpenLayersMap()} und die Header-Zeilen. 
+\end{itemize}
+\textbf{GridListDataView} ist eine Schnittstelle in Vaadin, die es ermöglicht, die Daten eines Grid-Components zu verwalten und zu manipulieren.
+\clearpage
+Wenn \textbf{OpenGeoData-NRW} als Eintrag aus dem Dropdown ausgewählt wird, ergibt sich folgende Abbildung:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=18cm]{pegel-opengeodata.png}
+	\caption{\label{pegel:}Pegel-OpenGeoDataNrw}
+\end{figure}
+
 
 
 \chapter{Evaluierung}
