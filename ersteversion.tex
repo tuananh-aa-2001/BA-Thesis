@@ -211,6 +211,7 @@
 		\acro{JPA}{Java Persistence API}
 		\acro{CRUD}{Create, Raed, Update and Delete}
 		\acro{UUID}{Universally Unique Identifier}
+		\acro{SRP}{Single Responsibility Principle}
 	\end{acronym}
 	
 	\cleardoublepage
@@ -532,15 +533,20 @@ Im Wesentlichen gibt es vier Typen:
 
 \section*{\large \textbf{Kontextsicht}}
 Die Kontextsicht (Level 0) zeigt das zu entwickelnde System als Blockbox, mit dem die Interaktion des Users stattfindet und welche weiteren Systeme beteiligt sind, aus den das zu entwickelnde System Daten importieren or exportieren kann.\\
-Die Abbildung 4.1 zeigt das System, welche sowohl die Schnittstelle zum Benutzer darstellt also auch mit anderen externen System zum Importieren der Daten. Daraus hinaus ist es mit einem Datenbankmanagementsystem zur Speicherung von Daten verbunden.
+Die Abbildung 4.1 zeigt das System, welche sowohl die Schnittstelle zum Benutzer  also auch mit anderen externen System zum Importieren der Daten darstellt. Daraus hinaus ist es mit einem Datenbankmanagementsystem zur Speicherung von Daten verbunden.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=9cm]{Kontextangrenzung.png}
+	\includegraphics[width=12cm]{Kontextangrenzung.png}
 	\caption{\label{} Kontextangrenzung}
 \end{figure}
 \section*{\large \textbf{Bausteinschicht}}
-Die Bausteinschicht zeigt den inneren Aufbau des Systems - und zwar denjenigen Teil, den entwickelt wird.
-
+Die Bausteinschicht zeigt den näheren Aufbau des Systems - und zwar denjenigen Teil, den entwickelt wird. Jedes mit blau gefüllte Package beinhaltet alle Entitäten und die für den Aufbau der View und Datenaustausch mit der externen Datenquelle benötigten Komponenten.\\
+Im Package \textbf{MainView} wird die Anwendung mit Startseite initialisiert und die Anbindung der weitern Views an die Hauptview ermöglicht. Das Package \textbf{Utils} beinhaltet zahlreiche Hilfsfunktionen. Diese dienen vor allem dazu, die Modularität, die Wartbarkeit und die Verständlichkeit des Codes sicherzustellen. Das Package \textbf{Konfiguration} beinhaltet unterschiedliche Konfigurationsklassen für die Applikation.\\ Die anderen Packages sind gemäß dem Single Responsibility Principle (SRP) aufgebaut. Jedes Package verfolgt dabei eine klar definierte, spezifische Aufgabe. Durch die Anwendung des SRP werden die Verantwortlichkeiten innerhalb des Systems präzise getrennt, was die Projektstruktur übersichtlicher und verständlicher macht.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{Bausteinsicht-1.png}
+	\caption{\label{} Bausteinsicht}
+\end{figure}
 
 
 \section{Design-Entscheidung}
@@ -568,7 +574,7 @@ public class Application implements AppShellConfigurator {
 			\item  \textbf{@EnableAutoConfiguration}: ermöglicht die automatische Konfiguration basierend auf den Abhängigkeiten im Klassenpfad.
 			\item  \textbf{@ComponentScan}: sucht nach Komponenten, Konfigurationsklassen und Services im aktuellen Pakte und allen Unterpakten.
 		\end{enumerate}
-	Die Annotation \textbf{@Theme(value = "opendata-konnektor")} legt das Vaadin-Theme fest. \textbf{value} definiert den Namen des Themes und Themens werden verwendet, um das Erscheinungsbild der Anwendung anzupassen.\\
+	Die Annotation \textbf{@Theme(value = opendata-konnektor)} legt das Vaadin-Theme fest. \textbf{value} definiert den Namen des Themes und Themens werden verwendet, um das Erscheinungsbild der Anwendung anzupassen.\\
 	Die Annotation \textbf{@EnableCaching} aktiviert die Spring Caching-Funktionalität und ermöglicht die Verwendung von Cache-Mechanismen(\textbf{@Cacheable},\textbf{@Cacheable},\textbf{@CacheEvict}).\\
 	\textbf{AppShellConfigurator} ist eine Schnittstelle (\textbf{interface}) aus dem Vaadin Framework. Sie wird verwende, um die \textbf{App Shell} einer Vaadin-Anwendung zu konfigurieren. Was ist die App Shell in Vaadin ?
 	\begin{itemize}
@@ -700,7 +706,8 @@ Im Rahmen dieses Abschnittes wird die Implementierung des Use-Cases \textit{Date
 Die Umsetzung eines UI-Komponents erfolgt unter Java-Programmiersprache als Klasse, welche ein Komponent wie z.B. ein VerticalLayout oder HorizontalLayout oder ein Dialog von Paket \textbf{com.vaadin.flow.component.Component} erbt.
 \begin{lstlisting}
 import com.vaadin.flow.component.combobox.ComboBox;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaa
+din.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 		
 @Route(value = "suche", layout = MainLayout.class)
