@@ -324,7 +324,8 @@
 		password=
 		driver=org.postgresql.Driver
 		# Reference Configuration
-		referenceUrl=hibernate:spring:de.ahu.opendata?dialect=org.hibernate.dialect.PostgreSQLDialect
+		referenceUrl=hibernate:spring:de.ahu.opendata?dialect=
+		org.hibernate.dialect.PostgreSQLDialect
 		referenceDriver=liquibase.ext.hibernate.database.connection.HibernateDriver
 		# Output Files
 		changeLogFile=src/main/resources/db/changelog-root.xml
@@ -391,10 +392,8 @@
 	\end{enumerate}
 	\subsection{Anwendungsszenario}
 	Die zu entwickelnde Applikation soll als zentrale Stelle für die Durchsuche der Geodaten und Verwaltung der relevanten Geodaten dienen und ist auch in der Lage, diese Geodaten durch eine Schnittstelle einen anderen Client zur Verfügung stellen zu können.
-	\subsection{Stakeholder}
-	In der Softwareentwicklung sind Stakeholder Personen, Gruppen oder Organisation, die ein Interesse am Erfolg eines Softwareprojekts haben und von dessen Ergebnissen direkt oder indirekt beeinflusst werden.
-	
-	\subsection{User-Stories}
+	\subsection{Stakeholder und User-Stories}
+	In der Softwareentwicklung sind Stakeholder Personen, Gruppen oder Organisation, die ein Interesse am Erfolg eines Softwareprojekts haben und von dessen Ergebnissen direkt oder indirekt beeinflusst werden.\\
 	Mittels User-Stories können funktionale Anforderungen der Stakeholder erfasst werden.
 	\begin{enumerate}
 		\item Als Benutzer möchte ich in der Web-Oberfläche eine Übersicht über populäre Datenquellen sehen, die  relevante Geodaten bereitstellen.
@@ -456,25 +455,7 @@
 		\item Benutzer wählt eine Station von dem Filter „Pegelstation” aus.
 		\item Das System zeigt dann sowohl historische als auch die Vorhersagedaten, falls die gewählte Station überhaupt Daten zurückliefert, in einem Diagramm.
 	\end{enumerate}
-	\section*{\small \textbf{Use-Case 4: OGC-Geodatendiensten einsehen}}
-	OGC-Geodatendienste,wie Web Map Server, Web Feature Server, etc. sind die Webservices, die auf einer standardisierten Schnittstelle basieren, die es ermöglichen, Geodaten zwischen verschiedenen Systemen auszutauschen. Sie werden von der OGC entwickelt und sind international anerkannt.\\\\
-	Akteur : Benutzer\\
-	Ziel:  OGC-Geodatendiensten einsehen\\
-	Vorbedingung: keine\\
-	Nachbedingung: keine\\
-	\underline{Ablauf}:
-	\begin{enumerate}
-		\item Benutzer navigiert zu GovData-Das Datenportal - Tab.
-		\item Benutzer sieht links die Filtermöglichkeiten und rechts einen Platzhalter für die Ergebnisse, wenn die Filter angewendet werden.
-		\item Benutzer geht allen Filtern durch und gibt einen Suchbegriff ein und klickt auf das Button "Suche starten".
-		\item Die Applikation liefert eine Liste von Ergebnisse anhand der Eingaben.
-		\item Benutzer sieht optimal eine Liste von Treffer in einer tabellarischen Form mit wesentlichen Information zu dem jeweiligen Datensatz.
-		\item Benutzer klickt auf eine Zeile der Tabelle und sieht die detaillierten Information zu dem selektierten Datensatz inklusive die Geodatendiensten.
-		\item Benutzer klickt auf ein weiteres Button zur Vorschau der Geodatendienste.
-		\item Das System holt die Daten der Geodatendienste dynamisch ab und analysiert es und stellt die geparste Daten in ein Dialog bereits. 	
-	\end{enumerate}
-	\section*{\small \textbf{Use-Case 5: Datenstream eines Klimaphänomen einsehen}}
-	
+	\section*{\small \textbf{Use-Case 4: Datenstream eines Klimaphänomen einsehen}}
 	Akteur : Benutzer\\
 	Ziel: Datenstream eines Klimaphänomen einsehen\\
 	Vorbedingung: keine\\
@@ -490,7 +471,7 @@
 		\item Benutzer wählt einen Eintrag aus dem Dropdown aus und bekommt die wirklichen Daten zu der selektierten Messstellen und zu dem eingegebenen Klimaphänomen.
 	\end{enumerate}
 	
-	\section*{\small \textbf{Use-Case 6: Daten zu einem Klimaphänomen abonnieren}}
+	\section*{\small \textbf{Use-Case 5: Daten zu einem Klimaphänomen abonnieren}}
 	Akteur : Benutzer\\
 	Ziel: den Datenstream zu einem Klimaphänomen abonnieren\\
 	Vorbedingung: keine\\
@@ -504,7 +485,7 @@
 		\item Benutzer wechselt zu einer sogenannten Abonnement-Verwaltung Tab und sieht den eben abonnierten Datensatz in einer Tabelle.
 	\end{enumerate}
 	
-\section*{\small \textbf{Use-Case 7: Abonnierte Datensätze in Grid abrufen}}
+\section*{\small \textbf{Use-Case 6: Abonnierte Datensätze in Grid abrufen}}
 Akteur : Benutzer\\
 Ziel: Abonnierte Datensätze abrufen\\
 Vorbedingung: keine\\
@@ -518,7 +499,7 @@ Nachbedingung: keine\\
 	\item Das System reagiert drauf und leitet den Benutzer auf einen anderen URL weiter, wo er die abonnierten Datensätzen in dem gewünschten Format sieht. 
 \end{enumerate}
 
-\section*{\small \textbf{Use-Case 8: Umformatierung der Rohdaten konfigurieren}}
+\section*{\small \textbf{Use-Case 7: Umformatierung der Rohdaten konfigurieren}}
 Akteur : Benutzer\\
 Ziel: Umformatierung der Rohdaten konfigurieren\\
 Vorbedingung: keine\\
@@ -569,21 +550,19 @@ Die Laufzeitsicht beschreibt, wie ein System während seiner Ausführung seine w
 \end{figure}
 Die obige Abbildung demonstriert das Use-Case 5: Suche nach Messdaten und Klimadaten basierend auf die Nutzer-Eingabe. Ein Benutzer gibt einen Suchbegriff in ein Suchfeld ein. Daraufhin wird:  
 \begin{enumerate}
-	\item Der Begriff ins Englische übersetzt, um passende Wetterstation über den Deutschen Wetterdienst zu finden (historisch und prognostisch).
-	\item Bei passenden Begriffen wie "Pegel" oder "Grundwasser" werden zusätzliche Datenquellen abgefragt:
+	\item Der Begriff ins Englische übersetzt,da die Anfrage an den Server ausschließlich mit englischen Parametern zulässt,um passende Wetterstation über den Deutschen Wetterdienst zu finden (historisch und prognostisch).
+	\item Bei passenden Begriffen wie „Pegel“ oder „Grundwasser“ werden zusätzliche Datenquellen abgefragt:
 	\begin{itemize}
 		\item Pegelstationen über den Pegeldienst
 		\item Grundwasser - oder Oberflächendaten über einen Web-Crawler((CrawlerFileService)), der OpenGeoData-Dateien herunterlädt und filtert.
 	\end{itemize}
-	\item Die gefundenen Dateien werden entpackt und analysiert, um Stationsdaten zu extrahieren.
-	\item Alle Stationen werden zusammengeführt, nach Anbieter gruppiert und dem Benutzer im UI (Gitteransicht + Kartenansicht + Filtermöglichkeiten) dargestellt.
+	\item Die gefundenen Dateien werden entpackt und analysiert, um Stationsdaten zu extrahieren. Alle Stationen werden zusammengeführt, nach Anbieter gruppiert und dem Benutzer im UI (Gitteransicht + Kartenansicht + Filtermöglichkeiten) dargestellt.
 \end{enumerate}
-Die folgende Abbildung illustriert das Use-Case 8:
 \begin{figure}[H]
 	\includegraphics[width=18.5cm]{CsvKonfiguration.png}
 	\caption{\label{} Use-Case 8}
 \end{figure}
-Ein Benutzer wählt eine CSV-Datei aus einer Dropdown-Liste aus und klickt auf "Umformatieren". Das System:
+Die Abbildung 4.4 illustriert den Fluss vom Use-Case 8. Ein Benutzer wählt eine CSV-Datei aus einer Dropdown-Liste aus und klickt auf „Umformatieren". Das System:
 \begin{enumerate}
 	\item Ermittelt die passende Konfiguration (falls vorhanden) basierend auf dem Dateinamen.
 	\item Lädt die zugehörige Datei aus bereits extrahierten Dateien.
@@ -596,14 +575,16 @@ Ein Benutzer wählt eine CSV-Datei aus einer Dropdown-Liste aus und klickt auf "
 		\end{itemize}
 	\item Diese Konfiguration kann anschließend gespeichert oder für die weitere Verarbeitung verwendet werden.
 \end{enumerate}
-
 \section*{\large \textbf{Verteilungsschicht}}
 Üblicherweise beschreibt die Verteilungssicht die technische Infrastruktur und wie sich die einzelnen (Software-)Bausteine auf die einzelnen Infrastrukturkomponenten verteilen.\\ \\
 Im Rahmen dieses Prototyps wird auf die Verteilungsschicht verzichtet, da die entwickelte Anwendung ausschließlich lokal (auf dem \textit{localhost}) ausgeführt wird und kein Deployment auf verteilte Systemumgebungen vorgesehen ist. Eine detaillierte Beschreibung der physischen Infrastruktur ist daher zum aktuellen Zeitpunkt nicht erforderlich.
 
-
 \clearpage
 \section{Design-Entscheidung}
+Bei der Architekturarbeit geht es meistens darum, die Entscheidungen zu treffen,die dazu beitragen, konkrete Lösungen für die aktuellen Herausforderungen zu finden. Von daher kommen zunächst zwei Architekturstile bei dieser prototypischen Entwicklung in Frage: \textbf{Monolith} und \textbf{Event-Driven Architektur}( Ereignisgesteuerte Architektur).\\ \\
+Bei der \textbf{monolithischen Architektur}  handelt es sich um eine Softwarearchitektur, bei der alle Funktionalitäten und Komponenten einer Anwendung in einem einzigen, zusammenhängenden Codeblock gebündelt sind. Die gesamte Anwendung wird gemeinsame entwickelt, getestet, bereitgestellt und skaliert. Monolithen sind oft einfacher zu konfigurieren und zu verwalten, insbesondere in der frühen Phase eines Projekts. \\ \\
+Im Gegensatz dazu basiert die \textbf{Event-Driven Architektur} auf dem Prinzip, dass Komponenten lose gekoppelt sind und über Ereignisse miteinander kommunizieren. Jede Komponente reagiert auf bestimmte Ereignisse und löst ggf. weitere Ereignisse aus.Diese Architektur eignet sich besonders gut für Systeme mit hoher Skalierbarkeit, Flexibilität  und dynamischen Anforderung, ist jedoch oft komplexer in der Aufstellung der Infrastruktur und im Betrieb.\\ \\
+Für die prototypische Entwicklung habe ich mich für die \textbf{monolithische Architektur} entschieden, da sie einen schnelleren Entwicklungsstart ermöglicht, weniger Infrastruktur erfordert und die Komplexität im Vergleich zur \textbf{Event-Driven-Architektur} zunächst gering ist. Diese Entscheidung erlaubt es, mehr den Fokus auf die Umsetzungen der Kernfunktionalitäten zu legen, ohne sich frühzeitig mit verteilten Systemen oder asynchroner Kommunikation auseinandersetzten zu müssen. 
 	
 	
 \chapter{Implementierung}
@@ -997,10 +978,12 @@ private void initOpenLayersMap() {
   if (!mapVerticalLayout.getChildren().anyMatch(component -> component instanceof OpenLayersMap)) {
 	olMap = new OpenLayersMap();
 	olMap.setSizeFull();
-	olMap.showStationsOnMap(dataProviderStations.getItems().collect(Collectors.toList()));
+	olMap.showStationsOnMap(dataProviderStations.getItems()
+	.collect(Collectors.toList()));
     mapVerticalLayout.add(olMap);
   } else {
-	olMap.showStationsOnMap(dataProviderStations.getItems().collect(Collectors.toList()));
+	olMap.showStationsOnMap(dataProviderStations.getItems()
+	.collect(Collectors.toList()));
   }
 }
 \end{lstlisting}
@@ -1123,7 +1106,7 @@ new FormLayout.ResponsiveStep("500px", 2));
 Dieser Code-Abschnitt erstellt ein Formular zur Filterung von Stationen anhand von Koordinaten (Breitengrad und Längengrad).\\
 Formularkomponenten:
 \begin{itemize}
-	\item \textbf{Vier Textfelder:}: Eingabe von minimalen und maximalen Breiten- und Längengraden.
+	\item Vier \textbf{Textfelder:}: Eingabe von minimalen und maximalen Breiten- und Längengraden.
 	\item Button \textbf{Filtern}: Startet den Filterprozess.
 \end{itemize}
 Filterlogik beim Button-Klick:
@@ -1164,7 +1147,8 @@ ddProvider.addValueChangeListener(event -> {
 				providerColumn.setHeader("Provider");
 			}
 				dataProviderStations = stationGrid.setItems(selectedStations.stream()
-				.sorted(Comparator.comparing(StationDTO::getName)).collect(Collectors.toList()));
+				.sorted(Comparator.comparing(StationDTO::getName))
+				.collect(Collectors.toList()));
 			}
 			updateHeaderRows();
 		} else {
@@ -1195,14 +1179,48 @@ Wenn \textbf{OpenGeoData-NRW} als Eintrag aus dem Dropdown ausgewählt wird, erg
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=18cm]{pegel-opengeodata.png}
-	\caption{\label{pegel:}Pegel-OpenGeoDataNrw}
+	\caption{\label{}Pegel-OpenGeoDataNrw}
 \end{figure}
-
-
-
-\chapter{Evaluierung}
-	
 \chapter{Fazit und Ausblick}
-	
+
+\section{Bewertung}
+Bei der Bewertung  zwei grundlegende Aspekte näher betrachtet und kritisch analysiert: die technische Implementierung sowie das Architekturdesign. Der Fokus liegt dabei insbesondere auf der Frage, inwiefern die ursprüngliche formulierten Anforderungen im Verlauf der Entwicklung erfolgreich umgesetzt werden konnten.\\ \\
+Im Rahmen der Arbeit ergeben sich zwei hauptsächlich folgende Forschungsfragen:
+\begin{itemize}
+	\item Lässt sich ein generisches Mapping umsetzen, um die heterogenen Datenstrukturen in eine einheitliche Datenstruktur zu überführen.
+	\item Kann eine einheitliche Schnittstelle implementiert werden, die es eine Client-Applikation ermöglicht,in diesem Fall der AhuManager, gezielt einzelnen Datensätze mit dem gewünschten Zielformat zu abonnieren?
+\end{itemize}
+\subsection{Bewertung von Implementierung}
+Zu der ersten Frage, konnte ein generisches Mapping  erfolgreich implementiert werden, um heterogene Datenstrukturen in ein einheitliches Format zu überführen. Dies wurde exemplarisch anhand von drei unterschiedlichen Datenquellen – dem \textbf{Deutschen Wetterdienst},\textbf{OpenGeoData.NRW} und \textbf{PegelOnline} – umgesetzt. Für diese Quellen funktioniert das Mapping zuverlässig. Allerdings ist die aktuelle Lösung nicht vollständig generisch im Hinblick auf beliebige, unbekannte Datenstrukturen. Für weitere Datenquellen mit stark abweichenden Strukturen sind gegebenenfalls spezifische Anpassungen notwendig, wodurch die generische Anwendbarkeit in solchen Fällen eingeschränkt ist.\\ \\
+Zu der zweiten Frage, konnte eine einheitliche Schnittstelle im Rahmen dieser prototypischen Entwicklung realisiert werden. Diese REST-Schnittstelle ermöglicht es einer Client-Applikation – wie in diesem Fall dem \textbf{AhuManager} – gezielt einzelne Datensätze im gewünschten Zielformat zu abonnieren. Derzeit ist die Schnittstelle jedoch nur lokal (localhost) verfügbar, weshalb sie für den produktiven Einsatz noch entsprechend angepasst werden muss, um einen stabilen Datenaustausch zwischen Service und Client auch über Netzwerkgrenzen hinweg zu ermöglichen.
+
+\subsection{Bewertung von Architekturdesign und Technologien}
+Um eine Architektur einer Software bewerten zu können,werden unter anderem die \textbf{SOLID-Prinzipien} herangezogen. Diese definieren,wie Funktionen und Datenstrukturen in Klassen organisiert sowie wie Abhängigkeiten zwischen Klassen gestaltet sein sollen. Ziel ist die Entwicklung wartbarer, verständlicher und wiederverwendbarer Softwarekomponenten, die als stabile Grundlage für vielfältige Softwaresysteme dienen.\\
+Die fünf SOLID-Prinzipien im Überblick:
+\begin{itemize}
+	\item \textbf{S} - Single-Responsibility-Prinzip(SRP): Eine Klasse sollte genau eine Verantwortlichkeit besitzen.
+	\item \textbf{O} - Open-Closed-Prinzip(OCP): Softwaremodule sollen für Erweiterungen offen, aber für Modifikationen geschlossen sein.
+	\item \textbf{L} - Liskov’sche Substitutions-Prinzip(LSP): Objekte von Subklassen sollen sich wie Objekte ihrer Superklasse verhalten lassen. 
+	\item \textbf{I} - Interface-Segregation-Prinzip(ISP): Schnittstellen sollen spezifisch auf konkrete Anforderungen zugeschnitten sein.
+	\item \textbf{D} - Dependency-Inversion-Prinzip(DIP): Abhängigkeiten sollen sich auf Abstraktionen, nicht auf konkrete Implementierung beziehen.
+\end{itemize}
+Im vorliegenden Projekt wurden mehrere dieser Prinzipien umgesetzt.
+\begin{itemize}
+	\item \textbf{Single-Responsibility-Prinzip} : Wie bereits in Abbildung 4.2 dargestellt, wurde dieses Prinzip konsequent umgesetzt. Jede Komponente bzw. jeder Service ist in einem eigenen Package gekapselt und übernimmt eine klar abgegrenzte Aufgabe.
+	\item \textbf{Liskov Substitution Principle}: Auch dieses Prinzip wurde berücksichtigt. So stellt z.B. die Klasse \textbf{„BaseEntity“} eine abstrakte Oberklasse dar, deren Subklassen ihre zugesicherten Eigenschaften einhalten. Die Anwendung dieses Prinzips wurde im Detail in Abschnitt 5.1 erläutert.
+	\item \textbf{Dependency-Inversion-Prinzip}: Durch den Einsatz des Spring Frameworks wird dieses Prinzip weitgehend automatisch unterstützt. Insbesondere durch die Verwendung der Annotation \textbf{@Autowird} erfolgen Abhängigkeiten auf Basis von Interfaces bzw. Abstraktionen und nicht auf konkrete Implementierungen.
+\end{itemize}
+Für die Umsetzung der spezifizierten Anforderungen wurden bewährte Technologien eingesetzt, die eine effiziente Entwicklung und eine benutzerfreundliche Darstellung der Ergebnisse ermöglichen.\\ \\
+Im Backend kam das Spring Framework zum Einsatz, das durch seine modulare Struktur, umfangreiche Konfigurationsmöglichkeiten und integrierte Unterstützung für Dependency Injection eine schnelle und strukturierte Implementierung der Geschäftslogik erlaubt.\\ \\
+Für die Gestaltung der Benutzeroberfläche wurde Vaadin verwendet. Diese Java-basierte Web-UI-Technologie bietet eine Vielzahl an vorkonfigurierten Komponenten, die sich besonders gut zur Darstellung großer Datenmengen eignen. Durch die hohe Abstraktionsebene und serverseitige Verarbeitung lassen sich komplexe Benutzeroberflächen mit minimalem Aufwand realisieren. Insbesondere die Möglichkeit, Messdaten übersichtlich und interaktiv anzuzeigen, stellt einen wesentlichen Vorteil von Vaadin im vorliegenden Projekt dar.
+\section{Ausblick}
+Die zentrale Fragestellung zu Beginn dieser Arbeit lautete, ob die prototypische Entwicklung zur Messdatenerhebung und -bereitstellung einen konkreten Mehrwert für den \textbf{AhuManager} liefern kann. Diese Frage lässt sich nicht abschließend beantworten, bietet jedoch Diskussionspotenzial.Der entwickelte Prototyp bildet eine solide Grundlage, auf der weiter aufgebaut werden kann.\\
+Insbesondere in folgenden Punkten besteht Weiterentwicklungspotenzial:
+\begin{itemize}
+	\item \textbf{Ausbau der Schnittstellen}: Die Anbindung eines stabilen und skalierbaren Abonnement-Services könnte die Datenbereitstellung effizienter und flexibler gestalten.
+	\item \textbf{Integration weiterer Datenquellen}: Eine Erweiterung auf zusätzliche externe Systeme würde Mehrwert bringen.
+	\item \textbf{Verbesserung der Benutzeroberfläche}: Die grafische Darstellung und Interaktivität der Oberfläche lässt sich im Hinblick auf Usability und Performance weiter optimieren.
+\end{itemize}
+Ein spannender Aspekt für die zukünftige Entwicklung wäre die Frage,ob sich eine \textbf{generalisierte Datenstruktur} realisieren lässt, in der alle abonnierten Daten einheitlich in einer Datenbank abgelegt werden können-beispielsweise angelehnt an das \textbf{SensorThings API-Modell}. Eine solche Standardisierung könnte die Interoperabilität zwischen verschiedenen Systemen wesentlich verbessern.	
 \printbibliography
 \end{document}

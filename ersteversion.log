@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  21 MAY 2025 22:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.3)  22 MAY 2025 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1156,7 +1156,13 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 LaTeX Warning: Label `' multiply defined.
 
 
-LaTeX Warning: Label `pegel:' multiply defined.
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
 
 )
 \openout1 = `ersteversion.aux'.
@@ -1432,13 +1438,13 @@ LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line
 
 (C:\Users\Tuan\MiKTeX\tex/latex/kpfonts\ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
-))
+) [3
+
+])
 \tf@toc=\write5
 \openout5 = `ersteversion.toc'.
 
- [3
-
-] [4]
+ [4]
 
 LaTeX Warning: Hyper reference `acro:REST-API' on page 5 undefined on input lin
 e 192.
@@ -1646,7 +1652,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
 ] [8]
 chapter 2.
-<vaadin_architekture.jpg, id=131, 1939.245pt x 2055.68pt>
+<vaadin_architekture.jpg, id=135, 1939.245pt x 2055.68pt>
 File: vaadin_architekture.jpg Graphic file (type jpg)
 <use vaadin_architekture.jpg>
 Package pdftex.def Info: vaadin_architekture.jpg  used on input line 257.
@@ -1717,7 +1723,7 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (C:\Users\Tuan\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) [12]
-<liquibase-changelog.png, id=173, 208.3785pt x 73.4745pt>
+<liquibase-changelog.png, id=177, 208.3785pt x 73.4745pt>
 File: liquibase-changelog.png Graphic file (type png)
 <use liquibase-changelog.png>
 Package pdftex.def Info: liquibase-changelog.png  used on input line 315.
@@ -1725,20 +1731,14 @@ Package pdftex.def Info: liquibase-changelog.png  used on input line 315.
 LaTeX Font Info:    Font shape `T1/jkptt/m/it' in size <10.95> not available
 (Font)              Font shape `T1/jkptt/m/sl' tried instead on input line 321.
 
-
-Overfull \hbox (75.7368pt too wide) in paragraph at lines 327--328
-[][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-[13
+ [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.345 		http:
-             //www.liquibase.org/xml/ns/pro/liquibase-pro-4.23.xsd"> <./liquiba
-se-changelog.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+             //www.liquibase.org/xml/ns/pro <./liquibase-changelog.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
 
@@ -1747,321 +1747,356 @@ chapter 3.
 [16
 
 ] [17]
-Overfull \hbox (3.25005pt too wide) in paragraph at lines 427--428
+Overfull \hbox (3.25005pt too wide) in paragraph at lines 426--427
 []\T1/jkp/m/n/12 Weitere Drop-downs wer-den da-nach ein-ge-blen-det, ent-we-der
  möch-te Be-nut-zer die Mess-
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 460--466
-
- []
-
-[19] [20] [21] [22]
+[18] [19] [20] [21]
 chapter 4.
-<Kontextangrenzung.png, id=346, 470.9595pt x 217.41225pt>
+<Kontextangrenzung.png, id=338, 470.9595pt x 217.41225pt>
 File: Kontextangrenzung.png Graphic file (type png)
 <use Kontextangrenzung.png>
-Package pdftex.def Info: Kontextangrenzung.png  used on input line 552.
+Package pdftex.def Info: Kontextangrenzung.png  used on input line 533.
 (pdftex.def)             Requested size: 341.43306pt x 157.6248pt.
-<Bausteinsicht-1.png, id=347, 480.5955pt x 323.40825pt>
+<Bausteinsicht-1.png, id=339, 480.5955pt x 323.40825pt>
 File: Bausteinsicht-1.png Graphic file (type png)
 <use Bausteinsicht-1.png>
-Package pdftex.def Info: Bausteinsicht-1.png  used on input line 560.
+Package pdftex.def Info: Bausteinsicht-1.png  used on input line 541.
 (pdftex.def)             Requested size: 426.79134pt x 287.20076pt.
-[23
+[22
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.562 \end{figure}
-                   <./Kontextangrenzung.png>] [24
+l.543 \end{figure}
+                   <./Kontextangrenzung.png>] [23
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.563 \clearpage
+l.544 \clearpage
                  <./Bausteinsicht-1.png>]
-<Such-Algorithmus.png, id=362, 1380.15625pt x 1056.94875pt>
+<Such-Algorithmus.png, id=354, 1380.15625pt x 1056.94875pt>
 File: Such-Algorithmus.png Graphic file (type png)
 <use Such-Algorithmus.png>
-Package pdftex.def Info: Such-Algorithmus.png  used on input line 567.
+Package pdftex.def Info: Such-Algorithmus.png  used on input line 548.
 (pdftex.def)             Requested size: 526.37598pt x 403.11232pt.
 
-Overfull \hbox (42.67911pt too wide) in paragraph at lines 567--568
+Overfull \hbox (42.67911pt too wide) in paragraph at lines 548--549
 [][]
  []
 
-[25
+[24
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.576 		\item G
-               rundwasser - oder OberflÃ¤chendaten Ã¼ber einen Web-Crawler((...
- <./Such-Algorithmus.png (PNG copy)>]
-Overfull \hbox (23.79498pt too wide) in paragraph at lines 576--577
+l.556 		\item P
+               egelstationen Ã¼ber den Pegeldienst <./Such-Algorithmus.png (PNG
+ copy)>]
+Overfull \hbox (23.79498pt too wide) in paragraph at lines 557--558
 []\T1/jkp/m/n/12 Grundwasser - oder Ober-flä-chen-da-ten über einen Web-Crawler
 ((CrawlerFileService)),
  []
 
-<CsvKonfiguration.png, id=372, 1000.73875pt x 886.31125pt>
+<CsvKonfiguration.png, id=362, 1000.73875pt x 886.31125pt>
 File: CsvKonfiguration.png Graphic file (type png)
 <use CsvKonfiguration.png>
-Package pdftex.def Info: CsvKonfiguration.png  used on input line 583.
+Package pdftex.def Info: CsvKonfiguration.png  used on input line 562.
 (pdftex.def)             Requested size: 526.37598pt x 466.19943pt.
 
-Overfull \hbox (42.67911pt too wide) in paragraph at lines 583--584
+Overfull \hbox (42.67911pt too wide) in paragraph at lines 562--563
 [][]
  []
 
-[26
+[25
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.587 \begin{enumerate}
+l.566 \begin{enumerate}
                         <./CsvKonfiguration.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 601--603
+Underfull \hbox (badness 10000) in paragraph at lines 579--581
 
  []
 
-[27] [28
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 584--588
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--588
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--588
+
+ []
+
+[27
 
 ]
 chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--615
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
 
  []
 
 
-Overfull \hbox (3.8396pt too wide) in paragraph at lines 628--629
+Overfull \hbox (3.8396pt too wide) in paragraph at lines 609--610
 []\T1/jkp/b/n/12 @EnableAutoConfiguration\T1/jkp/m/n/12 : er-mög-licht die au-t
 o-ma-ti-sche Kon-fi-gu-ra-ti-on ba-sie-rend auf
  []
 
-[29
+[28
 
-] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 683--692
+] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 664--673
 
  []
 
 
-Overfull \hbox (12.7795pt too wide) in paragraph at lines 683--692
+Overfull \hbox (12.7795pt too wide) in paragraph at lines 664--673
 \T1/jkp/m/n/12 Die An-no-ta-ti-on \T1/jkp/b/n/12 @Get-ter \T1/jkp/m/n/12 und \T
 1/jkp/b/n/12 @Set-ter \T1/jkp/m/n/12 sind Lom-bok An-no-ta-ti-on, die au-to-ma-
 tisch Getter/Setter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 683--692
+Underfull \hbox (badness 10000) in paragraph at lines 664--673
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 683--692
+Underfull \hbox (badness 10000) in paragraph at lines 664--673
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 683--692
+Underfull \hbox (badness 10000) in paragraph at lines 664--673
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 683--692
+Underfull \hbox (badness 10000) in paragraph at lines 664--673
 
  []
 
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 694--697
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 718--721
-
- []
-
-[32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 753--757
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 675--678
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 753--757
+Underfull \hbox (badness 10000) in paragraph at lines 699--702
+
+ []
+
+[31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 734--738
 
  []
 
 
-Overfull \hbox (12.3226pt too wide) in paragraph at lines 753--757
+Underfull \hbox (badness 10000) in paragraph at lines 734--738
+
+ []
+
+
+Overfull \hbox (12.3226pt too wide) in paragraph at lines 734--738
 \T1/jkp/m/n/12 tion/-da-ta und \T1/jkp/b/n/12 @Re-quest-Pa-ram \T1/jkp/m/n/12 e
 x-tra-hiert den \T1/jkp/b/n/12 id\T1/jkp/m/n/12 -Parameter aus der URL-Abfragez
 eichenkette.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--761
+Underfull \hbox (badness 10000) in paragraph at lines 740--742
 
  []
 
-[34]
-<suchSeite.png, id=529, 844.3545pt x 328.8285pt>
+[33]
+<suchSeite.png, id=520, 844.3545pt x 328.8285pt>
 File: suchSeite.png Graphic file (type png)
 <use suchSeite.png>
-Package pdftex.def Info: suchSeite.png  used on input line 791.
+Package pdftex.def Info: suchSeite.png  used on input line 772.
 (pdftex.def)             Requested size: 483.69684pt x 188.37247pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 795--799
+Underfull \hbox (badness 10000) in paragraph at lines 776--780
 
  []
 
 
-Overfull \hbox (17.7467pt too wide) in paragraph at lines 795--799
+Overfull \hbox (17.7467pt too wide) in paragraph at lines 776--780
 \T1/jkp/m/n/12 Mit Ab-ruf von \T1/jkp/b/n/12 tfSearch.getStyle() \T1/jkp/m/n/12
  wird dies Drop-down sti-li-siert und mit \T1/jkp/b/n/12 tfSearch.setItems(...)
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 795--799
+Underfull \hbox (badness 10000) in paragraph at lines 776--780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 795--799
+Underfull \hbox (badness 10000) in paragraph at lines 776--780
 
  []
 
-[35
+[34
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.799 
+l.780 
        <./suchSeite.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 800--801
+Underfull \hbox (badness 10000) in paragraph at lines 781--782
 
  []
 
-[36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 869--870
+[35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 850--851
 
  []
 
 
-Overfull \hbox (4.01099pt too wide) in paragraph at lines 871--872
+Overfull \hbox (4.01099pt too wide) in paragraph at lines 852--853
 []\T1/jkp/m/n/12 Die Me-tho-de \T1/jkp/b/n/12 create-Hea-der-Con-tent() \T1/jkp
 /m/n/12 er-stellt den Header-Bereich der An-wen-dung. Die Kom-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 871--872
+Underfull \hbox (badness 10000) in paragraph at lines 852--853
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 873--874
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
 
  []
 
-[38]
-<pegel.png, id=629, 1199.682pt x 711.8595pt>
+[37]
+<pegel.png, id=620, 1199.682pt x 711.8595pt>
 File: pegel.png Graphic file (type png)
 <use pegel.png>
-Package pdftex.def Info: pegel.png  used on input line 880.
+Package pdftex.def Info: pegel.png  used on input line 861.
 (pdftex.def)             Requested size: 512.1496pt x 303.89948pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 880--881
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 861--862
  [][] 
  []
 
-[39
+[38
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.898 private 
-              void initGridStation() { <./pegel.png>] [40] [41]
-Overfull \hbox (21.20607pt too wide) in paragraph at lines 977--978
+l.879 private 
+              void initGridStation() { <./pegel.png>] [39] [40]
+Overfull \hbox (21.20607pt too wide) in paragraph at lines 958--959
 [][][][][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (27.00955pt too wide) in paragraph at lines 978--979
+Overfull \hbox (27.00955pt too wide) in paragraph at lines 959--960
 [][][][][][][][][][][][][][][][][][][][]  
  []
 
-
-Overfull \hbox (30.18497pt too wide) in paragraph at lines 1000--1001
-[][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-
-Overfull \hbox (30.18497pt too wide) in paragraph at lines 1003--1004
-[][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-[42] [43]
-Overfull \hbox (16.84662pt too wide) in paragraph at lines 1062--1064
+[41] [42]
+Overfull \hbox (16.84662pt too wide) in paragraph at lines 1045--1047
 []\T1/jkp/m/n/12 Die Klas-se \T1/jkp/b/n/12 Open-Layers-Map \T1/jkp/m/n/12 er-w
 ei-tert Div und in-te-griert ei-ne \T1/jkp/b/n/12 Open-Layers\T1/jkp/m/n/12 -Ka
 rtenkomponente. 
  []
 
 
-Overfull \hbox (38.5315pt too wide) in paragraph at lines 1067--1068
+Overfull \hbox (38.5315pt too wide) in paragraph at lines 1050--1051
 []\T1/jkp/b/n/12 @JsModule\T1/jkp/m/n/12 : ver-weist auf die JavaScript-Datei \
 T1/jkp/b/n/12 openlayers-connector.js \T1/jkp/m/n/12 zur Client-Integration. 
  []
 
 
-Overfull \hbox (1.47562pt too wide) in paragraph at lines 1071--1072
+Overfull \hbox (1.47562pt too wide) in paragraph at lines 1054--1055
 []\T1/jkp/b/n/12 showStationsOnMap(List<T> sta-ti-ons)\T1/jkp/m/n/12 : zeigt St
 a-tio-nen auf der Kar-te an und er-kennt,
  []
 
-[44] [45] [46]
-Overfull \hbox (45.5147pt too wide) in paragraph at lines 1167--1168
-[][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-[47]
-<pegel-opengeodata.png, id=916, 1195.46625pt x 705.837pt>
+[43] [44] [45] [46]
+<pegel-opengeodata.png, id=910, 1195.46625pt x 705.837pt>
 File: pegel-opengeodata.png Graphic file (type png)
 <use pegel-opengeodata.png>
-Package pdftex.def Info: pegel-opengeodata.png  used on input line 1197.
+Package pdftex.def Info: pegel-opengeodata.png  used on input line 1181.
 (pdftex.def)             Requested size: 512.1496pt x 302.3839pt.
 
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 1197--1198
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 1181--1182
  [][] 
  []
 
-[48
+[47
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1203 \chapter
-               {Evaluierung} <./pegel-opengeodata.png>]
+l.1184 \chapter
+               {Fazit und Ausblick} <./pegel-opengeodata.png>]
 chapter 6.
-[49
+
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1189
+
+ []
+
+
+Overfull \hbox (15.08205pt too wide) in paragraph at lines 1191--1192
+[]\T1/jkp/m/n/12 Kann ei-ne ein-heit-li-che Schnitt-stel-le im-ple-men-tiert we
+r-den, die es ei-ne Client-Applikation
+ []
+
+
+Overfull \hbox (5.08728pt too wide) in paragraph at lines 1194--1196
+\T1/jkp/m/n/12 ab-wei-chen-den Struk-tu-ren sind ge-ge-be-nen-falls spe-zi-fi-s
+che An-pas-sun-gen not-wen-dig, wo-durch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1194--1196
+
+ []
+
+
+Overfull \hbox (0.21469pt too wide) in paragraph at lines 1198--1200
+\T1/jkp/m/n/12 Um ei-ne Ar-chi-tek-tur ei-ner Soft-wa-re be-wer-ten zu kön-nen,
+werden un-ter an-de-rem die \T1/jkp/b/n/12 SOLID-
+ []
+
+[48
 
 ]
-chapter 7.
-[50
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1216
 
-] [51
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1216
+
+ []
+
+[49]
+Overfull \hbox (16.35553pt too wide) in paragraph at lines 1220--1221
+[]\T1/jkp/b/n/12 Ausbau der Schnitt-stel-len\T1/jkp/m/n/12 : Die An-bin-dung ei
+-nes sta-bi-len und ska-lier-ba-ren Abonnement-
+ []
+
+[50] [51
 
 ] (ersteversion.aux)
  ***********
@@ -2077,19 +2112,15 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ersteversion.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to 'ersteversion.run.xml'.
 \openout1 = `ersteversion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28729 strings out of 474486
- 498004 string characters out of 5755015
- 1999542 words of memory out of 5000000
- 49921 multiletter control sequences out of 15000+600000
+ 28723 strings out of 474486
+ 497983 string characters out of 5755015
+ 2004542 words of memory out of 5000000
+ 49919 multiletter control sequences out of 15000+600000
  643473 words of font info for 115 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,12n,107p,10936b,7179s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2102,9 +2133,9 @@ type1/public/kpfonts/jkpssbn8a.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpf
 onts/jkpssbne.pfb><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttbn8a.pf
 b><C:/Users/Tuan/MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb><C:/Users/Tuan
 /MiKTeX/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on ersteversion.pdf (51 pages, 4904923 bytes).
+Output written on ersteversion.pdf (51 pages, 4912881 bytes).
 PDF statistics:
- 1223 PDF objects out of 1440 (max. 8388607)
- 708 named destinations out of 1000 (max. 500000)
- 288 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1227 PDF objects out of 1440 (max. 8388607)
+ 704 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 
