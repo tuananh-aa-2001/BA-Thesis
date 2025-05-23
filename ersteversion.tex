@@ -87,8 +87,10 @@
 	showstringspaces=false,
 	columns=flexible,
 	basicstyle={\small\ttfamily},
-	numbers=none,
-	numberstyle=\tiny\color{gray},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+	stepnumber=1,
+	numbersep=10pt,
 	keywordstyle=\color{blue},
 	commentstyle=\color{dkgreen},
 	stringstyle=\color{mauve},
@@ -216,39 +218,35 @@
 	\chapter*{Abstract}
 	\thispagestyle{plain}
 	\addcontentsline{toc}{chapter}{Abstract}
-	In einer zunehmend digitalisierten und automatisierten Welt wächst täglich die Menge an neu generierten Geodaten – insbesondere Mess- und räumlichen Daten.\\ \\
-	Die Suche nach und Einbindung von OGC-Geodatendiensten wie WMS (Web Map Service) und WFS (Web Feature Service) in Geoinformationssysteme wie QGIS kann tatsächlich schwierig sein. Die Suche erfordert den Anwender oft das Durchforsten verschiedener Quellen und die manuelle Überprüfung von Dienstbeschreibung. Eine automatisiert und effiziente Lösung kann teilweise helfen, diesen Prozess zu verbessern. \\ 
-	Die Suche nach Messdaten wie Grundwasserständen, Pegelständen und Klimadaten (Niederschlag,Temperatur) und deren Umformatierung in ein einheitliches Format gestalten sich als schwierig und kompliziert, da es eine Vielzahl von Datenanbietern mit unterschiedliche Datenstrukturen, Formen, etc. gibt.\\ \\
-	Die Bereitstellung dieser Rohdaten erfolgt meinst im CSV-Format oder als individuell strukturierte ASCII-Dateien. Im Kontext von der Datenkonsum, gibt es bei der Ahu den sogenannten ahuManager-Client, der diese Daten konsumiert. Bevor diese konsumieren können, müssen die Rohdaten in ein kompatibles Format umformatiert werden, was bisher teilweise von Hand erledigt werden (in Excel o.ä.). Diese manuelle Vorgehen kann perspektivisch zum Teil oder ganz automatisiert werden, was die Produktivität steigert und die Fehleranfälligkeit vermeidet. \\ \\
-	Daher befasst sich diese Arbeit  mit dem Thema, wie eine webbasierte Applikation zur Wertschöpfung und Bereitstellung von rohen Geodaten im Kontext von der Abteilung Geomatik von Ahu GmbH entwickelt werden kann.
-	
+	In einer zunehmend digitalisierten und automatisierten Welt wächst die Menge neu generierter Geodaten – insbesondere Mess- und raumbezogene Daten - kontinuierlich.\\ \\
+	Die Recherche nach relevanten Messdaten wie Grundwasserständen, Pegelständen und Klimadaten (Niederschlag,Temperatur), sowie deren Umformatierung in ein einheitliches Format stellt eine erhebliche Herausforderung dar. Dies liegt vor allem an der Vielzahl unterschiedlicher Datenanbietern, die jeweils eigene Datenstrukturen und -formate verwenden.\\ \\
+	Die Bereitstellung dieser Rohdaten erfolgt häufig im CSV-Format oder als individuell strukturierte ASCII-Dateien. Im Kontext der Ahu GmbH werden diese Daten über den sogenannten \textbf{ahuManager} konsumiert. Vor der Weiterverarbeitung müssen die Rohdaten jedoch in ein kompatibles Zielformat umgewandelt werden - ein Vorgang, der bislang teilweise manuell (z.B. mithilfe von Excel) durchgeführt wird. Diese manuelle Datenaufbereitung ist zeitaufwendig, fehleranfällig und nur begrenzt skalierbar. \\ \\
+	Ziel dieser Arbeit ist es daher, zu untersuchen, wie eine webbasierte Applikation zur automatisierten Umwandlung und Bereitstellung von Messdaten konzipiert und prototypisch umgesetzt werden kann.
 	\clearpage
 	\chapter{Einleitung}
 	\section{Motivation der Arbeit}
-	Diese Bachelorarbeit wird in Zusammenarbeit mit dem Bereich Geomatik der Ahu GmbH verfasst.Der Bereich beschäftigt sich mit Konzeption und Softwareentwicklung der Monitoringsysteme und Web-Anwendungen, die es Dienstleitern, Betreibern und Aufsichtsbehörden ermöglichen, ein kosteneffizientes Management für Geodaten(Grundwasser, Oberflächenwasser, Boden,etc.) umzusetzen. \\ \\
-	Momentan besteht es Bedarf für ein zentrales System zur automatisierten Suche und Verwaltung der Geodaten aus verschiedenen Datenanbietern und diese Daten in einer homogen Struktur zusammenzubringen und einen vorhandenen Client(z.B ahuManager) bereitzustellen. Unter anderem  wird auch die Einbindung von OGC-Geodatendiensten für besseren und effizienten Prozess zur Durchsuche und Verwaltung gesorgt. 
+	Diese Bachelorarbeit entsteht in Kooperation mit dem Bereich Geomatik der Ahu GmbH, der sich auf die Konzeption und Entwicklung von Monitoringsysteme sowie Webanwendungen spezialisiert hat.Ziel ist es, Dienstleitern, Betreibern und Aufsichtsbehörden ein kosteneffizientes Management von Geodaten - wie etwa Grundwasser-, Oberflächenwasser-, und Bodendaten- zu ermöglichen. \\\\
+	Aktuell besteht ein Bedarf an einem zentralen System, das eine automatisierte Suche, Aggregation und Verwaltung von Geodaten aus unterschiedlichen externen Datenquellen ermöglicht. Ziel ist es, diese heterogenen Daten in eine homogene Struktur zu überführen und sie einem bestehenden Client-System, wie dem \textbf{AhuManager}, standardisiert bereitzustellen.
 	
 	\section{Ziel der Arbeit}
-	Die Hauptaufgabe dieser Arbeit besteht darin, ein Konzeption für die prototypische Entwicklung einer webbasierten Applikation zu erstellen und umzusetzen. Die Ziele enthalten eine übergreifende Suche von Geodaten und deren Umformatierung in ein passendes vorgegebenes Zielformat. Das weitere Zeil ist die Einbindung von mindestens einer OGC-Geodatendiensten.\\ \\ Durch die Umsetzungen dieser Ziele soll perspektivisch eine Software entstehen, die offene Problematik eine mögliche Lösung anbietet.
-	
+	Das Ziel dieser Bachelorarbeit besteht in der Konzeption und prototypischen Umsetzung einer webbasierten Anwendung zur Erhebung und Bereitstellung von Messdaten. Ein zentrales Anliegen ist die Entwicklung einer übergreifenden Suchfunktion für Geodaten sowie deren Umwandlung in ein definiertes Zielformat. \\ \\ 
+	Durch die Umsetzungen dieser Funktionalitäten soll perspektivisch eine Software entstehen, die eine praktikable Lösung für bestehende Herausforderungen in der Verarbeitung und Bereitstellung heterogener Messdaten bietet.
+	\clearpage
 	\section{Aufbau der Arbeit}
 	\section*{\small \textbf{Kapitel 1: Einleitung}}
-	Im ersten Kapitel werden die Motivation und Zwecke für diese Arbeit erklärt. Es wird kurz auf die Problematik des gewählten Themas eingegangen und dieses perspektivisch für die Firma auch Vorteile bringt.
-	
-	\section*{\small \textbf{Kapitel 2: Übersicht von Technologien}}
-	In diesem Kapitel werden wichtige Begriffe und in der Entwicklungsphase verwendete Technologien vorgestellt. Von der Bibliothek zur Verfolgung der Datenbankänderungen über das Backend-Framework bis hin zu in der Benutzeroberfläche verwendetem UI-Framework.   
+	Im ersten Kapitel werden die Motivation sowie die Zielsetzung der Arbeit erläutert. Es wird auf die Relevanz des gewählten Themas eingegangen, welchen potenziellen Nutzen die prototypische Entwicklung für das Unternehmen bieten kann.
+	\section*{\small \textbf{Kapitel 2: Technologischer Überblick}}
+	Dieses Kapitel stellt die in der Entwicklungsphase eingesetzten Technologien und relevanten Begriffe vor - von Bibliotheken zur Verfolgung der Datenbankänderungen über das verwendete Backend-Framework bis hin zum verwendeten UI-Framework für die Benutzeroberfläche.   
 	\section*{\small \textbf{Kapitel 3: Anforderungsanalyse und Spezifikation}}
-	In diesem Kapitel werden verschiedene User-Stories definiert und daraus Use-Cases spezifiziert, was die funktionale und nicht-funktionale Anforderungen der Anwendung angeht.  
+	In diesem Kapitel werden verschiedene User-Stories definiert und daraus Use-Cases abgeleitet. Die funktionalen sowie nicht-funktionalen Anforderungen an das System werden spezifiziert und dokumentiert.
 	\section*{\small \textbf{Kapitel 4: Konzeption und Architektur}}
-	Dieses Kapitel erläutert die Entscheidung für die gewählte Architektur des Prototyps anhand von unterschiedlichen Sichten.
+	In diesem Kapitel wird das zugrunde liegende Architekturdesign des Prototyps aus unterschiedlichen Sichten erläutert. Die getroffenen Architekturentscheidungen werden begründet und mit gängigen Architekturmustern verglichen.
 	\section*{\small \textbf{Kapitel 5: Implementierung}}
-	Anhand zahlreichen Code-Beispiele und technischen Erläuterungen wird die wirkliche Implementierung nochmal veranschaulicht. 
-	\section*{\small \textbf{Kapitel 6: Evaluierung}}
-	Das vorletzte Kapitel bewertet, inwiefern die vom Anfang festgelegte und erarbeitete Anforderungen erfüllt wurde. 
-	\section*{\small \textbf{Kapitel 7: Fazit und Ausblick für weitere Entwicklung}}
-	Abschließend wird noch einmal die gesamte Arbeit zusammenfassend bewertet und ein kurzer Ausblick für weiteren Entwicklungen oder Verbesserungen in der Zukunft gegeben.
+	Die tatsächliche Umsetzung des Prototyps wird anhand ausgewählter Codebeispiel und technischer Erläuterung detailliert dargestellt. Dabei wird auf zentrale Aspekte wie Datenverarbeitung, Schnittstellenlogik und UI-Integration eingegangen.
+	\section*{\small \textbf{Kapitel 6: Fazit und Ausblick}}
+	Abschließend erfolgt eine kritische Bewertung der erreichten Ergebnisse im Hinblick auf die zu Beginn definierten Anforderungen. Zudem wird ein Ausblick auf möglich Weiterentwicklung und Optimierungspotenziale gegeben.
 	
-	\chapter{Übersicht von Technologien}
+	\chapter{Technologischer Überblick}
 	\section{Vaadin}
 	Vaadin ist ein serverseitiges Web-Framework, das dem Entwickler erlaubt, moderne Webanwendung in Java zu entwickeln, ohne dass explizit HTML,CSS oder JavaScript geschrieben werden muss. Vaddin verfügt über eine große Komponentenbibliothek, die eine Vielzahl an vorgefertigten UI-Elementen wie Buttons, Tabellen, Formulare, Dialoge und Layouts bietet.
 	
@@ -293,22 +291,22 @@
 	
 	\section{Liquibase}
 	Dank Versionsverwaltung wie Git kann man in den meisten Projekten den Weg einer Code-Änderung von der der Entwicklung über Test bis hin zum produktiven Deployment richtig verfolgen und nachvollziehen. Was für den Code gilt, sollte auch für die Datenbankanpassungen gelten. Liquibase ist eine Bibliothek um Änderungen an einem Datenbankschema verfolgen, verwalten und anwenden zu können. Mit folgendem Eintrag in \texttt{pom.xml} kann man in ein Spring-Projekt integrieren.
-	\begin{lstlisting}[language=POM]
-		<dependency>
+\begin{lstlisting}[language=POM]
+<dependency>
 		<groupId>org.liquibase</groupId>
 		<artifactId>liquibase-core</artifactId>
 		<version>4.23.1</version>
-		</dependency>
-	\end{lstlisting}
+</dependency>
+\end{lstlisting}
 	Für die Speicherung der Daten wird die PostgreSQL-Datenbank entschieden. PostgreSQL selbst eine leistungsstarke, offene Datenbank, die kompatibel zu Liquibase passt. Die Aktivierung der Datenbank wird in der Datei \texttt{application.properties} innerhalb der Spring-Applikation wie folgt konfiguriert:
-	\begin{lstlisting}[language=properties]
-		spring.datasource.url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
-		spring.datasource.driver-class-name=org.postgresql.Driver
-		spring.datasource.username=opendataconn_ng_usr
-		spring.datasource.password=
-		spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-		spring.liquibase.change-log=classpath:/db/changelog-root.xml
-	\end{lstlisting}
+\begin{lstlisting}[language=properties]
+spring.datasource.url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.username=opendataconn_ng_usr
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.liquibase.change-log=classpath:/db/changelog-root.xml
+\end{lstlisting}
 	Für die Verwendung von Liquibase sind folgende Dateien notwendig:
 	\begin{figure}[h!]
 		\centering
@@ -317,58 +315,58 @@
 	\end{figure}
 	\section*{\small \textbf{1. Liquibase Konfiguration - liquibase.properties}}
 	In dieser Datei werden allgemeine Einstellungen wie der Datenbankzugang und die zu verwendenden Changelog-Konfiguration festgelegt.
-	\begin{lstlisting}[language=properties]
-		# Database Configuration
-		url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
-		username=opendataconn_ng_usr
-		password=
-		driver=org.postgresql.Driver
-		# Reference Configuration
-		referenceUrl=hibernate:spring:de.ahu.opendata?dialect=
-		org.hibernate.dialect.PostgreSQLDialect
-		referenceDriver=liquibase.ext.hibernate.database.connection.HibernateDriver
-		# Output Files
-		changeLogFile=src/main/resources/db/changelog-root.xml
-		diffChangeLogFile=src/main/resources/db/liquibase-new-diff-changelog.xml
-		outputChangeLogFile=src/main/resources/db/versions/output-changelog.xml
-	\end{lstlisting}
+\begin{lstlisting}[language=properties]
+# Database Configuration
+url=jdbc:postgresql://192.168.252.140:5432/opendataconn_ng
+username=opendataconn_ng_usr
+password=
+driver=org.postgresql.Driver
+# Reference Configuration
+referenceUrl=hibernate:spring:de.ahu.opendata?dialect=
+org.hibernate.dialect.PostgreSQLDialect
+referenceDriver=liquibase.ext.hibernate.database.connection.HibernateDriver
+# Output Files
+changeLogFile=src/main/resources/db/changelog-root.xml
+diffChangeLogFile=src/main/resources/db/liquibase-new-diff-changelog.xml
+outputChangeLogFile=src/main/resources/db/versions/output-changelog.xml
+\end{lstlisting}
 	\section*{\small \textbf{2. Changelog Konfiguration - changelog-root.xml}}
 	Ein so genannter Root-ChangeLog wird erstellt, welcher in XML geschrieben ist und eine output-changelog.xml inkludiert, welche im Ordner ,,versions'' zu finden ist. Diese Datei sorgt dafür, dass Liquibase das ChangeSet findet.
-	\begin{lstlisting}
-		<?xml version="1.0" encoding="UTF-8"?>   
-		<databaseChangeLog
-		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xmlns:pro="http://www.liquibase.org/xml/ns/pro"
-		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd
-		http://www.liquibase.org/xml/ns/pro 
-		http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.23.xsd">  
-		<includeAll path="db/versions"/>  
-		</databaseChangeLog>
-	\end{lstlisting}
+\begin{lstlisting}
+<?xml version="1.0" encoding="UTF-8"?>   
+<databaseChangeLog
+xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd
+http://www.liquibase.org/xml/ns/pro 
+http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.23.xsd">  
+<includeAll path="db/versions"/>  
+</databaseChangeLog>
+\end{lstlisting}
 	\section*{\small \textbf{3. Changelog Konfiguration - output-changelog.xml}}
 	Diese Datei enthält sämtliche Datenbankänderungen und die Änderungen werden in Form von ChangeSet beschrieben und verwaltet.Im Folgenden ist ein Abschnitt im XML-Format für das Anlagen einer Tabelle Abonnement wiedergegeben. \\ 
-	\begin{lstlisting}
-		<changeSet author="ng (generated)" id="1743435452264-1">
-		<createTable tableName="abonnement">
-		<column name="id" type="VARCHAR(32)">
-		<constraints nullable="false" primaryKey="true" primaryKeyName="abonnementPK" />
-		</column>
-		<column name="description" type="TEXT" />
-		<column name="label" type="VARCHAR(255)">
-		<constraints nullable="false" />
-		</column>
-		<column name="base_url" type="VARCHAR(255)" />
-		<column name="file_format" type="VARCHAR(255)" />
-		<column name="end_datum" type="date" />
-		<column name="location_id" type="VARCHAR(255)" />
-		<column name="parameter" type="VARCHAR(255)" />
-		<column name="start_datum" type="date" />
-		<column name="sub_url" type="VARCHAR(255)" />
-		</createTable>
-		</changeSet>
-	\end{lstlisting}
+\begin{lstlisting}
+<changeSet author="ng (generated)" id="1743435452264-1">
+	<createTable tableName="abonnement">
+	<column name="id" type="VARCHAR(32)">
+	<constraints nullable="false" primaryKey="true" primaryKeyName="abonnementPK" />
+	</column>
+	<column name="description" type="TEXT" />
+	<column name="label" type="VARCHAR(255)">
+	<constraints nullable="false" />
+	</column>
+	<column name="base_url" type="VARCHAR(255)" />
+	<column name="file_format" type="VARCHAR(255)" />
+	<column name="end_datum" type="date" />
+	<column name="location_id" type="VARCHAR(255)" />
+	<column name="parameter" type="VARCHAR(255)" />
+	<column name="start_datum" type="date" />
+	<column name="sub_url" type="VARCHAR(255)" />
+	</createTable>
+</changeSet>
+\end{lstlisting}
 	\section*{\small \textbf{4. Changelog Konfiguration - liquibase-new-diff-changelog.xml}}
 	Diese Datei enthält nur bestimmte Änderungen von bestimmten Tabellen, die man in die Datei \texttt{output-changelog.xml} einfügt, wenn man das Schema der Datenbank modifiziert. Ähnlich wie in \texttt{output-changelog.xml} werden Änderungen auch in Form von ChangeSet beschrieben.
 	
@@ -391,141 +389,131 @@
 		\item Randbedingungen sind Vorgaben, die den Lösungsraum einschränken und das Verhalten der Software beeinflussen.
 	\end{enumerate}
 	\subsection{Anwendungsszenario}
-	Die zu entwickelnde Applikation soll als zentrale Stelle für die Durchsuche der Geodaten und Verwaltung der relevanten Geodaten dienen und ist auch in der Lage, diese Geodaten durch eine Schnittstelle einen anderen Client zur Verfügung stellen zu können.
+	Die zu entwickelnde Applikation soll als zentrale Plattform zur Suche, Verwaltung und Bereitstellung von Geodaten dienen. Sie ermöglicht die Aggregation relevanter Informationen aus verschiedenen Datenquellen und stellt diese über eine standardisierte Schnittstelle einem externen Client - wie dem \textbf{ahuManager} - zur Verfügung.
 	\subsection{Stakeholder und User-Stories}
-	In der Softwareentwicklung sind Stakeholder Personen, Gruppen oder Organisation, die ein Interesse am Erfolg eines Softwareprojekts haben und von dessen Ergebnissen direkt oder indirekt beeinflusst werden.\\
-	Mittels User-Stories können funktionale Anforderungen der Stakeholder erfasst werden.
+	In der Softwareentwicklung bezeichnet der Begriff Stakeholder alle Personen, Gruppen oder Organisationen, die ein Interesse am Erfolg eines Projekts haben und direkt oder indirekt von dessen Ergebnissen betroffen sind. Um die funktionalen Anforderungen dieser Stakeholder zu erfassen, werden sogenannte User-Stories verwendet. Diese beschreiben aus Sicht der Endnutzer konkrete Anwendungsbedarfe.
+	\section*{\small \textbf{User-Stories:}}
 	\begin{enumerate}
-		\item Als Benutzer möchte ich in der Web-Oberfläche eine Übersicht über populäre Datenquellen sehen, die  relevante Geodaten bereitstellen.
-		\item Als Benutzer möchte ich mithilfe von Schlagwörtern nach OGC-Webservices durchsuchen und die entsprechenden Referenzen als URL-Links zu den Schlagwörtern erhalten.
+		\item Als Benutzer möchte ich in der Web-Oberfläche eine Übersicht über populäre Datenquellen erhalten, die relevante Geodaten bereitstellen.
 		\item Als Benutzer möchte ich gezielt nach Messdaten wie Grundwasserständen, Pegelständen, Niederschlag, etc. recherchieren und dabei Informationen über das Datenformat und wesentliche Inhalte der Datensätze erhalten.
-		\item Als Benutzer möchte ich Messdaten, die meist im CSV-Format oder individuell strukturierte ASCII-Dateien vorliegen, in ein passendes Zielformat konvertieren lassen.
-		\item Als Benutzer möchte ich die Daten in Form einer List von Datenstreams angezeigt bekommen.
-		\item Als Benutzer möchte ich in der Lage sein, bestimmte Datensätze abonnieren zu können.
-		\item Als Benutzer möchte ich die gefundenen Geo- und Messdaten visuell auf einer Karte darstellen lassen.
+		\item Als Benutzer möchte ich Messdaten, die meist im CSV-Format oder individuell strukturierte ASCII-Dateien vorliegen,automatisiert in ein einheitliches Zielformat konvertieren lassen.
+		\item Als Benutzer möchte ich die Daten in Form einer Gitter angezeigt bekommen.
+		\item Als Als Benutzer möchte ich die Möglichkeit haben, bestimmte Datensätze zu abonnieren.
+		\item Als Benutzer möchte ich die gefundenen Messdaten visuell auf einer Karte darstellen lassen.
 	\end{enumerate}
 	
 	\section{Spezifikation}
-	Mit den im letzten Abschnitt erhobenen User-Stories können nun die funktionalen Anforderung genauer spezifiziert werden. Dort werden Use-Cases genauer definiert.
+	Basierend auf den im vorherigen Abschnitt formulierten User-Stories lassen sich die funktionalen Anforderungen der Anwendung konkretisieren. In diesem Zusammenhang werden zentrale \textbf{ Use-Cases} definiert, welche die Interaktionen zwischen Nutzern und dem System aus funktionaler Sicht beschreiben.
 	\subsection{Use-Cases}
-	Einfach ausgedrückt wird mit einem Use-Case die nach außen sichtbare Interaktion eines Nutzers mit einem System dokumentiert. Dieser Nutzer kann entweder eine Person, eine Organisation oder ein anderes System sein.\\
-	Für die prototypische Anwendung werden folgenden Use-Cases ausgearbeitet.
-	\section*{\small \textbf{Use-Case 1: Historische Wetterdaten von \href{https://wetterdienst.readthedocs.io/en/latest/} {Wetterdatendienst} einsehen}}
+	Ein \textbf{Use-Case} beschreibt die sichtbare Interaktion eines Nutzers(Akteurs) mit dem System. Dabei kann es sich beim Akteur um eine Person,eine Organisation oder auch ein externes System handeln. Im Folgenden werden mehrere Use-Cases für die prototypische Anwendung dargestellt.
+	\section*{\small \textbf{Use-Case 1:  Einsicht historischer \href{https://wetterdienst.readthedocs.io/en/latest/} {Wetterdaten}}}
 	Akteur : Benutzer\\
-	Ziel: Historische Wetterdaten einer bestimmten Messtation einsehen\\
+	Ziel: Einsicht von Wetterdaten einer bestimmten Messstation\\
 	Vorbedingung: keine\\
-	Nachbedingung: keine\\
-	\underline{Ablauf}:
+	Nachbedingung: Die Daten der ausgewählten Station wurden als Diagramm angezeigt\\
+	\underline{Ablaufbeschreibung}:
 	\begin{enumerate}
-		\item Benutzer navigiert zu Historische Wetterdaten Tab.
-		\item Am Anfang zeigt die Seite einige Dropdowns zur Durchsuche der Daten und eine Karte, auf der noch keine Station zu sehen ist.
-		\item Benutzer wählt die gewünschte Auflösung aus (stündlich, täglich, monatlich, jährlich).
-		\item Benutzer wählt dann die Hauptparameter aus und ein Dropdown für Unterparamter blendet sich ein.
-		\item Benutzer wählt anschließend die Unterparamter aus.
-		\item Das System reagiert auf den Wert von Unterparamter und zeigt sich eine deutschlandweite Karte, wo alle relevanten Messstationen zu dem ausgewählten Unterparamter zu sehen sind. 
-		\item Weitere Dropdowns werden danach eingeblendet, entweder möchte Benutzer die Messstationen in einem bestimmten Bundesland sehen oder direkt eine gezielte Messstation auswählen.
-		\item Nach Auswahl einer Station wird die Station auf der Karte fokussiert und die Daten zur gewählten Station als Diagramm dargestellt. 
+		\item Der Benutzer navigiert zur Ansicht „Historische Wetterdaten“.
+		\item Die Seite zeigt initial eine leere Karte sowie verschiedene Dropdown-Menüs zur Auswahl der Datenparameter.
+		\item Der Benutzer wählt eine gewünschte zeitliche Auflösung (z.B. stündlich, täglich, monatlich, jährlich).
+		\item Daraufhin wird ein Dropdown-Menü mit Hauptparametern (z.B. Temperatur, Niederschlag) eingeblendet
+		\item Nach Auswahl eines Hauptparameters erscheint ein weiteres Dropdown-Menü mit dazugehörigen Unterparametern.
+		\item Das System zeigt anschließend eine Deutschlandkarte mit allen Messstationen, die den gewählten Unterparameter liefern. 
+		\item Optional kann der Benutzer die Auswahl weiter eingrenzen – entweder auf ein bestimmtes Bundesland oder auf eine konkrete Messstation.
+		\item Nach Auswahl einer Station wird diese auf der Karte fokussiert und die zugehörigen Wetterdaten in einem Diagramm visualisiert. 
 	\end{enumerate}
-	\section*{\small \textbf{Use-Case 2: Wettervorhersagedaten von \href{https://wetterdienst.readthedocs.io/en/latest/} {Wetterdatendienst} einsehen}}
+	\section*{\small \textbf{Use-Case 2: Einsicht von \href{https://wetterdienst.readthedocs.io/en/latest/} {Wettervorhersagedaten}}}
 	Akteur : Benutzer\\
-	Ziel:  Vorhersagedaten einer bestimmten Messtation einsehen\\
+	Ziel:  Einsicht von Wettervorhersagedaten einer bestimmten Messstation\\
 	Vorbedingung: keine\\
-	Nachbedingung: keine\\
-	\underline{Ablauf}:
+	Nachbedingung: Die Vorhersagedaten wurden als Diagramm angezeigt\\
+	\underline{Ablaufbeschreibung}:
 	\begin{enumerate}
-		\item Benutzer navigiert zu  Wettervorhersage Tab.
-		\item Die Seite stellt bereits eine Tabelle mit verschiedenen Parameter zum Ansehen der Wetterdaten.
-		\item Benutzer wählt eine Station aus dem Dropdown aus.
-		\item Nach der Auswahl erscheint automatisch ein Button zur Überprüfung der Verfügbarkeit der Wetterdaten.
-		\item Benutzer klickt auf dieses Button und wartet auf die Meldung des Systems.
-		\item Das System überprüft all in der Grid befindliche Parameter,ob jeweiliger Parameter überhaupt Daten liefert. 
-		\item Anhand des Status,ob es die Daten zu jeweiligen Parameter gibt, wird es in der Grid ein weitere Spalte zur Einsicht der Daten geben. 
-		\item Benutzer klickt auf das Icon in der neu erscheinenden Spalte.
-		\item Ein Fenster öffnet sich und stellt die Daten in Form eines Diagramm bereits. 
+		\item Der Benutzer navigiert zur Ansicht „Wettervorhersage“.
+		\item Die Seite zeigt eine Tabelle mit verschiedenen Parametern zur Anzeige verfügbarer Wetterdaten.
+		\item Der Benutzer wählt eine Wetterstation aus einem Dropdown-Menü aus.
+		\item Nach der Auswahl erscheint ein Button zur Überprüfung der Datenverfügbarkeit.
+		\item Der Benutzer klickt auf den Button und wartet auf eine Rückmeldung des Systems.
+		\item Das System prüft für alle Parameter in der Tabelle, ob jeweils Daten vorhanden sind.
+		\item Basierend auf dem Ergebnis ergänzt das System die Tabelle um eine zusätzliche Spalte zur Einsicht verfügbarer Daten.
+		\item er Benutzer klickt auf das angezeigte Symbol in der neuen Spalte.
+		\item Ein Dialogfenster öffnet sich und visualisiert die Vorhersagedaten in Form eines Diagramms. 
 	\end{enumerate}
-	\section*{\small \textbf{Use-Case 3: Pegelstanddaten von \href{https://www.pegelonline.wsv.de/gast/start} {PegelOnline} einsehen}}
+	\section*{\small \textbf{Use-Case 3: Einsicht von Pegelstanddaten  (\href{https://www.pegelonline.wsv.de/gast/start} {PegelOnline})}}
 	Akteur : Benutzer\\
-	Ziel:  Pegelstanddaten einer bestimmten Messtation einsehen\\
+	Ziel:  Einsicht von Pegelstanddaten einer ausgewählten Messstation\\
 	Vorbedingung: keine\\
-	Nachbedingung: keine\\
-	\underline{Ablauf}:
+	Nachbedingung: Daten der gewählten Station werden visualisiert.\\
+	\underline{Ablaufbeschreibung}:
 	\begin{enumerate}
-		\item Benutzer navigiert zu Pegelständedaten Tab.
-		\item Benutzer sieht links die Filtermöglichkeiten und rechts eine Karte mit Pegelstationen deutschlandweit, die je nach aktueller Lage farblich kategorisiert sind.
-		\item Benutzer wählt eine Station von dem Filter „Pegelstation” aus.
-		\item Das System zeigt dann sowohl historische als auch die Vorhersagedaten, falls die gewählte Station überhaupt Daten zurückliefert, in einem Diagramm.
+		\item Der Benutzer navigiert zur Ansicht „Pegelstanddaten“.
+		\item Auf der linken Seite befinden sich Filteroptionen, auf der rechten Seite eine interaktive Karte mit deutschlandweiten Pegelstationen, farblich codiert nach aktuellem Pegelstatus.
+		\item Der Benutzer wählt eine Station aus dem Filter „Pegelstation“.
+		\item Das System zeigt – sofern verfügbar – historische sowie Vorhersagedaten der gewählten Station in einem Diagramm an.
 	\end{enumerate}
-	\section*{\small \textbf{Use-Case 4: Datenstream eines Klimaphänomen einsehen}}
+	\section*{\small \textbf{Use-Case 4: Einsicht von Liste der Messstellen eines Klimaphänomen}}
 	Akteur : Benutzer\\
-	Ziel: Datenstream eines Klimaphänomen einsehen\\
+	Ziel: Einsicht der Liste der Messstelle eines Klimaphänomen\\
 	Vorbedingung: keine\\
-	Nachbedingung: keine\\
-	\underline{Ablauf}:
+	Nachbedingung: Die Messdaten zur gewählten Station und zum Phänomen werden angezeigt\\
+	\underline{Ablaufbeschreibung}:
 	\begin{enumerate}
-		\item Benutzer navigiert zu zentraler Suche - Tab.
-		\item Benutzer sieht nur einzigen Eingabefeld, wo er ein Klimaphänomen eingibt. Die Klimaphänomene sind in dieser Entwicklungsstufe zunächst vorgegeben.
-		\item Je nach Klimaphänomen bekommt der Benutzer links eine Liste von Datenstream aus verschiedenen Datenquellen in einer tabellarischen Form und rechts eine Karte, wo alle Messstellen dem Klimaphänomen relevant sind.
-		\item Benutzer kann die Messstellen sowohl nach deren Koordinaten als auch nach deren Anbietern filtern.
-		\item Benutzer sieht eine Spalte mit „Daten anzeigen” und klickt auf das Button.
-		\item Ein Dialogfenster öffnet sich wo je nach Klimaphänomen ein Dropdown zur Auswahl erscheint.
-		\item Benutzer wählt einen Eintrag aus dem Dropdown aus und bekommt die wirklichen Daten zu der selektierten Messstellen und zu dem eingegebenen Klimaphänomen.
+		\item Der Benutzer navigiert zur zentralen Suchansicht.
+		\item Es wird ein zentrales Eingabefeld angezeigt, in das ein Klimaphänomen eingegeben werden kann (in dieser Entwicklungsphase sind die möglichen Begriffe vorgegeben).
+		\item Unabhängig vom eingegebenen Begriff erscheint links eine tabellarische Liste relevanter Messstellen aus verschiedenen Datenquellen; rechts wird eine Karte mit zugehörigen Messstellen angezeigt.
+		\item Der Benutzer filtert die angezeigten Messstationen optional nach Koordinaten oder nach Datenanbieter.
+		\item In der Tabelle befindet sich eine Spalte mit einem Button „Daten anzeigen“. Der Benutzer klickt darauf.
+		\item Ein Dialogfenster öffnet sich, in dem ein Dropdown-Menü zur Auswahl spezifischer Datenoptionen erscheint.
+		\item Nach Auswahl eines Eintrags zeigt das System die tatsächlichen Messdaten zur ausgewählten Station und zum gewählten Klimaphänomen.
 	\end{enumerate}
 	
 	\section*{\small \textbf{Use-Case 5: Daten zu einem Klimaphänomen abonnieren}}
 	Akteur : Benutzer\\
-	Ziel: den Datenstream zu einem Klimaphänomen abonnieren\\
+	Ziel: Die Daten einer ausgewählten Station zu einem Klimaphänomen abonnieren\\
 	Vorbedingung: keine\\
-	Nachbedingung: keine\\
-	\underline{Ablauf}:
+	Nachbedingung: Die Daten einer ausgewählten Station wurde erfolgreich abonniert.\\
+	\underline{Ablaufbeschreibung}:
 	\begin{enumerate}
-		\item Noch in dem Dialogfenster findet Benutzer ein Button zum Abonnieren der Daten. 
-		\item Benutzer klickt auf das Button und ein anderes Dialog öffnet sich.
-		\item Benutzer überprüft die wesentliche Metadaten der zu abonnieren Klimadaten und kann das Start/ Enddatum bearbeiten sowie das gewünschte Format auswählen.
-		\item Benutzer klickt auf das „Speichern” Button und  das Abonnement-Dialog schließt sich von allein.
-		\item Benutzer wechselt zu einer sogenannten Abonnement-Verwaltung Tab und sieht den eben abonnierten Datensatz in einer Tabelle.
+		\item Im geöffneten Dialogfenster befindet sich ein Button „Abonnieren“.
+		\item Der Benutzer klickt auf den Button, woraufhin sich ein weiteres Dialogfenster öffnet.
+		\item In diesem Dialog überprüft der Benutzer die Metadaten der zu abonnierenden Daten, kann ein Start- und Enddatum festlegen sowie das gewünschte Datenformat auswählen.
+		\item Der Benutzer klickt auf den Button „Speichern“. Das Dialogfenster schließt sich automatisch.
+		\item Anschließend wechselt der Benutzer zur Ansicht „Abonnement-Verwaltung“ und sieht den neu erstellten Abonnement-Eintrag in einer tabellarischen Übersicht.
 	\end{enumerate}
 	
 \section*{\small \textbf{Use-Case 6: Abonnierte Datensätze in Grid abrufen}}
 Akteur : Benutzer\\
-Ziel: Abonnierte Datensätze abrufen\\
-Vorbedingung: keine\\
-Nachbedingung: keine\\
-\underline{Ablauf}:
+Ziel: Abruf abonnierter Datensätze\\
+Vorbedingung: Abonnements sind vorhanden.\\
+Nachbedingung: Die abonnierten Daten wurden erfolgreich angezeigt.\\
+\underline{Ablaufbeschreibung}:
 \begin{enumerate}
-	\item Benutzer navigiert nochmal zu Abonnement-Verwaltung Tab. 
-	\item Benutzer fokussiert sich auf rechte Seit der Grid und bewegt die Maus über das Icon mit dem Hilfetext „Abonnierte Daten abrufen” und klickt drauf.
-	\item Ein kleiner Dialog öffnet sich und zeigen sich zwei Optionen zum Abruf der Daten. Die eine ist mit dem Titel „Alle Daten im angegebenen Zeitraum” und die andere mit dem Titel „Inkrementelle Updates”
-	\item Benutzer wählt die erste Option aus und klickt drauf.
-	\item Das System reagiert drauf und leitet den Benutzer auf einen anderen URL weiter, wo er die abonnierten Datensätzen in dem gewünschten Format sieht. 
+	\item Der Benutzer navigiert zur Ansicht „Abonnement-Verwaltung“.
+	\item In der rechten Spalte der Grid-Ansicht fährt er mit der Maus über ein Symbol mit dem Tooltip „Abonnierte Daten abrufen“ und klickt drauf.
+	\item Ein Dialogfenster öffnet sich und bietet zwei Optionen zur Auswahl: „Alle Daten im angegebenen Zeitraum“ und „Inkrementelle Updates“
+	\item Der Benutzer wählt die Option „Alle Daten im angegebenen Zeitraum“ aus.
+	\item Das System leitet den Benutzer auf eine separate URL weiter, auf der die abonnierten Datensätze im gewählten Format angezeigt werden.
 \end{enumerate}
 
 \section*{\small \textbf{Use-Case 7: Umformatierung der Rohdaten konfigurieren}}
 Akteur : Benutzer\\
-Ziel: Umformatierung der Rohdaten konfigurieren\\
-Vorbedingung: keine\\
-Nachbedingung: keine\\
-\underline{Ablauf}:
+Ziel:  Konfiguration der Umformatierung von Rohdaten\\
+Vorbedingung: Rohdaten sind verfügbar.\\
+Nachbedingung: Die Umformatierungskonfiguration wurde gespeichert.\\
+\underline{Ablaufbeschreibung}:
 \begin{enumerate}
-	\item Benutzer klickt auf das Button "Daten anzeigen".
-	\item Ein Dialogfenster öffnet sich, in dem die Gitteransicht für die Rohdaten und die Button "Abonnieren" und "Umformatieren" zu sehen sind.
-	\item Benutzer klickt auf das Button "Umformatieren".
-	\item Ein andere Dialogfenster öffnet sich, wo der Benutzer die Rohdaten umformatieren kann.
-	\item Benutzer speichert die eben durchgeführte Konfiguration mit dem Button "Konfiguration speichern".
-	\item Das System persistiert diese Konfiguration.  
+	\item Der Benutzer klickt in der Grid-Ansicht zur Such-Ansicht auf den Button „Daten anzeigen“.
+	\item Es öffnet sich ein Dialogfenster, das eine tabellarische Darstellung der Rohdaten sowie die Buttons „Abonnieren“ und „Umformatieren“ enthält. Der Benutzer klickt auf den Button „Umformatieren“.
+	\item Ein neues Dialogfenster erscheint, in dem der Benutzer Parameter zur Umformatierung der Rohdaten anpassen kann (z.B. Feldtrennung, Strukturierung, Einheiten).
+	\item Nach der Konfiguration klickt der Benutzer auf „Konfiguration speichern“.
+	\item Das System speichert die Einstellungen persistent zur späteren Wiederverwendung.
 \end{enumerate}
 	
 \chapter{Konzeption und Architektur}
 \section{Konzeption}
-Mit Sichten kann ein System aus unterschiedlichen Perspektiven gezeigt werden.
-Im Wesentlichen gibt es vier Typen:
-\begin{itemize}
-\item Kontextschicht
-\item Bausteinschicht
-\item Laufzeitschicht
-\item Verteilungsschicht
-\end{itemize}
+Zur strukturierten Beschreibung der Systemarchitektur werden verschiedene Sichten eingesetzt. Diese ermöglichen es, das System aus unterschiedlichen Perspektiven zu betrachten und somit sowohl fachliche als auch technische Anforderungen klar und nachvollziehbar zu adressieren. Im Rahmen dieser Arbeit werden vier wesentliche Architektursichten betrachtet.
 
-\section*{\large \textbf{Kontextsicht}}
+\section*{\large \textbf{1. Kontextsicht}}
 Die Kontextsicht zeigt das zu entwickelnde System als Blockbox, mit dem die Interaktion des Users stattfindet und welche weiteren Systeme beteiligt sind, aus den das zu entwickelnde System Daten importieren or exportieren kann.\\
 Die Abbildung 4.1 zeigt das System, welche sowohl die Schnittstelle zum Benutzer  also auch mit anderen externen System zum Importieren der Daten darstellt. Daraus hinaus ist es mit einem Datenbankmanagementsystem zur Speicherung von Daten verbunden.
 \begin{figure}[H]
@@ -533,7 +521,8 @@ Die Abbildung 4.1 zeigt das System, welche sowohl die Schnittstelle zum Benutzer
 	\includegraphics[width=12cm]{Kontextangrenzung.png}
 	\caption{\label{} Kontextangrenzung}
 \end{figure}
-\section*{\large \textbf{Bausteinschicht}}
+\clearpage
+\section*{\large \textbf{2. Bausteinschicht}}
 Die Bausteinschicht zeigt den näheren Aufbau des Systems - und zwar denjenigen Teil, den entwickelt wird. Jedes mit blau gefüllte Package beinhaltet alle Entitäten und die für den Aufbau der View und Datenaustausch mit der externen Datenquelle benötigten Komponenten.\\
 Im Package \textbf{MainView} wird die Anwendung mit Startseite initialisiert und die Anbindung der weitern Views an die Hauptview ermöglicht. Das Package \textbf{Utils} beinhaltet zahlreiche Hilfsfunktionen. Diese dienen vor allem dazu, die Modularität, die Wartbarkeit und die Verständlichkeit des Codes sicherzustellen. Das Package \textbf{Konfiguration} beinhaltet unterschiedliche Konfigurationsklassen für die Applikation.\\ Die anderen Packages sind gemäß dem Single Responsibility Principle (SRP) aufgebaut. Jedes Package verfolgt dabei eine klar definierte, spezifische Aufgabe. Durch die Anwendung des SRP werden die Verantwortlichkeiten innerhalb des Systems präzise getrennt, was die Projektstruktur übersichtlicher und verständlicher macht.
 \begin{figure}[H]
@@ -542,13 +531,13 @@ Im Package \textbf{MainView} wird die Anwendung mit Startseite initialisiert und
 	\caption{\label{} Bausteinsicht}
 \end{figure}
 \clearpage
-\section*{\large \textbf{Laufzeitsicht}}
+\section*{\large \textbf{3. Laufzeitsicht}}
 Die Laufzeitsicht beschreibt, wie ein System während seiner Ausführung seine wesentliche Aufgaben ausführt. Häufig werden Sequenzdiagramme verwendet, um die Laufzeitsicht zu visualisieren,insbesondere zur Darstellung von Interaktionen zwischen Systemteilen.
 \begin{figure}[H]
 	\includegraphics[width=18.5cm]{Such-Algorithmus.png}
-	\caption{\label{} Use-Case 5}
+	\caption{\label{} Use-Case 4: Einsicht der Liste der Messstelle eines Klimaphänomen}
 \end{figure}
-Die obige Abbildung demonstriert das Use-Case 5: Suche nach Messdaten und Klimadaten basierend auf die Nutzer-Eingabe. Ein Benutzer gibt einen Suchbegriff in ein Suchfeld ein. Daraufhin wird:  
+Die obige Abbildung demonstriert das Use-Case 4 basierend auf die Nutzer-Eingabe. Ein Benutzer gibt einen Suchbegriff in ein Suchfeld ein. Daraufhin wird:  
 \begin{enumerate}
 	\item Der Begriff ins Englische übersetzt,da die Anfrage an den Server ausschließlich mit englischen Parametern zulässt,um passende Wetterstation über den Deutschen Wetterdienst zu finden (historisch und prognostisch).
 	\item Bei passenden Begriffen wie „Pegel“ oder „Grundwasser“ werden zusätzliche Datenquellen abgefragt:
@@ -560,9 +549,9 @@ Die obige Abbildung demonstriert das Use-Case 5: Suche nach Messdaten und Klimad
 \end{enumerate}
 \begin{figure}[H]
 	\includegraphics[width=18.5cm]{CsvKonfiguration.png}
-	\caption{\label{} Use-Case 8}
+	\caption{\label{} Use-Case 7: Umformatierung der Rohdaten konfigurieren}
 \end{figure}
-Die Abbildung 4.4 illustriert den Fluss vom Use-Case 8. Ein Benutzer wählt eine CSV-Datei aus einer Dropdown-Liste aus und klickt auf „Umformatieren". Das System:
+Die Abbildung 4.4 illustriert den Fluss vom Use-Case 7. Ein Benutzer wählt eine CSV-Datei aus einer Dropdown-Liste aus und klickt auf „Umformatieren". Das System:
 \begin{enumerate}
 	\item Ermittelt die passende Konfiguration (falls vorhanden) basierend auf dem Dateinamen.
 	\item Lädt die zugehörige Datei aus bereits extrahierten Dateien.
@@ -575,7 +564,7 @@ Die Abbildung 4.4 illustriert den Fluss vom Use-Case 8. Ein Benutzer wählt eine
 		\end{itemize}
 	\item Diese Konfiguration kann anschließend gespeichert oder für die weitere Verarbeitung verwendet werden.
 \end{enumerate}
-\section*{\large \textbf{Verteilungsschicht}}
+\section*{\large \textbf{4. Verteilungsschicht}}
 Üblicherweise beschreibt die Verteilungssicht die technische Infrastruktur und wie sich die einzelnen (Software-)Bausteine auf die einzelnen Infrastrukturkomponenten verteilen.\\ \\
 Im Rahmen dieses Prototyps wird auf die Verteilungsschicht verzichtet, da die entwickelte Anwendung ausschließlich lokal (auf dem \textit{localhost}) ausgeführt wird und kein Deployment auf verteilte Systemumgebungen vorgesehen ist. Eine detaillierte Beschreibung der physischen Infrastruktur ist daher zum aktuellen Zeitpunkt nicht erforderlich.
 
@@ -611,7 +600,7 @@ public class Application implements AppShellConfigurator {
 		\end{enumerate}
 	Die Annotation \textbf{@Theme(value = "opendata-konnektor")} legt das Vaadin-Theme fest. \textbf{value} definiert den Namen des Themes und Themens werden verwendet, um das Erscheinungsbild der Anwendung anzupassen.\\
 	Die Annotation \textbf{@EnableCaching} aktiviert die Spring Caching-Funktionalität und ermöglicht die Verwendung von Cache-Mechanismen(\textbf{@Cacheable},\textbf{@Cacheable},\textbf{@CacheEvict}).\\
-	\textbf{AppShellConfigurator} ist eine Schnittstelle (\textbf{interface}) aus dem Vaadin Framework. Sie wird verwende, um die \textbf{App Shell} einer Vaadin-Anwendung zu konfigurieren. Was ist die App Shell in Vaadin ?
+	\textbf{AppShellConfigurator} ist eine Schnittstelle (\textbf{Interface}) aus dem Vaadin Framework. Sie wird verwende, um die \textbf{App Shell} einer Vaadin-Anwendung zu konfigurieren. Was ist die App Shell in Vaadin ?
 	\begin{itemize}
 		\item Die App Shell is ein grundlegendes HTML-Dokument, das vom Server an den Client gesendet wird.
 		\item Es enthält die wesentlichen Informationen wie Meta-Tags, Icons, Stylesheets usw., die bei der ersten Anfrage geladen werden.
@@ -709,13 +698,11 @@ public interface AbonnementRepository extends JpaRepository<Abonnement, String>{
 		\item T : die Entitätsklasse, die verwaltet wird, in diesem Fall(Abonnement).
 		\item Id: der Datentyp des Primärschlüssels (String).
 	\end{itemize}
-	\vspace{1cm}
 	Für die Entität \textbf{Abonnement} wird ein sogenannten AbonnementController bereitgestellt, mit dem der Zugriff auf die Daten von außen ermöglicht.
 \begin{lstlisting}
 @RestController
 @RequestMapping("/api/subscription")
 public class AbonnementController {
-	
 	@Autowired
 	private AbonnementService abonnementService;
 			
@@ -723,7 +710,6 @@ public class AbonnementController {
 	public ResponseEntity<String> getAboData(@RequestParam @NotBlank String id) {
 		return abonnementService.fetchAbonnementData(id).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("kein Abonnement fuer die " + id + "gefunden.))
 	}
-			
 	@GetMapping(value = "/incremental_data")
 	public ResponseEntity<String> getIncrementalData(@RequestParam @NotBlank String id) {
 		return abonnementService.fetchInrementalData(id).orElseGet(
@@ -737,7 +723,7 @@ Mit der Annotation \textbf{@Autowired} sucht Spring automatisch nach einer passe
 Die Annotation \textbf{@GetMapping(/data)} definiert einen GET-Endpunkt unter /api/subscription/data und \textbf{@RequestParam} extrahiert den \textbf{id}-Parameter aus der URL-Abfragezeichenkette. \textbf{@NotBlank} ist ein Bean Validation und validiert, dass der \textbf{id}-Parameter nicht leer ist und falls der leer ist, wird ein 400 Bad Request zurückgegeben. \textbf{ResponseEntity$<$String$>$} wird verwendet, um eine HTTP-Response mit einem StatusCode und einem Body zurückzugeben.
 	
 \section{Front-End-Komponente }
-Im Rahmen dieses Abschnittes wird die Implementierung des Use-Cases \textit{Datenstream eines Klimaphänomen einsehen} erläutert. Die Entwicklung erfolgt unter Verwendung von Vaadin-Framework.\\ \\
+Im Rahmen dieses Abschnittes wird die Implementierung des Use-Cases 4: Einsicht von Liste der Messstellen eines Klimaphänomen erläutert. Die Entwicklung erfolgt unter Verwendung von Vaadin-Framework.\\ \\
 Die Umsetzung eines UI-Komponents erfolgt unter Java-Programmiersprache als Klasse, welche ein Komponent wie z.B. ein VerticalLayout oder HorizontalLayout oder ein Dialog von Paket \textbf{com.vaadin.flow.component.Component} erbt.
 \begin{lstlisting}
 import com.vaadin.flow.component.combobox.ComboBox;
@@ -859,7 +845,7 @@ Wählt man nun einen Eintrag aus der DropDownList aus,z.B.\textbf{Pegel}, ergibt
 \begin{figure}[H]
 	 \centering
 	\includegraphics[width=18cm]{pegel.png}
-	\caption{\label{pegel:}Pegel}
+	\caption{\label{pegel:}Einsicht von Liste der Pegelstation}
 \end{figure}
 Bei der Abbildung sind es drei Hauptkomponenten deutlich zu erkennen, nämlich : die Tabelle, die Karte und die Filtermöglichkeiten nach Koordinaten und Servicename.
 \section*{\small \textbf{1. Die Tabelle}}
@@ -1007,10 +993,7 @@ public class OpenLayersMap extends Div {
 	public OpenLayersMap() {
 		this.getParent().ifPresent(null);
 		initConnector();
-		
-		addDetachListener(detach -> {
-			shutDown();
-		});
+		addDetachListener(detach -> { shutDown();});
 	}
 	public <T extends RestDTO> void showStationsOnMap(List<T> stations) {
 		runBeforeClientResponse(ui -> {
